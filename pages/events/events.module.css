@@ -1,6 +1,22 @@
+.events_page_wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  /* height: 100px; */
+}
+
+@media only screen and (max-width: 1000px) {
+  .events_page_wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* height: 100px; */
+  }
+}
+
 .heading {
   height: 180px;
-  width: 100vw;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   color: #7f7f7f;
@@ -10,14 +26,9 @@
   justify-content: center;
 }
 
-.innernav {
-  display: flex;
-  height: 40px;
-}
-
 .upcoming_past {
-  /* background-color: aqua; */
-
+  height: 40px;
+  margin: 0px auto 0px auto;
   display: flex;
   width: 248px;
   justify-content: space-around;

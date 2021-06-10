@@ -1,0 +1,14 @@
+/* :root {
+  --card-width: 400px;
+  --outer-padding: 100px; 
+} */
+.upcoming_card_wrapper {
+  height: 250px;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+}
+@media only screen and (max-width: 1000px) {
+  .upcoming_card_wrapper {
+    height: 203px;
+  }
+}
