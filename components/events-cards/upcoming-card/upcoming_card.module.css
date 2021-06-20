@@ -7,8 +7,9 @@
   height: 250px;
   border-radius: 12px;
   display: flex;
-  /* border: 1px solid black; */
+  animation: comeInside 2s ease-in-out;
 }
+
 .text_content {
   width: 50%;
   height: 100%;

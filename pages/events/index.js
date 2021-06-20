@@ -20,12 +20,21 @@ const index = () => {
         <div className={styles.heading}>
           <div style={{ fontSize: "48px" }}>Events</div>
         </div>
-        <div className={styles.upcoming_past}>
-          <div className={styles.upcoming} style={nav === 0 ? borderUpcoming : {}} onClick={() => setNav(0)}>
-            Upcoming
+        <div className={styles.events_nav}>
+          <div className={styles.upcoming_past}>
+            <div className={styles.upcoming} style={nav === 0 ? borderUpcoming : {}} onClick={() => setNav(0)}>
+              Upcoming
+            </div>
+            <div className={styles.past} style={nav === 1 ? borderPast : {}} onClick={() => setNav(1)}>
+              Past
+            </div>
           </div>
-          <div className={styles.past} style={nav === 1 ? borderPast : {}} onClick={() => setNav(1)}>
-            Past
+          <div className={styles.actions}>
+            <img src="/assets/images/filters.svg" className={styles.filter} />
+            <div style={{ height: "25px", width: "200px", position: "relative" }}>
+              <div className={styles.search_icon}></div>
+              <input type="search" name="search" className={styles.search_box}></input>
+            </div>
           </div>
         </div>
       </section>

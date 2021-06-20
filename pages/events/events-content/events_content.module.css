@@ -15,7 +15,7 @@
   row-gap: 45px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1450px) {
   .events_cards_container {
     grid-template-columns: repeat(2, 400px);
     column-gap: 50px;
