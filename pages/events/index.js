@@ -37,6 +37,13 @@ const index = () => {
             </div>
           </div>
         </div>
+        <div className={styles.mobile_actions}>
+          <img src="/assets/images/filters.svg" className={styles.filter} />
+          <div style={{ height: "25px", width: "200px", position: "relative" }}>
+            <div className={styles.search_icon}></div>
+            <input type="search" name="search" className={styles.search_box}></input>
+          </div>
+        </div>
       </section>
       {nav == 0 ? <Upcoming /> : <Past />}
     </section>

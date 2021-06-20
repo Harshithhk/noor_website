@@ -89,3 +89,25 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(92, 92, 92);
 }
+
+@media only screen and (max-width: 500px) {
+  .past_card_wrapper {
+    height: 250px;
+  }
+  .title {
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .description {
+    font-size: 10px;
+    margin-top: 1%;
+  }
+
+  .text_content {
+    height: 50%;
+  }
+  .showcase_area {
+    height: 50%;
+    display: flex;
+  }
+}
