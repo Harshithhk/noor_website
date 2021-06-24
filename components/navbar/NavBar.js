@@ -1,9 +1,12 @@
 import styles from "./NavBar.module.css";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
-  const [left, setLeft] = useState(8);
-  const [index, setIndex] = useState(0);
+  const router = useRouter();
+  const [index, setIndex] = useState(() => (router.pathname == "/events" ? 1 : router.pathname == "/blogs" ? 3 : 0));
+  const [left, setLeft] = useState(() => index * 120);
   const [filter, setFilter] = useState("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)");
 
   const handleNavClick = (i) => {
@@ -16,6 +19,7 @@ const NavBar = () => {
   };
 
   useEffect(() => {
+    console.log(router.pathname);
     switch (index) {
       case 0:
         setFilter("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)");
@@ -51,18 +55,24 @@ const NavBar = () => {
             }}
           />
         </div>
-        <div className={styles.btns} onClick={() => handleNavClick(0)} style={{ color: index === 0 ? "#707070" : "#ffffff" }}>
-          Home
-        </div>
-        <div className={styles.btns} onClick={() => handleNavClick(1)} style={{ color: index === 1 ? "#707070" : "#ffffff" }}>
-          Events
-        </div>
+        <Link href="/">
+          <div className={styles.btns} onClick={() => handleNavClick(0)} style={{ color: index === 0 ? "#707070" : "#ffffff" }}>
+            Home
+          </div>
+        </Link>
+        <Link href="/events">
+          <div className={styles.btns} onClick={() => handleNavClick(1)} style={{ color: index === 1 ? "#707070" : "#ffffff" }}>
+            Events
+          </div>
+        </Link>
         <div className={styles.btns} onClick={() => handleNavClick(2)} style={{ color: index === 2 ? "#707070" : "#ffffff" }}>
           About us
         </div>
-        <div className={styles.btns} onClick={() => handleNavClick(3)} style={{ color: index === 3 ? "#707070" : "#ffffff" }}>
-          Blogs
-        </div>
+        <Link href="/blogs">
+          <div className={styles.btns} onClick={() => handleNavClick(3)} style={{ color: index === 3 ? "#707070" : "#ffffff" }}>
+            Blogs
+          </div>
+        </Link>
         <div className={styles.btns} onClick={() => handleNavClick(4)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
           Services
         </div>

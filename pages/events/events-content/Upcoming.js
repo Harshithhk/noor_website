@@ -1,5 +1,5 @@
 import styles from "./events_content.module.css";
-import UpcomingCard from "../../../components/events-cards/upcoming-card/UpcomingCard";
+import UpcomingCard from "../../../components/cards/upcoming-card/UpcomingCard";
 import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData";
 const Upcoming = () => {
   return (

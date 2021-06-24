@@ -28,41 +28,7 @@
   justify-content: center;
 }
 
-.upcoming_past {
-  height: 40px;
-  margin: 0px auto 0px auto;
-  display: flex;
-  width: 270px;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-}
 
-.upcoming {
-  flex: 1;
-  border-right: 1px solid #d8d8d8;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border-right: 1px solid #d8d8d8;
-  border-bottom: 1px solid #f6c1c1; */
-  /* border-style: solid;
-  border-color: #d8d8d8; */
-  /* border:  1px 5px 10px 20px solid black; */
-}
-.past {
-  flex: 1;
-  /* background-color: blue; */
-  text-align: center;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .actions {
   position: absolute;
@@ -127,10 +93,6 @@
   background-position: center;
   /* background-color: rebeccapurple; */
 }
-/* :root {
-  --card-width: 400px;
-  --outer-padding: 100px; 
-} */
 
 .events_cards_container {
   /* margin-top: 65px; */

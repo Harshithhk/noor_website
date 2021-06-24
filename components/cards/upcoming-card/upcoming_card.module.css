@@ -1,10 +1,6 @@
-/* :root {
-  --card-width: 400px;
-  --outer-padding: 100px; 
-} */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 .upcoming_card_wrapper {
-  height: 250px;
+  height: 260px;
   border-radius: 12px;
   display: flex;
   animation: comeInside 2s ease-in-out;

@@ -1,5 +1,5 @@
 import styles from "./events_content.module.css";
-import PastCard from "../../../components/events-cards/past-card/PastCard";
+import PastCard from "../../../components/cards/past-card/PastCard";
 import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData";
 
 const Past = () => {
