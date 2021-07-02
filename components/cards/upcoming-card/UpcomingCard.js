@@ -1,9 +1,10 @@
-import React from "react";
-import styles from "./upcoming_card.module.css";
-import { LightenDarkenColor } from "../../../utils/design-utils/css-utils";
+import React from "react"
+import styles from "./upcoming_card.module.css"
+import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
+import Link from "next/link"
 
 const UpcomingCard = ({ bgColor, bgUrl }) => {
-  const darkenedLabelBg = LightenDarkenColor(bgColor, -20);
+  const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
 
   return (
     <div className={styles.upcoming_card_wrapper} style={{ backgroundColor: "#f2f2f2" }}>
@@ -18,12 +19,14 @@ const UpcomingCard = ({ bgColor, bgUrl }) => {
           <div className={styles.description}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr
           </div>
-          <button className={styles.register}>Register</button>
+          <Link href="/events/register/example">
+            <button className={styles.register}>Register</button>
+          </Link>
         </div>
       </div>
       <div className={styles.image} style={{ backgroundImage: `url(${bgUrl})` }}></div>
     </div>
-  );
-};
+  )
+}
 
-export default UpcomingCard;
+export default UpcomingCard
