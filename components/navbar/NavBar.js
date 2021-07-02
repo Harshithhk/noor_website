@@ -1,43 +1,43 @@
-import styles from "./NavBar.module.css";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import styles from "./NavBar.module.css"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
 
 const NavBar = () => {
-  const router = useRouter();
-  const [index, setIndex] = useState(() => (router.pathname == "/events" ? 1 : router.pathname == "/blogs" ? 3 : 0));
-  const [left, setLeft] = useState(() => index * 120);
-  const [filter, setFilter] = useState("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)");
+  const router = useRouter()
+  const [index, setIndex] = useState(() => (router.pathname == "/events" ? 1 : router.pathname == "/blogs" ? 3 : 0))
+  const [left, setLeft] = useState(() => index * 120)
+  const [filter, setFilter] = useState("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)")
 
   const handleNavClick = (i) => {
     if (i > index) {
-      setLeft(i * 120);
+      setLeft(i * 120)
     } else {
-      setLeft(left - (index - i) * 120);
+      setLeft(left - (index - i) * 120)
     }
-    setIndex(i);
-  };
+    setIndex(i)
+  }
 
   useEffect(() => {
-    console.log(router.pathname);
+    console.log(router.pathname)
     switch (index) {
       case 0:
-        setFilter("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)");
-        break;
+        setFilter("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)")
+        break
       case 1:
-        setFilter("invert(99%) sepia(56%) saturate(1315%) hue-rotate(291deg) brightness(100%) contrast(99%)");
-        break;
+        setFilter("invert(99%) sepia(56%) saturate(1315%) hue-rotate(291deg) brightness(100%) contrast(99%)")
+        break
       case 2:
-        setFilter("invert(83%) sepia(26%) saturate(594%) hue-rotate(296deg) brightness(103%) contrast(101%)");
-        break;
+        setFilter("invert(83%) sepia(26%) saturate(594%) hue-rotate(296deg) brightness(103%) contrast(101%)")
+        break
       case 3:
-        setFilter("invert(87%) sepia(17%) saturate(241%) hue-rotate(111deg) brightness(105%) contrast(102%)");
-        break;
+        setFilter("invert(87%) sepia(17%) saturate(241%) hue-rotate(111deg) brightness(105%) contrast(102%)")
+        break
       case 4:
-        setFilter("invert(92%) sepia(13%) saturate(246%) hue-rotate(167deg) brightness(95%) contrast(107%)");
-        break;
+        setFilter("invert(92%) sepia(13%) saturate(246%) hue-rotate(167deg) brightness(95%) contrast(107%)")
+        break
     }
-  }, [index]);
+  }, [index])
 
   return (
     <nav className={styles.navbar}>
@@ -78,7 +78,7 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
