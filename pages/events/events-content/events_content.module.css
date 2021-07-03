@@ -9,13 +9,13 @@
   width: fit-content;
   /* background-color: aqua; */
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 425px);
   /* column-gap: calc((100vw - 100px - 1200px) / 2); */
-  column-gap: 50px;
-  row-gap: 50px;
+  column-gap: 45px;
+  row-gap: 45px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1400px) {
   .events_cards_container {
     grid-template-columns: repeat(2, 400px);
     column-gap: 50px;
@@ -23,10 +23,16 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .events_cards_container {
-    grid-template-columns: repeat(1, 325px);
-    column-gap: 50px;
-    row-gap: 50px;
+    grid-template-columns: repeat(1, 425px);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .events_cards_container {
+    grid-template-columns: repeat(1, 320px);
+    column-gap: 45px;
+    row-gap: 45px;
   }
 }

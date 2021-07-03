@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import styles from "./events.module.css";
-import Upcoming from "./events-content/Upcoming";
-import Past from "./events-content/Past";
+import styles from "./blogs.module.css";
+import { upcomingEventsData } from '../../utils/dummy-data/upcomingEventsData'
+import Blogcard from "../../components/cards/blog-card/BlogCard";
 
-const borderUpcoming = {
-  borderBottom: "1px solid #f6c1c1",
-};
-
-const borderPast = {
-  borderBottom: "1px solid #f6c1c1",
-};
 
 const index = () => {
   const [nav, setNav] = useState(0);
@@ -18,17 +11,9 @@ const index = () => {
     <section className={styles.events_page_wrapper}>
       <section>
         <div className={styles.heading}>
-          <div style={{ fontSize: "48px" }}>Events</div>
+          <div style={{ fontSize: "48px" }}>Blogs</div>
         </div>
         <div className={styles.events_nav}>
-          <div className={styles.upcoming_past}>
-            <div className={styles.upcoming} style={nav === 0 ? borderUpcoming : {}} onClick={() => setNav(0)}>
-              Upcoming
-            </div>
-            <div className={styles.past} style={nav === 1 ? borderPast : {}} onClick={() => setNav(1)}>
-              Past
-            </div>
-          </div>
           <div className={styles.actions}>
             <img src="/assets/images/filters.svg" className={styles.filter} />
             <div style={{ height: "25px", width: "200px", position: "relative" }}>
@@ -45,7 +30,11 @@ const index = () => {
           </div>
         </div>
       </section>
-      {nav == 0 ? <Upcoming /> : <Past />}
+      <section className={styles.events_cards_container}>
+      {upcomingEventsData.map((element) => {
+        return <Blogcard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} />;
+      })}
+    </section>
     </section>
   );
 };

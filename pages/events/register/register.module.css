@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+.register_page_wrapper {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-bottom: 6.25rem;
+  font-family: "Open Sans", sans-serif;
+  color: #707070;
+}
+
+.heading {
+  height: 180px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img {
+  margin: auto;
+  overflow: hidden;
+  width: 50%;
+}
+.content_description {
+  height: 365px;
+  width: 1100px;
+  /* background: rgb(139, 139, 139); */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content_texts {
+  width: 50%;
+  /* padding-left: 2rem; */
+  margin: auto 0;
+}
+.content_texts_inner {
+  width: 420px;
+  margin-left: auto;
+}
+
+.event_date {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.event_heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.event_description {
+  font-size: 0.875rem;
+  margin-top: 1.375rem;
+  color: #7f7f7f;
+}
+
+.event_price {
+  font-size: 1.25rem;
+  margin-top: 1.375rem;
+  font-weight: lighter;
+}
+
+.participate_gateway {
+  height: 20.625rem;
+  width: 1100px;
+  background: #f6f5f7;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.celebration_img {
+  /* margin: auto; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  overflow: hidden;
+  width: 50%;
+}
+
+.participate_form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.participate_form_inner {
+  width: 420px;
+  margin-left: auto;
+}
+
+.label {
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+}
+.name {
+  width: 18.625rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+}
+.name:focus {
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+
+.phone_number {
+  width: 18.625rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+
+  background: #fff;
+}
+
+.phone_number:focus {
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+
+.payment_button {
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 6px;
+  width: 18.625rem;
+  height: 2.625rem;
+  margin-top: 4rem;
+  font-size: 11px;
+  font-weight: 600;
+  color: #707070;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  box-shadow: 2px 2px 2px 2px rgb(221, 221, 221);
+}
+
+.payment_button:hover {
+  background-color: #fceeee;
+}
+
+.payment_button:active {
+  /* color: blue; */
+  background-color: #f8d7d7;
+}
+
+.name:focus {
+  outline: none; /* Removes the border when the input is clicked */
+}
+.phone_number:focus {
+  outline: none; /* Removes the border when the input is clicked */
+}
+
+@media only screen and (max-width: 1300px) {
+  .register_page_wrapper {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .content_description {
+    width: 800px;
+  }
+  .content_texts_inner {
+    width: 300px;
+    margin-left: auto;
+  }
+  .participate_gateway {
+    width: 800px;
+  }
+  .participate_form {
+    width: 300px;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .register_page_wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 6.25rem;
+  }
+  .content_description {
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .img {
+    width: 100%;
+  }
+  .content_texts {
+    width: 100%;
+    /* padding-left: 2rem; */
+    margin: auto 0;
+  }
+  .content_texts_inner {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .celebration_img {
+    padding: 0px;
+    width: 50%;
+  }
+  .celebration_img > img {
+    width: 90%;
+    height: fit-content;
+  }
+  .participate_gateway {
+    width: 100%;
+  }
+  .name {
+    width: 15.625rem;
+  }
+  .phone_number {
+    width: 15.625rem;
+  }
+  .payment_button {
+    width: 15.625rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .register_page_wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 6.25rem;
+  }
+
+  .content_texts_inner {
+    width: 100%;
+    /* margin-left: auto; */
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .content_texts {
+    margin-top: 2.125rem;
+  }
+  .celebration_img {
+    display: none;
+  }
+  .participate_form_inner {
+    width: 100%;
+  }
+  .participate_form {
+    width: 80%;
+    margin: auto;
+    /* display: flex; */
+    /* align-items: center; */
+  }
+  .name {
+    width: 100%;
+  }
+
+  .phone_number {
+    width: 100%;
+  }
+
+  .payment_button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .register_page_wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 6.25rem;
+  }
+  .event_date {
+    font-size: 1rem;
+  }
+  .event_heading {
+    font-size: 1.5rem;
+  }
+  .event_description {
+    font-size: 0.9rem;
+  }
+  .event_price {
+    font-size: 1rem;
+  }
+  .participate_form {
+    width: 90%;
+  }
+  .payment_button {
+    margin-top: 2rem;
+  }
+  .participate_gateway {
+    height: 17.5rem;
+  }
+}
