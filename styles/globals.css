@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+@import '~swiper/swiper.min.css';
+@import '~swiper/components/navigation/navigation.min.css';
+@import '~swiper/components/pagination/pagination.min.css';
+@import '~swiper/components/scrollbar/scrollbar.min.css';
 
 html,
 body {
