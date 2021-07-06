@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+.media_showcase {
+  /* min-width: fit-content; */
+  max-width: 1000px;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 0;
+
+  /* position: relative; */
+}
+
+.card {
+  width: 320px;
+  height: 200px;
+  margin-right: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.left_arrow {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  height: 50px;
+  width: 25px;
+  /* background-color: red; */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_arrow {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  height: 50px;
+  width: 25px;
+  /* background-color: red; */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active_buttons {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  font-size: 8px;
+}
+
+.one {
+  display: none;
+}
+.two {
+  display: none;
+}
+.three {
+}
+
+.left_arrow:active {
+  background-color: aquamarine;
+}
+.right_arrow:active {
+  background-color: aquamarine;
+}
+
+@media only screen and (max-width: 1100px) {
+  .media_showcase {
+    width: 660px;
+  }
+  .one {
+    display: none;
+  }
+  .two {
+    display: flex;
+  }
+  .three {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .media_showcase {
+    width: 320px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .one {
+    display: flex;
+  }
+  .two {
+    display: none;
+  }
+  .three {
+    display: none;
+  }
+  .right_arrow {
+    box-shadow: 1px 1px 2px rgb(238, 54, 91);
+    right: -5px;
+    height: 50px;
+    z-index: 10;
+    background-color: white;
+  }
+  .left_arrow {
+    box-shadow: 1px 1px 2px rgb(238, 54, 91);
+    left: -5px;
+    height: 50px;
+    z-index: 10;
+    background-color: white;
+  }
+}
