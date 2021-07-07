@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+.institutions_page_wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+}
+
+.heading {
+    height: 180px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #7f7f7f;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

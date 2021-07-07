@@ -73,9 +73,11 @@ const NavBar = () => {
             Blogs
           </div>
         </Link>
-        <div className={styles.btns} onClick={() => handleNavClick(4)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
-          Services
-        </div>
+        <Link href="/institutions">
+          <div className={styles.btns} onClick={() => handleNavClick(4)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
+            Services
+          </div>
+        </Link>
       </div>
     </nav>
   )
