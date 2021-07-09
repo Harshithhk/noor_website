@@ -84,12 +84,12 @@ const Carousel = () => {
       <div className={cx(styles.active_buttons, styles.three)}>
         {[...Array(pgCountForthree)].map((count, index) => {
           return index === activePage ? (
-            <div style={{ marginRight: index !== pgCountForthree.length ? "5px" : "0px" }}>
+            <div style={{ marginRight: index !== pgCountForthree.length ? "5px" : "0px", color: "#707070" }}>
               <BsCircleFill />
             </div>
           ) : (
-            <div style={{ marginRight: index !== pgCountForthree.length ? "5px" : "0px" }}>
-              <BsCircle />
+            <div style={{ marginRight: index !== pgCountForthree.length ? "5px" : "0px", color: "#ffffff" }}>
+              <BsCircleFill />
             </div>
           )
         })}
