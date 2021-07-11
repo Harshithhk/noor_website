@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .institutions_page_wrapper {
     padding-left: 40px;
@@ -12,8 +13,39 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     color: #7f7f7f;
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+.institution_reach_information {
+    display: flex;
+}
+
+.institution_reach_image {
+    flex: 1;
+}
+
+.information {
+    margin-top: 6rem;
+    flex: 1;
+}
+
+.subheading {
+    padding-right: 4rem;
+    
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #7f7f7f;
+}
+
+.text_info {
+    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    
+    color: #7f7f7f;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+}
