@@ -147,7 +147,7 @@
 
 .similar_events {
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 20rem;
   height: 200px;
   width: fit-content;
@@ -167,7 +167,7 @@
   width: 60rem;
   justify-content: space-around;
   align-items: center;
-  margin-top: 2.25rem;
+  margin-top: 4rem;
 
   /* justify-content: center; */
 }
