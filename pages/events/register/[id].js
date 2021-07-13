@@ -33,7 +33,7 @@ const Register = () => {
             <div className={styles.participate_form_inner}>
               <div>
                 <div className={styles.label}>Name</div>
-                <input className={styles.name} spellcheck="false" type="text" />
+                <input className={styles.name} spellCheck="false" type="text" />
               </div>
               <div style={{ marginTop: "2rem" }}>
                 <div className={styles.label}>Phone Number</div>

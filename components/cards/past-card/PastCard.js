@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./past_card.module.css";
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils";
-import ImageGallery from "react-image-gallery";
+
+import Link from "next/link"
 
 const PastCard = ({ bgColor, bgUrl }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20);
@@ -38,6 +39,7 @@ const PastCard = ({ bgColor, bgUrl }) => {
           </div>
         </div>
       </div>
+      <Link href="/events/eventdetails/example">
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
         <div style={{ display: "flex" }}>
           <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>
@@ -50,6 +52,10 @@ const PastCard = ({ bgColor, bgUrl }) => {
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr
         </div>
       </div>
+      </Link>
+
+
+      <style></style>
     </div>
   );
 };
