@@ -128,6 +128,38 @@ const index = () => {
             </div>
           </div>
         </section>
+        <section>
+          <div className={styles.heading} style={{ marginTop: "2rem" }}>
+            <div style={{ textAlign: "center", alignItems: "center" }}>Say hi!</div>
+          </div>
+
+          {/* _________________________________FORM________________________ */}
+
+          <div className={styles.about_us_form}>
+            <div className={styles.about_us_form_img}>
+              <img src="/assets/images/deskWithMonitor.svg" alt="" />
+            </div>
+            <div className={styles.about_us_form_inputs}>
+              <div className={styles.input_container}>
+                <div className={styles.label}>Name</div>
+                <input className={styles.namee} spellCheck="false" type="text" />
+                <div className={styles.label} style={{ marginTop: "1rem" }}>
+                  Email
+                </div>
+                <input className={styles.email} spellCheck="false" type="text" />
+                <div className={styles.label} style={{ marginTop: "1em" }}>
+                  Subject
+                </div>
+                <input className={styles.subject} spellCheck="false" type="text" />
+                <div className={styles.label} style={{ marginTop: "1rem" }}>
+                  Message
+                </div>
+                <textarea className={styles.form_message} spellCheck="false" type="text" />
+                <button className={styles.payment_button}> SUBMIT</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </section>
   )
