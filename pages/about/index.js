@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./about_us.module.css"
 import ResponsivePlayer from "../../components/video-player/ResponsivePlayer"
+import cx from "classnames"
 const index = () => {
   return (
     <>
@@ -17,6 +18,9 @@ const index = () => {
               <div style={{ textAlign: "center", alignItems: "center" }}>Founder's message</div>
             </div>
             <div className={styles.founders_message}>
+              <div className={cx(styles.message_img,styles.display)}>
+                <img src="/assets/images/Group.png" alt="" />
+              </div>
               <div className={styles.message}>
                 <div className={styles.message_heading}>Hello there!</div>
                 <p className={styles.message_description}>
@@ -33,76 +37,81 @@ const index = () => {
                   </div>
                 </p>
               </div>
-              <div className={styles.message_img}>
+              <div className={cx(styles.message_img,styles.hide)}>
                 <img src="/assets/images/Group.png" alt="" />
               </div>
             </div>
           </section>
-          <section>
+          <section className={styles.founders}>
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the founders</div>
             </div>
             <div className={styles.person}>
-              <div className={styles.person_image} style={{ paddingRight: " 5rem" }}>
+              <div className={cx(styles.person_image,styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Capture.png" alt="" />
               </div>
 
               <div className={styles.person_details}>
-                <div>
+                <div className={styles.right_text}>
                   <div className={styles.name}>Zeel</div>
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    <span className={styles.hide}> et dolore magna aliquyam
+                    
                     erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    
                     sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                     invidunt.
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
             <div className={styles.person}>
               <div className={styles.person_details}>
-                <div>
+                <div className={styles.left_text}>
                   <div className={styles.name}>Mugdha</div>
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore<span className={styles.hide}> et dolore magna aliquyam
                     erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                     sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                     invidunt.
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className={styles.person_image} style={{ paddingLeft: " 5rem" }}>
+              <div className={cx(styles.person_image,styles.right)} style={{ paddingLeft: " 5rem" }}>
                 <img src="/assets/images/Capture1.png" alt="" />
               </div>
             </div>
             <div className={styles.person}>
-              <div className={styles.person_image} style={{ paddingRight: " 5rem" }}>
+              <div className={cx(styles.person_image,styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Capture2.png" alt="" />
               </div>
 
               <div className={styles.person_details}>
-                <div>
+                <div className={styles.right_text}>
                   <div className={styles.name}>Piyush</div>
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<span className={styles.hide}> labore et dolore magna aliquyam 
                     erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                     sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                     invidunt.
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* <ResponsivePlayer /> */}
-          <section>
+          <section >
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the team</div>
             </div>
             <div className={styles.meet_the_team_avatars}>
-              <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }} >
                 <div className={styles.avtars_container}>
                   <img src="/assets/images/Meet-the-team/Avatar1.svg" alt="" />
                   <div className={styles.avatar_name}> Manas </div>
@@ -116,7 +125,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Tejaswini </div>
                 </div>
               </div>
-              <div style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
+              <div className={cx(styles.avatar_row,styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
                 <div className={styles.avtars_container}>
                   <img src="/assets/images/Meet-the-team/Avatar4.svg" alt="" />
                   <div className={styles.avatar_name}> Ramesh </div>
@@ -132,13 +141,13 @@ const index = () => {
               </div>
             </div>
           </section>
+
+
+          
           <section>
             <div className={styles.heading} style={{ marginTop: "2rem" }}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Say hi!</div>
             </div>
-
-            {/* _________________________________FORM________________________ */}
-
             <div className={styles.about_us_form}>
               <div className={styles.about_us_form_img}>
                 <img src="/assets/images/deskWithMonitor.svg" alt="" />

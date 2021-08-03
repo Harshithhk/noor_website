@@ -1,5 +1,7 @@
 import React from "react"
 import styles from "./gethelp.module.css"
+import Link from "next/link"
+
 const index = () => {
   return (
     <>
@@ -138,7 +140,9 @@ const index = () => {
           </div>
           <div className={styles.protal}>
             <div className={styles.portal_text}>Answer a few questions and we'll find the best therapist match for you</div>
-            <button className={styles.portal_button}>Take the test</button>
+            <Link href="/gethelp/questions">
+              <button className={styles.portal_button}>Take the test</button>
+            </Link>
           </div>
         </div>
 

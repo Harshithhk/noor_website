@@ -63,12 +63,13 @@
 .person {
   width: 100%;
   display: flex;
+  height: 25rem;
 }
 .person_image {
   width: 50%;
 }
 .person_image img {
-  width: 100%;
+  height: 100%;
   /* height: 100%; */
   object-fit: cover;
   overflow: hidden;
@@ -103,6 +104,9 @@
 .avtars_container {
   height: 10rem;
   width: 10rem;
+}
+.avtars_container img{
+  width: 100%;
 }
 .avatar_name {
   width: 100%;
@@ -219,4 +223,207 @@
 .payment_button:active {
   /* color: blue; */
   background-color: #f8d7d7;
+}
+.display{
+  display: none;
+}
+.hide{
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+  .about_us_page_wrapper {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .person {
+  width: 100%;
+  display: flex;
+  height: 20rem;
+}
+.person_image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.right{
+  justify-content:flex-end;
+}
+.person_image img {
+  height: 80%;
+  /* height: 100%; */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.person_details {
+  display: flex;
+  color: #707070;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0rem;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .event_details_page_wrapper {
+    /* padding-left: 15%;
+    padding-right: 15%; */
+    padding-bottom: 6.25rem;
+  }
+
+  .founders_message {
+  width: 100%;
+  flex-direction: column;
+}
+.message{
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+.message_description{
+  text-align:justify;
+
+}
+.message_img{
+  width: 100%;
+}
+.hide{
+  display: none;
+}
+.display{
+  display: inherit;
+}
+ .person_image{
+    width: 60%;
+    
+  }
+  .left{
+    padding-right: 3rem !important;
+  }
+  .right{
+    padding-left: 3rem !important;
+  }
+  .person_image img{
+    padding: 0rem;
+    height: auto;
+    width: 100%;
+    padding-right: 0rem !important;
+  }
+  .person_details{
+    padding: 0rem;
+    width: 50%;
+  }
+  
+
+
+}
+@media only screen and (max-width: 800px) {
+  .heading {
+    font-size: 40px;
+  }
+  .meet_the_team_avatars{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .avatar_row{
+    flex-direction: column;
+    margin-top: 0rem !important;
+  }
+  .avtars_container{
+    margin-top: 0rem;
+  }
+  /* .person{
+    flex-direction: column;
+  }
+  .person_details{
+    width: 100%;
+  }
+  .person_image{
+    width:100%
+  } */
+}
+
+@media only screen and (max-width: 750px) {
+  .event_details_page_wrapper {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 6.25rem;
+  }
+  .about_us_form_img{
+    display: none;
+  }
+  .about_us_form_inputs {
+  width: 100%;
+  }
+  .input_container input {
+  width: 13.625rem;
+  }
+  .input_container textarea {
+  width: 13.625rem;
+  }
+  .avtars_container{
+    width: 118px;
+  }
+  .about_us_form {
+  height: 28rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .founders{
+ margin-left: -2.25rem;
+    margin-right: -2.25rem;
+  }
+  .person{ 
+    height: 15rem;
+    justify-content: space-around;
+   
+  }
+  .name{
+    font-size: 1.5rem;
+  }
+  .designation{
+    font-size: 0.75rem;
+  }
+  .text{
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .left{
+    padding-right: 1rem !important;
+  }
+  .right{
+    padding-left: 1rem !important;
+  }
+  .left_text{
+    margin-left: 1rem;
+  }
+  .right_text{
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .person{ 
+    height: 12rem;
+  }
+  .video{
+  height: 200px;
+  }
 }
