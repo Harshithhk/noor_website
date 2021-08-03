@@ -1,7 +1,8 @@
+
 import React, { useState } from "react";
 import styles from "./blogs.module.css";
 import { upcomingEventsData } from '../../utils/dummy-data/upcomingEventsData'
-import Blogcard from "../../components/cards/blog-card/BlogCard";
+import Blogcard from "../../components/cards/new-blog-card/BlogCard";
 
 
 const index = () => {
@@ -32,7 +33,7 @@ const index = () => {
       </section>
       <section className={styles.events_cards_container}>
       {upcomingEventsData.map((element) => {
-        return <Blogcard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} />;
+        return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} />;
       })}
     </section>
     </section>
