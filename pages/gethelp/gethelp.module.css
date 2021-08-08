@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+.events_page_wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  /* padding-bottom: 100px; */
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading {
+  height: 180px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.imglines {
+  width: 100%;
+  height: 20rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.person_image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5rem; */
+}
+.innerBg {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/Get-Help/Img1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerBg img {
+  /* width: 50%; */
+  /* height: 100%; */
+  object-fit: cover;
+  overflow: hidden;
+}
+.person_image img {
+  object-fit: cover;
+  overflow: hidden;
+}
+.content {
+  width: 50%;
+  height: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #7f7f7f;
+  /* padding-right: 5rem; */
+}
+.content div {
+  width: 18.75rem;
+  text-align: center;
+}
+.questions_wrapper {
+  margin-top: 3rem;
+}
+
+.question_container {
+  height: 12rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background-color: #707070;
+}
+
+.question {
+  font-size: 1.25rem;
+  color: #7f7f7f;
+}
+.answer {
+  font-size: 0.8rem;
+  color: #7f7f7f;
+  margin-top: 1.4rem;
+}
+
+.partners_wrapper {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-bottom: 10rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.partners_img {
+  width: 31.25rem;
+  height: 24rem;
+  margin: 0 auto;
+}
+.partners_img img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.person {
+  width: 100%;
+  display: flex;
+}
+
+.persons_image {
+  width: 50%;
+}
+.persons_image img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.person_details {
+  display: flex;
+  color: #707070;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 5rem;
+}
+.name {
+  font-size: 2.25rem;
+}
+
+.designation {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.text {
+  font-size: 0.875rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 2rem;
+}
+
+.test_portal {
+  margin-top: 10rem;
+  height: 28rem;
+  width: 100%;
+  border-radius: 20px;
+  background: #f6f5f7;
+  display: flex;
+}
+.test_img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.protal {
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portal_text {
+  font-size: 1.25rem;
+  color: #7f7f7f;
+  text-align: center;
+}
+.portal_button {
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 3px;
+  width: 12rem;
+  height: 2.5rem;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  /* font-weight: 600; */
+  color: #707070;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  box-shadow: 2px 2px 2px 2px rgb(221, 221, 221);
+}
+
+.portal_button:hover {
+  background-color: #fceeee;
+}
+
+.portal_button:active {
+  background-color: #f8d7d7;
+}
+
+.about_us_form {
+  height: 31.25rem;
+  width: 100%;
+  background-color: #ddedfa;
+  display: flex;
+  padding: 0 2rem 0 2rem;
+}
+.about_us_form_img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_us_form_inputs {
+  width: 50%;
+  /* background-color: red; */
+  display: flex;
+}
+.input_container {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #707070;
+  margin-bottom: 5px;
+  font-size: 0.875rem;
+}
+.namee {
+  width: 18.625rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+}
+.namee:focus {
+  outline: none; /* Removes the border when the input is clicked */
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+.email {
+  width: 18.625rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+}
+.email:focus {
+  outline: none; /* Removes the border when the input is clicked */
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+.subject {
+  width: 18.625rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+}
+.subject:focus {
+  outline: none; /* Removes the border when the input is clicked */
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+.form_message {
+  width: 18.625rem;
+  height: 5rem;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #707070;
+}
+.form_message:focus {
+  outline: none; /* Removes the border when the input is clicked */
+  box-shadow: inset 0 0 2px 2px rgb(236, 236, 236);
+}
+
+.payment_button {
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 6px;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 2rem;
+  font-size: 11px;
+  /* font-weight: 600; */
+  color: #707070;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  box-shadow: 2px 2px 2px 2px rgb(221, 221, 221);
+}
+
+.payment_button:hover {
+  background-color: #fceeee;
+}
+
+.payment_button:active {
+  /* color: blue; */
+  background-color: #f8d7d7;
+}
+
+.pd_left {
+  padding-left: 14rem;
+}
+.pd_right {
+  padding-right: 14rem;
+}
+
+.qc_pd_right {
+  padding-right: 17rem;
+}
+
+.qc_pd_left {
+  padding-left: 17rem;
+}
+.show {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    height: 125px;
+  }
+  .pd_left {
+    padding-left: 3rem;
+  }
+  .pd_right {
+    padding-right: 3rem;
+  }
+  .qc_pd_right {
+    padding-right: 4rem;
+  }
+
+  .qc_pd_left {
+    padding-left: 4rem;
+  }
+  .innerBg {
+    background: none;
+  }
+  .partners_wrapper {
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+  }
+  .partners_img {
+    width: 20.25rem;
+    height: 22rem;
+    margin: 0 auto;
+  }
+  .test_img {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+  .test_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .test_portal {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .heading {
+    font-size: 40px;
+  }
+  .about_us_form_img {
+    display: none;
+  }
+  .about_us_form_inputs {
+    width: 100%;
+  }
+  .input_container input {
+    width: 13.625rem;
+  }
+  .input_container textarea {
+    width: 13.625rem;
+  }
+  .avtars_container {
+    width: 118px;
+  }
+  .about_us_form {
+    height: 28rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .question_container {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .answer {
+    font-size: 0.8rem;
+    color: #7f7f7f;
+    margin-top: 1rem;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: inherit;
+  }
+
+  .imglines {
+    width: 100%;
+    height: 20rem;
+    /* padding-left: 5rem; */
+    /* padding-right: 5rem; */
+    padding: 0rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .person_image {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  .events_page_wrapper {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .img_mg_top {
+    margin-top: 3rem;
+  }
+
+  .test_portal {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: fit-content;
+    margin-top: 1rem;
+  }
+  .test_img {
+    width: 100%;
+    padding: 0rem;
+  }
+  .protal {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .partners_wrapper {
+    padding: 1.25rem;
+  }
+  .portal_text {
+    margin-top: 2rem;
+  }
+  .portal_button {
+    margin-top: 2rem;
+    width: 12rem;
+    height: 2.25rem;
+  }
+}
