@@ -3,7 +3,7 @@
   padding-left: 6.25rem;
   padding-right: 6.25rem;
 
-  padding-bottom: 10.25rem;
+  padding-bottom: 0rem !important;
   font-family: "Open Sans", sans-serif;
 
   /* height: 100px; */
@@ -18,6 +18,31 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+}
+
+.partners_img {
+  width: 31.25rem;
+  height: 24rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.partners_img img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .partners_img {
+    width: 90%;
+    height: 17rem;
+    margin: 0 auto;
+  }
+  .partners_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+  }
 }
 
 .video {

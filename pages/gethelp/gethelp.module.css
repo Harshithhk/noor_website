@@ -2,7 +2,7 @@
 .events_page_wrapper {
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   font-family: "Open Sans", sans-serif;
 }
 
@@ -12,15 +12,16 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #7f7f7f;
-  /* background-color: aqua; */
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 48px;
 }
 .imglines {
   width: 100%;
   height: 20rem;
   padding-left: 5rem;
+  padding-right: 5rem;
   display: flex;
   /* background-color: rgb(255, 255, 255); */
 }
@@ -62,11 +63,14 @@
   align-items: center;
   font-size: 1.25rem;
   color: #7f7f7f;
-  padding-right: 5rem;
+  /* padding-right: 5rem; */
 }
 .content div {
   width: 18.75rem;
   text-align: center;
+}
+.questions_wrapper {
+  margin-top: 3rem;
 }
 
 .question_container {
@@ -303,4 +307,163 @@
 .payment_button:active {
   /* color: blue; */
   background-color: #f8d7d7;
+}
+
+.pd_left {
+  padding-left: 14rem;
+}
+.pd_right {
+  padding-right: 14rem;
+}
+
+.qc_pd_right {
+  padding-right: 17rem;
+}
+
+.qc_pd_left {
+  padding-left: 17rem;
+}
+.show {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    height: 125px;
+  }
+  .pd_left {
+    padding-left: 3rem;
+  }
+  .pd_right {
+    padding-right: 3rem;
+  }
+  .qc_pd_right {
+    padding-right: 4rem;
+  }
+
+  .qc_pd_left {
+    padding-left: 4rem;
+  }
+  .innerBg {
+    background: none;
+  }
+  .partners_wrapper {
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+  }
+  .partners_img {
+    width: 20.25rem;
+    height: 22rem;
+    margin: 0 auto;
+  }
+  .test_img {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+  .test_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .test_portal {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .heading {
+    font-size: 40px;
+  }
+  .about_us_form_img {
+    display: none;
+  }
+  .about_us_form_inputs {
+    width: 100%;
+  }
+  .input_container input {
+    width: 13.625rem;
+  }
+  .input_container textarea {
+    width: 13.625rem;
+  }
+  .avtars_container {
+    width: 118px;
+  }
+  .about_us_form {
+    height: 28rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .question_container {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .answer {
+    font-size: 0.8rem;
+    color: #7f7f7f;
+    margin-top: 1rem;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: inherit;
+  }
+
+  .imglines {
+    width: 100%;
+    height: 20rem;
+    /* padding-left: 5rem; */
+    /* padding-right: 5rem; */
+    padding: 0rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .person_image {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  .events_page_wrapper {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .img_mg_top {
+    margin-top: 3rem;
+  }
+
+  .test_portal {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: fit-content;
+    margin-top: 1rem;
+  }
+  .test_img {
+    width: 100%;
+    padding: 0rem;
+  }
+  .protal {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .partners_wrapper {
+    padding: 1.25rem;
+  }
+  .portal_text {
+    margin-top: 2rem;
+  }
+  .portal_button {
+    margin-top: 2rem;
+    width: 12rem;
+    height: 2.25rem;
+  }
 }

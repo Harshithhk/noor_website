@@ -1,6 +1,8 @@
 import React from "react"
 import styles from "./gethelp.module.css"
 import Link from "next/link"
+import ButWhy from "../../components/but-why/index"
+import cx from "classnames"
 
 const index = () => {
   return (
@@ -8,39 +10,50 @@ const index = () => {
       <section className={styles.events_page_wrapper}>
         <main>
           <div className={styles.heading}>
-            <div style={{ fontSize: "48px" }}>Seek Help</div>
+            <div style={{ textAlign: "center", alignItems: "center" }}>Seek Help</div>
           </div>
           <div className={styles.imglines}>
             <div className={styles.person_image}>
-              <div className={styles.innerBg}>
+              <div className={cx(styles.innerBg, styles.hide)}>
                 <img src="/assets/images/Get-Help/Img1Inner.png" alt="" />
               </div>
+              <img className={styles.show} src="/assets/images/Get-Help/Img1Inner.png" alt="" />
             </div>
             <div className={styles.content}>
               <div>The journey to stable mental health is a long one</div>
             </div>
           </div>
           <div className={styles.imglines}>
+            <div className={cx(styles.person_image, styles.show, styles.img_mg_top)}>
+              <img src="/assets/images/Get-Help/Img2.svg" alt="" />
+            </div>
             <div className={styles.content}>
               <div>We all feel low sometimes</div>
             </div>
-            <div className={styles.person_image}>
+            <div className={cx(styles.person_image, styles.hide)}>
               <img src="/assets/images/Get-Help/Img2.svg" alt="" />
             </div>
           </div>
           <div className={styles.imglines}>
-            <div className={styles.person_image}>
+            <div className={cx(styles.person_image, styles.show, styles.img_mg_top)}>
               <img src="/assets/images/Get-Help/Img3.svg" alt="" />
             </div>
-            <div className={styles.content}>
+            <div className={cx(styles.content, styles.hide)}>
               <div>Luckily, you can start your journey from the comfort of your own home!</div>
+            </div>
+            <div className={cx(styles.content, styles.show)} style={{ marginTop: "1rem" }}>
+              <div>Luckily, you can start your journey from the comfort of your own home!</div>
+            </div>
+            <div className={cx(styles.person_image, styles.hide, styles.img_mg_top)}>
+              <img src="/assets/images/Get-Help/Img3.svg" alt="" />
             </div>
           </div>
         </main>
       </section>
-      <section>
-        <div style={{ paddingLeft: "14rem" }}>
-          <div className={styles.question_container} style={{ borderRadius: "12px 0px 0px 12px", background: "#EEE2F7", paddingRight: "17rem" }}>
+
+      <section className={styles.questions_wrapper}>
+        <div className={styles.pd_left}>
+          <div className={cx(styles.question_container, styles.qc_pd_right)} style={{ borderRadius: "12px 0px 0px 12px", background: "#EEE2F7" }}>
             <div className={styles.question}>Question example : Is it okay to feel this way?</div>
             <div className={styles.answer}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -48,8 +61,8 @@ const index = () => {
             </div>
           </div>
         </div>
-        <div style={{ paddingRight: "14rem" }}>
-          <div className={styles.question_container} style={{ borderRadius: "0px 12px 12px 0px", background: "#FFC8DD", paddingLeft: "17rem" }}>
+        <div className={styles.pd_right}>
+          <div className={cx(styles.question_container, styles.qc_pd_left)} style={{ borderRadius: "0px 12px 12px 0px", background: "#FFC8DD" }}>
             <div className={styles.question}>Question example : Is it okay to feel this way?</div>
             <div className={styles.answer}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -57,8 +70,8 @@ const index = () => {
             </div>
           </div>
         </div>
-        <div style={{ paddingLeft: "14rem" }}>
-          <div className={styles.question_container} style={{ borderRadius: "12px 0px 0px 12px", background: "#EEE2F7", paddingRight: "17rem" }}>
+        <div className={styles.pd_left}>
+          <div className={cx(styles.question_container, styles.qc_pd_right)} style={{ borderRadius: "12px 0px 0px 12px", background: "#EEE2F7" }}>
             <div className={styles.question}>Question example : Is it okay to feel this way?</div>
             <div className={styles.answer}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -66,8 +79,8 @@ const index = () => {
             </div>
           </div>
         </div>
-        <div style={{ paddingRight: "14rem" }}>
-          <div className={styles.question_container} style={{ borderRadius: "0px 12px 12px 0px", background: "#FFC8DD", paddingLeft: "17rem" }}>
+        <div className={styles.pd_right}>
+          <div className={cx(styles.question_container, styles.qc_pd_left)} style={{ borderRadius: "0px 12px 12px 0px", background: "#FFC8DD" }}>
             <div className={styles.question}>Question example : Is it okay to feel this way?</div>
             <div className={styles.answer}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -76,64 +89,8 @@ const index = () => {
           </div>
         </div>
       </section>
+      <ButWhy />
       <section className={styles.partners_wrapper}>
-        <div className={styles.heading} style={{ transform: "translateY(-1.5rem)" }}>
-          <div style={{ fontSize: "48px" }}>Our partners can help</div>
-        </div>
-        <div className={styles.partners_img}>
-          <img src="/assets/images/Get-Help/partners.svg" alt="" srcset="" />
-        </div>
-        <div className={styles.person} style={{ marginTop: "7rem" }}>
-          <div className={styles.persons_image} style={{ paddingRight: " 5rem" }}>
-            <img src="/assets/images/Capture.png" alt="" />
-          </div>
-
-          <div className={styles.person_details}>
-            <div>
-              <div className={styles.name}>Zeel</div>
-              <div className={styles.designation}>Designation</div>
-              <div className={styles.text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.person}>
-          <div className={styles.person_details}>
-            <div>
-              <div className={styles.name}>Mugdha</div>
-              <div className={styles.designation}>Designation</div>
-              <div className={styles.text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-              </div>
-            </div>
-          </div>
-          <div className={styles.persons_image} style={{ paddingLeft: " 5rem" }}>
-            <img src="/assets/images/Capture1.png" alt="" />
-          </div>
-        </div>
-        <div className={styles.person}>
-          <div className={styles.persons_image} style={{ paddingRight: " 5rem" }}>
-            <img src="/assets/images/Capture2.png" alt="" />
-          </div>
-
-          <div className={styles.person_details}>
-            <div>
-              <div className={styles.name}>Piyush</div>
-              <div className={styles.designation}>Designation</div>
-              <div className={styles.text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className={styles.test_portal}>
           <div className={styles.test_img}>
             <img src="/assets/images/Get-Help/questionsPortal.svg" alt="" />
@@ -148,11 +105,8 @@ const index = () => {
 
         <section>
           <div className={styles.heading} style={{ marginTop: "2rem" }}>
-            <div style={{ textAlign: "center", alignItems: "center", fontSize: "48px" }}>Reach out to us</div>
+            <div style={{ textAlign: "center", alignItems: "center", padding: "2rem" }}>Reach out to us</div>
           </div>
-
-          {/* _________________________________FORM________________________ */}
-
           <div className={styles.about_us_form}>
             <div className={styles.about_us_form_img}>
               <img src="/assets/images/deskWithMonitor.svg" alt="" />
