@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+.home_wrapper {
+  padding-bottom: 10.25rem;
+  font-family: "Open Sans", sans-serif;
+
+  /* height: 100px; */
+}
+
+.transformation {
+  transform: translateY(-8rem);
+}
+
+.heading {
+  height: 180px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+._noor_bg_container {
+  height: 750px;
+  width: 100%;
+  /* overflow-y: hidden; */
+  /* margin-bottom: 10000px; */
+
+  background-image: url("/assets/images/Utils/Background_noor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-8rem);
+}
+.whats_new_bg_container {
+  background-color: #fecece;
+  height: 40rem;
+}
+/* 
+.whats_new_bg_container {
+  height: 750px;
+  width: 100%;
+
+  background-image: url("/assets/images/Utils/Background_noor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-8rem);
+} */
