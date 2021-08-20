@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import Image from "next/image"
 import styles from "./home.module.css"
+import styles1 from "./events/eventdetails/event_details.module.css"
 import cx from "classnames"
 
 import { BsCircle, BsCircleFill } from "react-icons/bs"
@@ -80,27 +81,30 @@ export default function Home() {
           </section>
           <section className={styles.transformation}>
             <div className={styles.heading}>
-              <div style={{ textAlign: "center", alignItems: "center" }}>Here's what's new</div>
+              <div style={{ textAlign: "center", alignItems: "center" }}>
+                <div className={styles.inner_heading}>Here's what's new</div>
+                <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
+              </div>
             </div>
             <div className={styles.whats_new_bg_container}>
-              <section className={styles.impressions}>
-                <div className={styles.cards_container}>
+              <section className={styles1.impressions_home}>
+                <div className={styles1.cards_container}>
                   {impressions.map((impression) => (
-                    <div className={styles.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
-                      <div className={styles.person}>
-                        <div className={styles.avatar}>
+                    <div className={styles1.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
+                      <div className={styles1.person}>
+                        <div className={styles1.avatar}>
                           <img src={impression.img} alt={impression.img} />
                         </div>
-                        <div className={styles.nameAndEvent}>
+                        <div className={styles1.nameAndEvent}>
                           <h1>{impression.name}</h1>
                           <p>{impression.event}</p>
                         </div>
                       </div>
-                      <div className={styles.review}>{impression.review}</div>
+                      <div className={styles1.review}>{impression.review}</div>
                     </div>
                   ))}
                 </div>
-                <div className={styles.active_buttons}>
+                <div className={styles1.active_buttons}>
                   {impressions.map((count, index) => {
                     return index === activeCard ? (
                       <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
@@ -122,6 +126,125 @@ export default function Home() {
                   })}
                 </div>
               </section>
+            </div>
+          </section>
+          <section className={styles.transformation2}>
+            <div className={styles.heading}>
+              <div style={{ textAlign: "center", alignItems: "center" }}>
+                <div className={styles.inner_heading}>Here's what's old</div>
+                <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
+              </div>
+            </div>
+            <div className={styles.whats_new_bg_container}>
+              <div className={styles.graphic_container}>
+                <div className={styles.left_holder}>
+                  <div className={styles.left_large}>
+                    <img src="/assets/images/WhatsOld-Placeholders/LeftLarge.png" alt="" />
+                  </div>
+                  <div className={styles.left_small}>
+                    <div className={styles.left_left}>
+                      <div className={styles.left_small_img}>
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                      </div>
+                      <div className={styles.left_small_img}>
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                      </div>
+                    </div>
+                    <div className={styles.right_right}>
+                      <div className={styles.left_small_img}>
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                      </div>
+                      <div className={styles.left_small_img}>
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.right_holder}>
+                  <img src="/assets/images/WhatsOld-Placeholders/RightImg.png" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className={styles.transformation3}>
+            <div className={styles.heading}>
+              <div style={{ textAlign: "center", alignItems: "center" }}>
+                <div className={styles.inner_heading}>Looking for help?</div>
+                <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
+              </div>
+            </div>
+            <div className={styles.whats_new_bg_container}>
+              <div className={styles.help_text}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+              </div>
+            </div>
+            <div className={styles.seekHelp_bg}>
+              <img src="/assets/images/Utils/SeekHelp.png" alt="" />
+            </div>
+            <button className={styles.seekHelp_button}>Seek Help</button>
+          </section>
+          <section className={styles.they_think}>
+            <div className={styles.heading}>
+              <div style={{ textAlign: "center", alignItems: "center" }}>They think we're nice</div>
+            </div>
+            <section className={styles1.impressions}>
+              <div className={styles1.cards_container}>
+                {impressions.map((impression) => (
+                  <div className={styles1.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
+                    <div className={styles1.person}>
+                      <div className={styles1.avatar}>
+                        <img src={impression.img} alt={impression.img} />
+                      </div>
+                      <div className={styles1.nameAndEvent}>
+                        <h1>{impression.name}</h1>
+                        <p>{impression.event}</p>
+                      </div>
+                    </div>
+                    <div className={styles1.review}>{impression.review}</div>
+                  </div>
+                ))}
+              </div>
+              <div className={styles1.active_buttons}>
+                {impressions.map((count, index) => {
+                  return index === activeCard ? (
+                    <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
+                      <BsCircleFill
+                        onClick={() => {
+                          setCard(index)
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#ffffff", cursor: "pointer" }}>
+                      <BsCircleFill
+                        onClick={() => {
+                          setCard(index)
+                        }}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
+            </section>
+          </section>
+
+          <section className={styles.transformation4}>
+            <div className={styles.heading}>
+              <div style={{ textAlign: "center", alignItems: "center" }}>
+                <div className={styles.inner_heading}>Institutional Reach</div>
+                <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
+              </div>
+            </div>
+            <div className={styles.whats_new_bg_container}>
+              <div className={styles.institutional_text}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                <div className={styles.absolute_hyperLink}>Check out Institutes</div>
+              </div>
             </div>
           </section>
         </main>

@@ -72,6 +72,16 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.impressions_home {
+  height: 650px;
+  width: 100%;
+  overflow-y: hidden;
+  /* margin-bottom: 10000px; */
+
+  /* background-image: url("/assets/images/Subtraction 9.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .cards_container {
   width: 35rem;
@@ -337,6 +347,9 @@
     margin-bottom: 2.5rem;
   }
   .impressions {
+    height: 500px;
+  }
+  .impressions_home {
     height: 500px;
   }
   .cards_container {
