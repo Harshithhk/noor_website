@@ -90,21 +90,28 @@ export default function Home() {
               <section className={styles1.impressions_home}>
                 <div className={styles1.cards_container}>
                   {impressions.map((impression) => (
-                    <div className={styles1.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
-                      <div className={styles1.person}>
-                        <div className={styles1.avatar}>
-                          <img src={impression.img} alt={impression.img} />
-                        </div>
-                        <div className={styles1.nameAndEvent}>
-                          <h1>{impression.name}</h1>
-                          <p>{impression.event}</p>
-                        </div>
+                    <div
+                      className={cx(styles1.card, styles.whats_new_card)}
+                      key={impression.id}
+                      id="card"
+                      style={{ transform: `translateX(${translateX}px)` }}
+                    >
+                      <div className={styles.new_img_container}>
+                        <img src="/assets/images/WhatsNew-PlaceHolders/img_placeholder.png" alt="" />
                       </div>
-                      <div className={styles1.review}>{impression.review}</div>
+                      <div className={styles.whats_new_content}>
+                        <div className={styles.label}>New Event</div>
+                        <div className={styles.event_name}>New Event</div>
+                        <div className={styles.event_details}>
+                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                          aliquyam erat, sed diam voluptua.{" "}
+                        </div>
+                        <button className={styles.register_button}>Seek Help</button>
+                      </div>
                     </div>
                   ))}
                 </div>
-                <div className={styles1.active_buttons}>
+                <div className={styles1.active_buttons} style={{ transform: "TranslateY(-20px)" }}>
                   {impressions.map((count, index) => {
                     return index === activeCard ? (
                       <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
@@ -127,6 +134,7 @@ export default function Home() {
                 </div>
               </section>
             </div>
+            <div className={styles.see_all_events}>See all events</div>
           </section>
           <section className={styles.transformation2}>
             <div className={styles.heading}>
@@ -135,35 +143,45 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container}>
+            <div className={styles.whats_new_bg_container} style={{ flexDirection: "column", height: "50em" }}>
               <div className={styles.graphic_container}>
                 <div className={styles.left_holder}>
                   <div className={styles.left_large}>
-                    <img src="/assets/images/WhatsOld-Placeholders/LeftLarge.png" alt="" />
+                    <img src="/assets/images/WhatsOld-Placeholders/LeftLarge1.png" alt="" />
                   </div>
                   <div className={styles.left_small}>
                     <div className={styles.left_left}>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
                       </div>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
                       </div>
                     </div>
                     <div className={styles.right_right}>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
                       </div>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallVideo1.png" alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className={styles.right_holder}>
-                  <img src="/assets/images/WhatsOld-Placeholders/RightImg.png" alt="" srcset="" />
+                  <img src="/assets/images/WhatsOld-Placeholders/RightImg1.png" alt="" srcset="" />
                 </div>
               </div>
+              <div className={styles.old_content}>
+                <div className={styles.old_content_name}>Event Name</div>
+                <div className={styles.old_content_text}>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                  erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua.
+                </div>
+              </div>
+              <div className={styles.line}></div>
             </div>
           </section>
           <section className={styles.transformation3}>
@@ -173,8 +191,8 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container}>
-              <div className={styles.help_text}>
+            <div className={styles.whats_new_bg_container} style={{ height: "35rem" }}>
+              <div className={styles.help_text} style={{ transform: "translateY(-40px)" }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
                 est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -238,7 +256,7 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container}>
+            <div className={styles.whats_new_bg_container} style={{ height: "30rem" }}>
               <div className={styles.institutional_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
