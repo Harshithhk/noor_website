@@ -1,12 +1,11 @@
-
-import React, { useState } from "react";
-import styles from "./blogs.module.css";
-import { upcomingEventsData } from '../../utils/dummy-data/upcomingEventsData'
-import Blogcard from "../../components/cards/new-blog-card/BlogCard";
-
+import React, { useState } from "react"
+import styles from "./blogs.module.css"
+import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+// import Blogcard from "../../components/cards/new-blog-card/BlogCard";
+import Blogcard from "../../components/cards/blog-card/BlogCard"
 
 const index = () => {
-  const [nav, setNav] = useState(0);
+  const [nav, setNav] = useState(0)
 
   return (
     <section className={styles.events_page_wrapper}>
@@ -32,12 +31,13 @@ const index = () => {
         </div>
       </section>
       <section className={styles.events_cards_container}>
-      {upcomingEventsData.map((element) => {
-        return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} />;
-      })}
+        {upcomingEventsData.map((element) => {
+          // return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} />;
+          return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} id={element.id} />
+        })}
+      </section>
     </section>
-    </section>
-  );
-};
+  )
+}
 
-export default index;
+export default index

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+.blog_page_wrapper {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+
+  padding-bottom: 10.25rem;
+  font-family: "Open Sans", sans-serif;
+
+  /* height: 100px; */
+}
+.heading {
+  height: 180px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.img_container {
+  width: 45.5rem;
+  height: 26rem;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.minor_text {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #7f7f7f;
+  margin: auto;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+.blog {
+  font-size: 0.8rem;
+  color: #707070;
+  line-height: 20px;
+  width: 45.5rem;
+  margin: 0 auto;
+  margin-top: 3.75rem;
+}
+.similar_blogs {
+  width: fit-content;
+  font-size: 2rem;
+  color: #707070;
+  font-weight: lighter;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+.similar_blog_cards {
+  width: 52.5rem;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin: 0 auto;
+  margin-top: 1.375rem;
+}
+.card_container {
+  width: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    height: 125px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .similar_blog_cards {
+    flex-direction: column;
+    height: 37.5rem;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .img_container {
+    width: 35rem;
+    height: 20.688rem;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .blog {
+    width: 35rem;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .img_container {
+    width: 25rem;
+    height: 14.375rem;
+  }
+  .blog {
+    width: 25rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .blog_page_wrapper {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .heading {
+    font-size: 35px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .img_container {
+    width: 19.5rem;
+    height: 11.125rem;
+  }
+  .blog {
+    width: 19.5rem;
+    font-size: 0.75rem;
+  }
+  .card_container {
+    width: 19.5rem;
+  }
+  .similar_blog_cards {
+    width: 19.5rem;
+  }
+}
