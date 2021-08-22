@@ -27,7 +27,14 @@ const index = () => {
     <section className={styles.blog_page_wrapper}>
       <main>
         <div className={styles.heading}>
+          <div className={styles.splash}>
+            <img src="/assets/images/Utils/Splash_left.png" alt="" />
+          </div>
           <div style={{ textAlign: "center", alignItems: "center" }}>Lorem ipsum dolor sit amet, consetetur</div>
+
+          <div className={styles.splash}>
+            <img src="/assets/images/Utils/Splash_right.png" alt="" />
+          </div>
         </div>
         <div className={styles.img_container}>
           <img src="/assets/images/Blog/Blog_img_placeholder.png" alt="" />

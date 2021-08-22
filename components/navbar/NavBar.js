@@ -6,7 +6,15 @@ import { useRouter } from "next/router"
 const NavBar = () => {
   const router = useRouter()
   const [index, setIndex] = useState(() =>
-    router.pathname == "/events" ? 1 : router.pathname == "/about" ? 2 : router.pathname == "/blogs" ? 3 : router.pathname == "/gethelp" ? 4 : 0
+    router.pathname.includes("/events")
+      ? 1
+      : router.pathname.includes("/about")
+      ? 2
+      : router.pathname.includes("/blogs")
+      ? 3
+      : router.pathname.includes("/gethelp")
+      ? 4
+      : 0
   )
   const [left, setLeft] = useState(() => index * 120)
   const [filter, setFilter] = useState("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)")
