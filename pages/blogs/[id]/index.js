@@ -3,6 +3,7 @@ import styles from "./individual_blog.module.css"
 // import blogCard from "../../../components/cards/blog-card/BlogCard"
 import BlogCard from "../../../components/cards/blog-card/BlogCard"
 import { useRouter } from "next/router"
+import cx from "classnames"
 
 var upcomingEventsData = [
   {
