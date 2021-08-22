@@ -77,7 +77,9 @@ export default function Home() {
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>What is Noor?</div>
             </div>
-            <div className={styles._noor_bg_container}></div>
+            <div className={styles._noor_bg_container}>
+              <img className={styles.noor_bg_img} src="/assets/images/Utils/Background_noor.png" alt="" />
+            </div>
           </section>
           <section className={styles.transformation}>
             <div className={styles.heading}>
@@ -86,9 +88,9 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container}>
+            <div className={cx(styles.whats_new_bg_container, styles.bg_container_1)}>
               <section className={styles1.impressions_home}>
-                <div className={styles1.cards_container}>
+                <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
                   {impressions.map((impression) => (
                     <div
                       className={cx(styles1.card, styles.whats_new_card)}
@@ -111,7 +113,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <div className={styles1.active_buttons} style={{ transform: "TranslateY(-20px)" }}>
+                <div className={cx(styles1.active_buttons, styles.active_buttons)} style={{ transform: "TranslateY(-20px)" }}>
                   {impressions.map((count, index) => {
                     return index === activeCard ? (
                       <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
@@ -143,7 +145,7 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container} style={{ flexDirection: "column", height: "50em" }}>
+            <div className={cx(styles.whats_new_bg_container, styles.bg_container_2)} style={{ flexDirection: "column", height: "50rem" }}>
               <div className={styles.graphic_container}>
                 <div className={styles.left_holder}>
                   <div className={styles.left_large}>
@@ -175,10 +177,13 @@ export default function Home() {
               <div className={styles.old_content}>
                 <div className={styles.old_content_name}>Event Name</div>
                 <div className={styles.old_content_text}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                  erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                  est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna{" "}
+                  <span className={styles.hide}>
+                    {" "}
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                  </span>
                 </div>
               </div>
               <div className={styles.line}></div>
@@ -191,12 +196,15 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container} style={{ height: "35rem" }}>
+            <div className={cx(styles.whats_new_bg_container, styles.bg_container_3)} style={{ height: "35rem" }}>
               <div className={styles.help_text} style={{ transform: "translateY(-40px)" }}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                <span className={styles.hide}>
+                  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                  duo dolores et ea
+                </span>
               </div>
             </div>
             <div className={styles.seekHelp_bg}>
@@ -208,15 +216,15 @@ export default function Home() {
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>They think we're nice</div>
             </div>
-            <section className={styles1.impressions}>
-              <div className={styles1.cards_container}>
+            <section className={cx(styles1.impressions, styles.impressions)}>
+              <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
                 {impressions.map((impression) => (
                   <div className={styles1.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
                     <div className={styles1.person}>
                       <div className={styles1.avatar}>
                         <img src={impression.img} alt={impression.img} />
                       </div>
-                      <div className={styles1.nameAndEvent}>
+                      <div className={cx(styles1.nameAndEvent, styles.nameAndEvent)}>
                         <h1>{impression.name}</h1>
                         <p>{impression.event}</p>
                       </div>
@@ -225,7 +233,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className={styles1.active_buttons}>
+              <div className={cx(styles1.active_buttons, styles.active_buttons_2)}>
                 {impressions.map((count, index) => {
                   return index === activeCard ? (
                     <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
@@ -256,7 +264,7 @@ export default function Home() {
                 <img className={styles.inner_img} src="/assets/images/Utils/BackgroundHeading2.png" alt="" />
               </div>
             </div>
-            <div className={styles.whats_new_bg_container} style={{ height: "30rem" }}>
+            <div className={cx(styles.whats_new_bg_container, styles.bg_container_4)} style={{ height: "30rem" }}>
               <div className={styles.institutional_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
