@@ -2,6 +2,7 @@ import styles from "./NavBar.module.css"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import cx from "classnames"
 
 const NavBar = () => {
   const router = useRouter()
@@ -12,7 +13,7 @@ const NavBar = () => {
       ? 2
       : router.pathname.includes("/blogs")
       ? 3
-      : router.pathname.includes("/gethelp")
+      : router.pathname.includes("/gethelp") || router.pathname.includes("/institutions")
       ? 4
       : 0
   )
@@ -85,11 +86,18 @@ const NavBar = () => {
             Blogs
           </div>
         </Link>
-        <Link href="/gethelp">
-          <div className={styles.btns} onClick={() => handleNavClick(4)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
-            Get Help
+
+        <div className={cx(styles.btns, styles.services)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
+          Services
+          <div className={styles.sub_menu}>
+            <Link href="/gethelp">
+              <div onClick={() => handleNavClick(4)}>Get Help</div>
+            </Link>
+            <Link href="/institutions">
+              <div onClick={() => handleNavClick(4)}>Institutions</div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
     </nav>
   )

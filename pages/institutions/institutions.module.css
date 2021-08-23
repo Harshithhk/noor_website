@@ -1,51 +1,219 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .institutions_page_wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+}
+.heading {
+  height: 180px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  position: relative;
 }
 
-.heading {
-    height: 180px;
-    width: 100%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    color: #7f7f7f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
 .institution_reach_information {
-    display: flex;
+  display: flex;
 }
 
 .institution_reach_image {
-    flex: 1;
+  flex: 1;
 }
 
 .information {
-    margin-top: 6rem;
-    flex: 1;
+  margin: auto;
+  margin-top: 6rem;
+  flex: 1;
 }
 
 .subheading {
-    padding-right: 4rem;
-    
-    font-size: 1.1rem;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: #7f7f7f;
+  padding-right: 4rem;
+
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #7f7f7f;
 }
 
 .text_info {
-    padding-right: 4rem;
+  padding-right: 4rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+  color: #7f7f7f;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+}
+.other_institutions {
+  height: fit-content;
+  width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.institution_card {
+  width: 16.5rem;
+  height: 20rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card_image_container {
+  width: 100%;
+  height: 13.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card_image_container img {
+  width: 100%;
+  height: 100%;
+
+  /* height: 100%; */
+  object-fit: cover;
+}
+.institution_card_content {
+  width: 100%;
+  /* height: 100%; */
+  flex: 1;
+  position: relative;
+}
+
+.card_content_text {
+  font-size: 0.6rem;
+  width: 14.5rem;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card_bottom_img {
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+}
+.card_bottom_img img {
+  width: 100%;
+  object-fit: cover;
+}
+.similar_blogs {
+  width: fit-content;
+  font-size: 2rem;
+  color: #7f7f7f;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+.card_container {
+  width: 400px;
+}
+.similar_blog_cards {
+  width: 52.5rem;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+@media only screen and (max-width: 1200px) {
+  .information {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .institutions_page_wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .subheading {
+    padding-right: 2.5rem;
+  }
+  .text_info {
+    padding-right: 2.5rem;
+  }
+  .other_institutions {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .similar_blog_cards {
+    flex-direction: column;
+    height: 37.5rem;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .institutions_page_wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .institution_reach_information {
+    flex-direction: column;
+  }
+  .institution_reach_image {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 17.163rem;
+    min-height: 13.036rem;
+    padding: 0rem;
+  }
+  .institution_reach_image img {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0rem !important;
+    object-fit: cover;
+  }
+  .subheading {
+    padding: 0rem;
+    font-size: 1.25rem;
+    margin-top: 5rem;
+  }
+  .text_info {
+    margin: 0 auto;
+    margin-top: 2.25rem;
+    width: 100%;
+    padding: 0rem;
+    padding-right: 1rem;
     padding-left: 1rem;
-    padding-top: 2rem;
-    
-    color: #7f7f7f;
-    font-size: 0.7rem;
-    line-height: 1.1rem;
+    font-size: 0.75rem;
+  }
+  .other_institutions {
+    flex-direction: column;
+  }
+  .similar_blog_cards {
+    width: 19.5rem;
+  }
+  .other_institutions {
+    height: fit-content;
+    width: 16.438rem;
+  }
+  .card_container {
+    width: 19.5rem;
+  }
+  .institution_card {
+    margin-bottom: 3rem;
+  }
+  .similar_blogs {
+    margin-top: 2rem;
+  }
+  .similar_blog_cards {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .institutions_page_wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .text_info {
+    padding: 0rem;
+  }
 }

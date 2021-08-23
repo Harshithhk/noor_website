@@ -5,6 +5,7 @@ import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
 import Blogcard from "../../components/cards/blog-card/BlogCard"
 
 const index = () => {
+  let i = 0.5
   const [nav, setNav] = useState(0)
 
   return (
@@ -32,8 +33,12 @@ const index = () => {
       </section>
       <section className={styles.events_cards_container}>
         {upcomingEventsData.map((element) => {
-          // return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} />;
-          return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} id={element.id} />
+          i = i + 0.25
+          return (
+            <div className={styles.Upcoming} style={{ animationDuration: `${i}s` }}>
+              <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} id={element.id} />
+            </div>
+          )
         })}
       </section>
     </section>

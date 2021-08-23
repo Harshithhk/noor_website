@@ -18,7 +18,7 @@ const index = () => {
               <div style={{ textAlign: "center", alignItems: "center" }}>Founder's message</div>
             </div>
             <div className={styles.founders_message}>
-              <div className={cx(styles.message_img,styles.display)}>
+              <div className={cx(styles.message_img, styles.display)}>
                 <img src="/assets/images/Group.png" alt="" />
               </div>
               <div className={styles.message}>
@@ -37,7 +37,7 @@ const index = () => {
                   </div>
                 </p>
               </div>
-              <div className={cx(styles.message_img,styles.hide)}>
+              <div className={cx(styles.message_img, styles.hide)}>
                 <img src="/assets/images/Group.png" alt="" />
               </div>
             </div>
@@ -47,7 +47,7 @@ const index = () => {
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the founders</div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image,styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Capture.png" alt="" />
               </div>
 
@@ -57,12 +57,11 @@ const index = () => {
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    <span className={styles.hide}> et dolore magna aliquyam
-                    
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt.
+                    <span className={styles.hide}>
+                      {" "}
+                      et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                      diam nonumy eirmod tempor invidunt.
                     </span>
                   </div>
                 </div>
@@ -74,20 +73,22 @@ const index = () => {
                   <div className={styles.name}>Mugdha</div>
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore<span className={styles.hide}> et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    <span className={styles.hide}>
+                      {" "}
+                      et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                      diam nonumy eirmod tempor invidunt.
                     </span>
                   </div>
                 </div>
               </div>
-              <div className={cx(styles.person_image,styles.right)} style={{ paddingLeft: " 5rem" }}>
+              <div className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
                 <img src="/assets/images/Capture1.png" alt="" />
               </div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image,styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Capture2.png" alt="" />
               </div>
 
@@ -96,22 +97,24 @@ const index = () => {
                   <div className={styles.name}>Piyush</div>
                   <div className={styles.designation}>Designation</div>
                   <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<span className={styles.hide}> labore et dolore magna aliquyam 
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    <span className={styles.hide}>
+                      {" "}
+                      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                      kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt.
                     </span>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section >
+          <section>
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the team</div>
             </div>
             <div className={styles.meet_the_team_avatars}>
-              <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }} >
+              <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }}>
                 <div className={styles.avtars_container}>
                   <img src="/assets/images/Meet-the-team/Avatar1.svg" alt="" />
                   <div className={styles.avatar_name}> Manas </div>
@@ -125,7 +128,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Tejaswini </div>
                 </div>
               </div>
-              <div className={cx(styles.avatar_row,styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
+              <div className={cx(styles.avatar_row, styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
                 <div className={styles.avtars_container}>
                   <img src="/assets/images/Meet-the-team/Avatar4.svg" alt="" />
                   <div className={styles.avatar_name}> Ramesh </div>
@@ -142,8 +145,6 @@ const index = () => {
             </div>
           </section>
 
-
-          
           <section>
             <div className={styles.heading} style={{ marginTop: "2rem" }}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Say hi!</div>
