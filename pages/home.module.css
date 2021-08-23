@@ -26,6 +26,7 @@
   transform: translateY(7rem);
   background-color: #d5ebfe;
   position: relative;
+  margin-bottom: 13.25rem;
 }
 
 .heading {
@@ -385,6 +386,7 @@
   }
   .transformation4 {
     transform: translateY(-15rem);
+    margin-bottom: -7rem;
   }
   .bg_container_1 {
     height: 32rem;

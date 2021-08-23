@@ -4,7 +4,7 @@ import Image from "next/image"
 import styles from "./home.module.css"
 import styles1 from "./events/eventdetails/event_details.module.css"
 import cx from "classnames"
-
+import Footer from "../components/footer"
 import { BsCircle, BsCircleFill } from "react-icons/bs"
 
 export default function Home() {
