@@ -3,7 +3,7 @@ import styles from "./blog_card.module.css"
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
 import Link from "next/link"
 
-const BlogCard = ({ bgColor, bgUrl, id }) => {
+const BlogCard = ({ bgColor, bgUrl, id, title }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
   const [showGallery, setshowGallery] = useState(false)
   const images = [
@@ -24,6 +24,7 @@ const BlogCard = ({ bgColor, bgUrl, id }) => {
 
   return (
     <div className={styles.past_card_wrapper} style={{ backgroundColor: "#f2f2f2" }}>
+      {/* <div className={styles.showcase_area} style={{ backgroundImage: `url(${images[Math.floor(Math.random() * 3)].original})` }}> */}
       <div className={styles.showcase_area} style={{ backgroundImage: `url(${images[Math.floor(Math.random() * 3)].original})` }}>
         <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>
           Seminar
@@ -34,7 +35,7 @@ const BlogCard = ({ bgColor, bgUrl, id }) => {
         </div>
       </div>
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
-        <div className={styles.title}>Mental health awareness seminar</div>
+        <div className={styles.title}>{title}</div>
         <div className={styles.description}>
           {" "}
           <div style={{ display: "flex", alignItems: "center", marginTop: "0.25rem" }}>

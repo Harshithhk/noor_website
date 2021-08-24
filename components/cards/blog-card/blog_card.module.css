@@ -95,9 +95,11 @@
 }
 
 .title {
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   /* margin-top: 2%; */
   font-weight: 400;
+  color: #575656;
 }
 
 .image {

@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./about_us.module.css"
 import ResponsivePlayer from "../../components/video-player/ResponsivePlayer"
 import cx from "classnames"
 const index = () => {
+  const [modalDetails, setModalDetails] = useState()
+  const [modalActive, setModalActive] = useState(false)
+
+  const handleModal = (person) => {
+    setModalDetails(person)
+    setModalActive(true)
+  }
+
   return (
     <>
       <section className={styles.about_us_page_wrapper}>
@@ -115,34 +123,116 @@ const index = () => {
             </div>
             <div className={styles.meet_the_team_avatars}>
               <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }}>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Manas",
+                      img: "/assets/images/Meet-the-team/Avatar1.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar1.svg" alt="" />
                   <div className={styles.avatar_name}> Manas </div>
                 </div>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Manasvi",
+                      img: "/assets/images/Meet-the-team/Avatar2.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar2.svg" alt="" />
                   <div className={styles.avatar_name}> Manasvi </div>
                 </div>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Tejaswini",
+                      img: "/assets/images/Meet-the-team/Avatar3.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar3.svg" alt="" />
                   <div className={styles.avatar_name}> Tejaswini </div>
                 </div>
               </div>
               <div className={cx(styles.avatar_row, styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Ramesh",
+                      img: "/assets/images/Meet-the-team/Avatar4.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar4.svg" alt="" />
                   <div className={styles.avatar_name}> Ramesh </div>
                 </div>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Ashish",
+                      img: "/assets/images/Meet-the-team/Avatar5.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar5.svg" alt="" />
                   <div className={styles.avatar_name}> Ashish </div>
                 </div>
-                <div className={styles.avtars_container}>
+                <div
+                  className={styles.avtars_container}
+                  onClick={() =>
+                    handleModal({
+                      name: "Jenna",
+                      img: "/assets/images/Meet-the-team/Avatar6.svg",
+                      designation: "Designation",
+                      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.",
+                    })
+                  }
+                >
                   <img src="/assets/images/Meet-the-team/Avatar6.svg" alt="" />
                   <div className={styles.avatar_name}> Jenna </div>
                 </div>
               </div>
             </div>
+            {modalActive && (
+              <section
+                className={styles.person_modal_wrapper}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setModalActive(false)
+                }}
+              >
+                <div className={styles.person_modal}>
+                  <div className={styles.person_modal_content}>
+                    <div className={styles.person_modal_image}>
+                      <img src="/assets/images/Meet-the-team/Avatar2.svg" alt="" />
+                    </div>
+                    <div className={styles.person_modal_details}>
+                      <div className={styles.person_modal_name}>{modalDetails.name}</div>
+                      <div className={styles.person_modal_designation}>{modalDetails.designation}</div>
+                      <div className={styles.person_modal_text}>{modalDetails.text}</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
           </section>
 
           <section>
