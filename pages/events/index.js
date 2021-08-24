@@ -15,7 +15,16 @@ const borderPast = {
   borderBottom: "1px solid #f6c1c1",
 }
 
-const index = () => {
+export const getStaticProps = async () => {
+  const upcommingData = upcomingEventsData
+  const pastData = pastEventsData
+
+  return {
+    props: { upcomingEventsData: upcommingData, pastEventsData: pastData },
+  }
+}
+
+const index = ({ upcomingEventsData, pastEventsData }) => {
   const [nav, setNav] = useState(0)
   const [searchText, setSearchText] = useState("")
 
