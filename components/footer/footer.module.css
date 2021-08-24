@@ -27,9 +27,15 @@
   height: 100%;
 }
 .nav_list div {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   font-size: 0.875rem;
   font-weight: lighter;
   color: #707070;
+}
+.nav_list div:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
 .logo {
   width: 8rem;
