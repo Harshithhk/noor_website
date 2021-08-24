@@ -1,8 +1,8 @@
-export var upcomingEventsData = [
+export var pastEventsData = [
   {
     id: 1,
     bgColor: "#FCD5E4",
-    title: `Metal health awareness seminar`,
+    title: "Mental health awareness seminar",
     bgUrl:
       "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
   },

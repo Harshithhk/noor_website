@@ -35,17 +35,17 @@ const index = () => {
             </div>
           </div>
           <div className={styles.imglines}>
-            <div className={cx(styles.person_image, styles.show, styles.img_mg_top)}>
+            <div className={cx(styles.person_image, styles.hide, styles.img_mg_top)}>
               <img src="/assets/images/Get-Help/Img3.svg" alt="" />
             </div>
             <div className={cx(styles.content, styles.hide)}>
               <div>Luckily, you can start your journey from the comfort of your own home!</div>
             </div>
+            <div className={cx(styles.person_image, styles.show, styles.img_mg_top)}>
+              <img src="/assets/images/Get-Help/Img3.svg" alt="" />
+            </div>
             <div className={cx(styles.content, styles.show)} style={{ marginTop: "1rem" }}>
               <div>Luckily, you can start your journey from the comfort of your own home!</div>
-            </div>
-            <div className={cx(styles.person_image, styles.hide, styles.img_mg_top)}>
-              <img src="/assets/images/Get-Help/Img3.svg" alt="" />
             </div>
           </div>
         </main>

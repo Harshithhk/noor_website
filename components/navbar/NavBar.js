@@ -2,11 +2,20 @@ import styles from "./NavBar.module.css"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import cx from "classnames"
 
 const NavBar = () => {
   const router = useRouter()
   const [index, setIndex] = useState(() =>
-    router.pathname == "/events" ? 1 : router.pathname == "/about" ? 2 : router.pathname == "/blogs" ? 3 : router.pathname == "/gethelp" ? 4 : 0
+    router.pathname.includes("/events")
+      ? 1
+      : router.pathname.includes("/about")
+      ? 2
+      : router.pathname.includes("/blogs")
+      ? 3
+      : router.pathname.includes("/gethelp") || router.pathname.includes("/institutions")
+      ? 4
+      : 0
   )
   const [left, setLeft] = useState(() => index * 120)
   const [filter, setFilter] = useState("invert(100%) sepia(74%) saturate(1791%) hue-rotate(186deg) brightness(99%) contrast(99%)")
@@ -77,11 +86,18 @@ const NavBar = () => {
             Blogs
           </div>
         </Link>
-        <Link href="/gethelp">
-          <div className={styles.btns} onClick={() => handleNavClick(4)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
-            Get Help
+
+        <div className={cx(styles.btns, styles.services)} style={{ color: index === 4 ? "#707070" : "#ffffff" }}>
+          Services
+          <div className={styles.sub_menu}>
+            <Link href="/gethelp">
+              <div onClick={() => handleNavClick(4)}>Get Help</div>
+            </Link>
+            <Link href="/institutions">
+              <div onClick={() => handleNavClick(4)}>Institutions</div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
     </nav>
   )

@@ -3,7 +3,7 @@ import styles from "./upcoming_card.module.css"
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
 import Link from "next/link"
 
-const UpcomingCard = ({ bgColor, bgUrl }) => {
+const UpcomingCard = ({ bgColor, bgUrl, title }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
 
   return (
@@ -15,7 +15,7 @@ const UpcomingCard = ({ bgColor, bgUrl }) => {
             Seminar{" "}
           </div>
           <div className={styles.date}>18 jan 2021</div>
-          <div className={styles.title}>Mental health awareness seminar</div>
+          <div className={styles.title}>{title}</div>
           <div className={styles.description}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr
           </div>

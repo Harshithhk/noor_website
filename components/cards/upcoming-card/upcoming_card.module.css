@@ -4,6 +4,7 @@
   border-radius: 12px;
   display: flex;
   animation: comeInside 2s ease-in-out;
+  color: #414141;
 }
 
 .text_content {
@@ -40,6 +41,7 @@
   font-size: 20px;
   margin-top: 2.5%;
   font-weight: 400;
+  min-height: 55px;
 }
 
 .description {
@@ -55,6 +57,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 400;
+  color: #414141;
   word-spacing: 1px;
   position: absolute;
   background: white;
@@ -66,17 +69,21 @@
   text-align: center;
   box-shadow: 0px 0px 0px;
   border: 0px solid;
+  border-radius: 3px;
   text-shadow: 0px 0px 0px;
   bottom: 15px;
   left: 50%;
   transform: translateX(calc(-50%));
+  transition: all 0.2s;
 }
 .register:hover {
-  border: 2px solid #dadada;
+  border: 2px solid #cccacc;
   border-radius: 7px;
   outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 2px #808080;
+  width: 130px;
+  font-size: 14px;
 }
 
 .image {
@@ -95,5 +102,8 @@
   }
   .text_content {
     width: 80%;
+  }
+  .title {
+    min-height: 81px;
   }
 }
