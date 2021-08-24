@@ -99,7 +99,7 @@ export default function Home() {
                       style={{ transform: `translateX(${translateX}px)` }}
                     >
                       <div className={styles.new_img_container}>
-                        <img src="/assets/images/WhatsNew-PlaceHolders/img_placeholder.png" alt="" />
+                        <img src="/assets/images/WhatsNew-Placeholders/ImageLarge.svg" alt="" />
                       </div>
                       <div className={styles.whats_new_content}>
                         <div className={styles.label}>New Event</div>
@@ -171,7 +171,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.right_holder}>
-                  <img src="/assets/images/WhatsOld-Placeholders/RightImg1.png" alt="" srcset="" />
+                  <img src="/assets/images/WhatsOld-Placeholders/RightImage.svg" alt="" srcset="" />
                 </div>
               </div>
               <div className={styles.old_content}>

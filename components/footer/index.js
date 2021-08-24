@@ -23,16 +23,16 @@ const index = () => {
         <div>Social Media</div>
         <div className={styles.socials_container}>
           <div className={styles.socials}>
-            <img src="/assets/images/Utils/socials/Google.png" alt="" />
+            <img src="/assets/images/Utils/Socials/Google.png" alt="" />
           </div>
           <div className={styles.socials}>
-            <img src="/assets/images/Utils/socials/Twitter.png" alt="" />
+            <img src="/assets/images/Utils/Socials/Twitter.png" alt="" />
           </div>
           <div className={styles.socials}>
-            <img src="/assets/images/Utils/socials/Facebook.png" alt="" />
+            <img src="/assets/images/Utils/Socials/Facebook.png" alt="" />
           </div>
           <div className={styles.socials}>
-            <img src="/assets/images/Utils/socials/Instagram.png" alt="" />
+            <img src="/assets/images/Utils/Socials/Instagram.png" alt="" />
           </div>
         </div>
       </div>

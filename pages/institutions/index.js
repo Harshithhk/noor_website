@@ -5,12 +5,14 @@ var upcomingEventsData = [
   {
     id: 1,
     bgColor: "#FCD5E4",
+    title: "Metal health awareness seminar",
     bgUrl:
       "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
   },
   {
     id: 2,
     bgColor: "#AAF1DB",
+    title: "Metal health awareness seminar",
     bgUrl:
       "https://images.unsplash.com/photo-1501869150797-9bbb64f782fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
   },
@@ -41,40 +43,40 @@ const index = () => {
         <div className={styles.other_institutions}>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
             </div>
             <div className={styles.institution_card_content}>
               <div className={styles.card_content_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
               </div>
               <div className={styles.card_bottom_img}>
-                <img src="/assets/images/institutions/bottom_img1.png" alt="" />
+                <img src="/assets/images/Institutions/bottom_img1.png" alt="" />
               </div>
             </div>
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
             </div>
             <div className={styles.institution_card_content}>
               <div className={styles.card_content_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
               </div>
               <div className={styles.card_bottom_img}>
-                <img src="/assets/images/institutions/bottom_img2.png" alt="" />
+                <img src="/assets/images/Institutions/bottom_img2.png" alt="" />
               </div>
             </div>
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
             </div>
             <div className={styles.institution_card_content}>
               <div className={styles.card_content_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
               </div>
               <div className={styles.card_bottom_img}>
-                <img src="/assets/images/institutions/bottom_img3.png" alt="" />
+                <img src="/assets/images/Institutions/bottom_img3.png" alt="" />
               </div>
             </div>
           </div>
@@ -86,7 +88,7 @@ const index = () => {
           {upcomingEventsData.map((element) => {
             return (
               <div className={styles.card_container}>
-                <BlogCard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} />
+                <BlogCard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} title={element.title} />
               </div>
             )
           })}
