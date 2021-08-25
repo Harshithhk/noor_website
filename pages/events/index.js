@@ -4,7 +4,7 @@ import Upcoming from "./events-content/Upcoming"
 import Past from "./events-content/Past"
 import axios from "axios"
 // import { upcomingEventsData } from " ../../utils/dummy-data/upcomingEventsData"
-// import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
 import { pastEventsData } from "../../utils/dummy-data/pastEventsData"
 
 const borderUpcoming = {
@@ -15,14 +15,14 @@ const borderPast = {
   borderBottom: "1px solid #f6c1c1",
 }
 
-// export const getStaticProps = async () => {
-//   const upcommingData = upcomingEventsData
-//   const pastData = pastEventsData
+export const getStaticProps = async () => {
+  const upcommingData = upcomingEventsData
+  const pastData = pastEventsData
 
-//   return {
-//     props: { upcomingEventsData: upcommingData, pastEventsData: pastData },
-//   }
-// }
+  return {
+    props: { upcomingEventsData: upcommingData, pastEventsData: pastData },
+  }
+}
 
 const index = ({ upcomingEventsData, pastEventsData }) => {
   useEffect(async () => {
@@ -109,13 +109,13 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
   )
 }
 
-export async function getStaticProps(context) {
-  const pastData = pastEventsData
-  const upcommingEvents = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+// export async function getStaticProps(context) {
+//   const pastData = pastEventsData
+//   const upcommingEvents = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
 
-  return {
-    props: { upcomingEventsData: upcommingEvents.data, pastEventsData: pastData },
-  }
-}
+//   return {
+//     props: { upcomingEventsData: upcommingEvents.data, pastEventsData: pastData },
+//   }
+// }
 
 export default index
