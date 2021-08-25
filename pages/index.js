@@ -6,6 +6,7 @@ import styles1 from "./events/eventdetails/event_details.module.css"
 import cx from "classnames"
 import Footer from "../components/footer"
 import { BsCircle, BsCircleFill } from "react-icons/bs"
+import Link from "next/link"
 
 export default function Home() {
   const impressions = [
@@ -62,7 +63,7 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  })
+  }, [])
 
   return (
     <div>
@@ -91,12 +92,12 @@ export default function Home() {
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_1)}>
               <section className={styles1.impressions_home}>
                 <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
-                  {impressions.map((impression) => (
+                  {impressions.map((impression, index) => (
                     <div
                       className={cx(styles1.card, styles.whats_new_card)}
                       key={impression.id}
                       id="card"
-                      style={{ transform: `translateX(${translateX}px)` }}
+                      style={{ transform: `translateX(${translateX}px)`, opacity: index !== activeCard ? "0" : "1" }}
                     >
                       <div className={styles.new_img_container}>
                         <img src="/assets/images/WhatsNew-Placeholders/ImageLarge.svg" alt="" />
@@ -108,7 +109,9 @@ export default function Home() {
                           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
                           aliquyam erat, sed diam voluptua.{" "}
                         </div>
-                        <button className={styles.register_button}>Seek Help</button>
+                        <Link href="/events/register/example">
+                          <button className={styles.register_button}>Seek Help</button>
+                        </Link>
                       </div>
                     </div>
                   ))}
@@ -136,7 +139,9 @@ export default function Home() {
                 </div>
               </section>
             </div>
-            <div className={styles.see_all_events}>See all events</div>
+            <Link href="/events">
+              <div className={styles.see_all_events}>See all events</div>
+            </Link>
           </section>
           <section className={styles.transformation2}>
             <div className={styles.heading}>
@@ -210,7 +215,9 @@ export default function Home() {
             <div className={styles.seekHelp_bg}>
               <img src="/assets/images/Utils/SeekHelp.png" alt="" />
             </div>
-            <button className={styles.seekHelp_button}>Seek Help</button>
+            <Link href="/gethelp">
+              <button className={styles.seekHelp_button}>Seek Help</button>
+            </Link>
           </section>
           <section className={styles.they_think}>
             <div className={styles.heading}>
@@ -218,8 +225,13 @@ export default function Home() {
             </div>
             <section className={cx(styles1.impressions, styles.impressions)}>
               <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
-                {impressions.map((impression) => (
-                  <div className={styles1.card} key={impression.id} id="card" style={{ transform: `translateX(${translateX}px)` }}>
+                {impressions.map((impression, index) => (
+                  <div
+                    className={styles1.card}
+                    key={impression.id}
+                    id="card"
+                    style={{ transform: `translateX(${translateX}px)`, opacity: index !== activeCard ? "0" : "1" }}
+                  >
                     <div className={styles1.person}>
                       <div className={styles1.avatar}>
                         <img src={impression.img} alt={impression.img} />
@@ -269,7 +281,9 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
                 est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
-                <div className={styles.absolute_hyperLink}>Check out Institutes</div>
+                <Link href="/institutions">
+                  <div className={styles.absolute_hyperLink}>Check out Institutes</div>
+                </Link>
               </div>
             </div>
           </section>

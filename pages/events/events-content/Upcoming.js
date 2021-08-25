@@ -12,7 +12,7 @@ const Upcoming = ({ searchText, eventsData }) => {
         i = i + 0.25
         return (
           <div className={styles.Upcoming} style={{ animationDuration: `${i}s` }}>
-            <UpcomingCard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} title={element.title} />
+            <UpcomingCard key={element.id} bgColor={element.bgColor ? element.bgColor : "#ECDAF8"} bgUrl={element.bgUrl} title={element.title} />
           </div>
         )
       })}

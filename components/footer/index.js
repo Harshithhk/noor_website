@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./footer.module.css"
 import { useRouter } from "next/router"
+import Link from "next/link"
 const index = () => {
   const router = useRouter()
 
@@ -9,11 +10,21 @@ const index = () => {
       <section className={styles.nav_content}>
         <div className={styles.team_noor}>Team Noor</div>
         <div className={styles.nav_list}>
-          <div>Events</div>
-          <div>About</div>
-          <div>Blogs</div>
-          <div>Get Help</div>
-          <div>Institutions</div>
+          <Link href="/events">
+            <div>Events</div>
+          </Link>
+          <Link href="/about">
+            <div>About</div>
+          </Link>
+          <Link href="/blogs">
+            <div>Blogs</div>
+          </Link>
+          <Link href="/gethelp">
+            <div>Get Help</div>
+          </Link>
+          <Link href="/institutions">
+            <div>Institutions</div>
+          </Link>
         </div>
       </section>
       <div className={styles.logo}>

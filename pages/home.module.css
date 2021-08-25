@@ -5,6 +5,8 @@
   /* max-width: 1920px; */
   overflow-x: hidden;
   overflow-y: auto;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .transformation {
@@ -305,6 +307,10 @@
   margin-top: 1rem;
 }
 
+.active_buttons {
+  transform: translate(10px, -20px) !important;
+}
+
 @media only screen and (max-width: 1000px) {
   .heading {
     height: 125px;
@@ -338,6 +344,7 @@
     margin-top: 0rem !important;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .heading {
     font-size: 40px;
@@ -410,7 +417,7 @@
     /* transform: translateY(-30px) !important; */
   }
   .active_buttons {
-    transform: translate(10px, -35px) !important;
+    transform: translate(10px, -42px) !important;
   }
   .old_content {
     width: 20.5rem;
@@ -475,7 +482,7 @@
     font-size: 0.625rem;
   }
   .active_buttons_2 {
-    transform: translate(10px, -42px) !important;
+    transform: translate(10px, -110px) !important;
   }
   .institutional_text {
     position: relative;
@@ -504,5 +511,20 @@
     transform: translateX(0%);
     font-weight: lighter;
     text-decoration: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .whats_new_cards_container {
+    height: 370px !important;
+  }
+  .whats_new_card {
+    height: 370px !important;
+  }
+  .new_img_container {
+    height: 170px !important;
+  }
+  .new_img_container img {
+    height: 170px !important;
+    object-fit: cover;
   }
 }
