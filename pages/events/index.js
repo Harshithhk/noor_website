@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./events.module.css"
 import Upcoming from "./events-content/Upcoming"
 import Past from "./events-content/Past"
-
+import axios from "axios"
 // import { upcomingEventsData } from " ../../utils/dummy-data/upcomingEventsData"
 import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
 import { pastEventsData } from "../../utils/dummy-data/pastEventsData"
@@ -25,6 +25,12 @@ export const getStaticProps = async () => {
 }
 
 const index = ({ upcomingEventsData, pastEventsData }) => {
+  useEffect(async () => {
+    const e = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+    console.log(e)
+    return () => {}
+  }, [])
+
   const [nav, setNav] = useState(0)
   const [searchText, setSearchText] = useState("")
 
@@ -101,5 +107,14 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
     </section>
   )
 }
+
+// export async function getStaticProps(context) {
+//   const pastData = pastEventsData
+//   const upcommingEvents = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+
+//   return {
+//     props: { upcomingEventsData: upcommingEvents.json(), pastEventsData: pastData },
+//   }
+// }
 
 export default index

@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "classnames": "^2.2.6",
     "next": "10.2.3",
