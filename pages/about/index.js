@@ -56,7 +56,7 @@ const index = () => {
             </div>
             <div className={styles.person}>
               <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
-                <img src="/assets/images/Capture.png" alt="" />
+                <img src="/assets/images/Meet-the-founders/Founder1.svg" alt="" />
               </div>
 
               <div className={styles.person_details}>
@@ -92,12 +92,12 @@ const index = () => {
                 </div>
               </div>
               <div className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
-                <img src="/assets/images/Capture1.png" alt="" />
+                <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
               </div>
             </div>
             <div className={styles.person}>
               <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
-                <img src="/assets/images/Capture2.png" alt="" />
+                <img src="/assets/images/Meet-the-founders/Founder3.svg" alt="" />
               </div>
 
               <div className={styles.person_details}>
