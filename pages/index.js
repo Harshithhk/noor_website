@@ -47,16 +47,31 @@ export default function Home() {
     setTranslateX(() => translateX + multiplier * (card.offsetWidth + 480))
   }
 
+  const [activeCard2, setactiveCard2] = useState(0)
+  const [translateX2, setTranslateX2] = useState(0)
+  var activeWindowSize = 1080
+
+  const setCard2 = (index) => {
+    let multiplier = activeCard2 - index
+    setactiveCard2(() => index)
+    const card = document.getElementById("card2")
+    setTranslateX2(() => translateX2 + multiplier * (card.offsetWidth + 480))
+  }
+
   const handleResize = () => {
     if (window.innerWidth < 650 && window.innerWidth > 520 && activeWindowSize != 650) {
       activeWindowSize = 650
       setactiveCard(0)
+      setactiveCard2(0)
       setCard(0)
+      setCard2(0)
     }
     if (window.innerWidth < 520 && activeWindowSize != 520) {
       activeWindowSize = 520
       setactiveCard(0)
+      setactiveCard2(0)
       setCard(0)
+      setCard2(0)
     }
   }
 
@@ -76,7 +91,9 @@ export default function Home() {
         <main>
           <section>
             <div className={styles.heading}>
-              <div style={{ textAlign: "center", alignItems: "center" }}>What is Noor?</div>
+              <div style={{ textAlign: "center", alignItems: "center", display: "flex" }}>
+                What is Noor <div className={styles.question_mark}>?</div>
+              </div>
             </div>
             <div className={styles._noor_bg_container}>
               <img className={styles.noor_bg_img} src="/assets/images/Utils/Background_noor.png" alt="" />
@@ -229,8 +246,8 @@ export default function Home() {
                   <div
                     className={styles1.card}
                     key={impression.id}
-                    id="card"
-                    style={{ transform: `translateX(${translateX}px)`, opacity: index !== activeCard ? "0" : "1" }}
+                    id="card2"
+                    style={{ transform: `translateX(${translateX2}px)`, opacity: index !== activeCard2 ? "0" : "1" }}
                   >
                     <div className={styles1.person}>
                       <div className={styles1.avatar}>
@@ -247,11 +264,11 @@ export default function Home() {
               </div>
               <div className={cx(styles1.active_buttons, styles.active_buttons_2)}>
                 {impressions.map((count, index) => {
-                  return index === activeCard ? (
+                  return index === activeCard2 ? (
                     <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
                       <BsCircleFill
                         onClick={() => {
-                          setCard(index)
+                          setCard2(index)
                         }}
                       />
                     </div>
@@ -259,7 +276,7 @@ export default function Home() {
                     <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#ffffff", cursor: "pointer" }}>
                       <BsCircleFill
                         onClick={() => {
-                          setCard(index)
+                          setCard2(index)
                         }}
                       />
                     </div>

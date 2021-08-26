@@ -1,0 +1,41 @@
+.bottom_navbar {
+  height: 3.5rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+  display: none;
+  justify-content: space-around;
+}
+
+.nav_botton {
+  width: 4rem;
+  height: 3.5rem;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.icon {
+  width: 55%;
+  object-fit: cover;
+  z-index: 10;
+}
+.nav_bg {
+  position: absolute;
+  /* width: 80% !important; */
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon_bold {
+  width: 42.5%;
+}
+@media only screen and (max-width: 810px) {
+  .bottom_navbar {
+    display: flex;
+  }
+}
