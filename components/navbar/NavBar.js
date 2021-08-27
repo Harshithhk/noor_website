@@ -91,7 +91,7 @@ const NavBar = () => {
           Services
           <div className={styles.sub_menu}>
             <Link href="/gethelp">
-              <div onClick={() => handleNavClick(4)}>Get Help</div>
+              <div onClick={() => handleNavClick(4)}>Seek Help</div>
             </Link>
             <Link href="/institutions">
               <div onClick={() => handleNavClick(4)}>Institutions</div>

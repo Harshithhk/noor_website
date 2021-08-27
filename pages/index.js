@@ -7,6 +7,8 @@ import cx from "classnames"
 import Footer from "../components/footer"
 import { BsCircle, BsCircleFill } from "react-icons/bs"
 import Link from "next/link"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function Home() {
   const impressions = [
@@ -40,7 +42,7 @@ export default function Home() {
     {
       id: 1,
       img: "/assets/images/WhatsNew-Placeholders/ImageLarge.svg",
-      label: "Councelling",
+      label: "Counselling",
       event: "One on one counselling",
       details:
         " One on one counselling sessions with Aksha Juvekar - Book a session to explore yourself, manage your emotions, and find healthier ways to cope with everyday life challenges. ",
@@ -96,6 +98,7 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize)
+    Aos.init({ duration: 500, delay: 20 })
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
@@ -212,7 +215,7 @@ export default function Home() {
                   <img src="/assets/images/WhatsOld-Placeholders/RightImage.svg" alt="" srcset="" />
                 </div>
               </div>
-              <div className={styles.old_content}>
+              <div data-aos="fade-in" className={styles.old_content}>
                 <div className={styles.old_content_name}>Unfold and Reflect</div>
                 <div className={styles.old_content_text}>
                   'Unfold' and 'Reflect' are our monthly theme-based sessions. The modules of these sessions have been curated by our team. Through
@@ -233,13 +236,9 @@ export default function Home() {
             </div>
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_3)} style={{ height: "35rem" }}>
               <div className={styles.help_text} style={{ transform: "translateY(-40px)" }}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr
-                <span className={styles.hide}>
-                  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                  duo dolores et ea
-                </span>
+                We believe that absence of mental illness doesn't necessarily mean we're psychologically healthy. Every person’s struggle is
+                different. Our counselors are here to aid you manage and regulate your emotions, deal effectively with relationship issues and
+                eventually empower you to be a better version of yourself, because you matter!
               </div>
             </div>
             <div className={styles.seekHelp_bg}>
@@ -307,7 +306,7 @@ export default function Home() {
               </div>
             </div>
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_4)} style={{ height: "30rem" }}>
-              <div className={styles.institutional_text}>
+              <div data-aos="fade-in" className={styles.institutional_text}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
                 erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
                 est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet

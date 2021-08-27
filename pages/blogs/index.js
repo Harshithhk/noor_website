@@ -1,8 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./blogs.module.css"
 import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
 // import Blogcard from "../../components/cards/new-blog-card/BlogCard";
 import Blogcard from "../../components/cards/blog-card/BlogCard"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const index = () => {
   let i = 0.5
@@ -20,10 +22,14 @@ const index = () => {
     setblogsData(blogsFiteredData)
   }
 
+  useEffect(() => {
+    Aos.init({ duration: 500, delay: 20 })
+  }, [])
+
   return (
     <section className={styles.events_page_wrapper}>
       <section className={styles.heading_and_tools}>
-        <div className={styles.heading}>
+        <div data-aos="zoom-in" className={styles.heading}>
           <div style={{ textAlign: "center", alignItems: "center" }}>Blogs</div>
         </div>
       </section>

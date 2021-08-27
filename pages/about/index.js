@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"
 import styles from "./about_us.module.css"
 import ResponsivePlayer from "../../components/video-player/ResponsivePlayer"
 import cx from "classnames"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 const index = () => {
   const [modalDetails, setModalDetails] = useState()
   const [modalActive, setModalActive] = useState(false)
@@ -11,16 +14,23 @@ const index = () => {
     setModalActive(true)
   }
 
+  useEffect(() => {
+    Aos.init({ duration: 500, delay: 20 })
+  }, [])
+
   return (
     <>
       <section className={styles.about_us_page_wrapper}>
         <main>
           <div className={styles.heading}>
-            <div style={{ textAlign: "center", alignItems: "center" }}>About Us</div>
+            <div data-aos="zoom-in" style={{ textAlign: "center", alignItems: "center" }}>
+              About Us
+            </div>
           </div>
           <div className={styles.video}>
             <img src="/assets/images/video-placehholder.png" alt="" />
           </div>
+
           <section>
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Founder's message</div>
@@ -55,7 +65,7 @@ const index = () => {
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the founders</div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder1.svg" alt="" />
               </div>
 
@@ -63,7 +73,7 @@ const index = () => {
                 <div className={styles.right_text}>
                   <div className={styles.name}>Zeel</div>
                   <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
+                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                     <span className={styles.hide}>
                       {" "}
@@ -80,7 +90,7 @@ const index = () => {
                 <div className={styles.left_text}>
                   <div className={styles.name}>Mugdha</div>
                   <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
+                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                     <span className={styles.hide}>
                       {" "}
@@ -91,12 +101,12 @@ const index = () => {
                   </div>
                 </div>
               </div>
-              <div className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
+              <div data-aos="fade-left" className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
               </div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder3.svg" alt="" />
               </div>
 
@@ -104,7 +114,7 @@ const index = () => {
                 <div className={styles.right_text}>
                   <div className={styles.name}>Piyush</div>
                   <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
+                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     <span className={styles.hide}>
                       {" "}
@@ -124,6 +134,7 @@ const index = () => {
             <div className={styles.meet_the_team_avatars}>
               <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }}>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -138,6 +149,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Manas </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -152,6 +164,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Manasvi </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -168,6 +181,7 @@ const index = () => {
               </div>
               <div className={cx(styles.avatar_row, styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -182,6 +196,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Ramesh </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -196,6 +211,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Ashish </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -240,7 +256,7 @@ const index = () => {
               <div style={{ textAlign: "center", alignItems: "center" }}>Say hi!</div>
             </div>
             <div className={styles.about_us_form}>
-              <div className={styles.about_us_form_img}>
+              <div data-aos="zoom-in" className={styles.about_us_form_img}>
                 <img src="/assets/images/deskWithMonitor.svg" alt="" />
               </div>
               <div className={styles.about_us_form_inputs}>
