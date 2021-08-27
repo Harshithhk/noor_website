@@ -394,6 +394,9 @@
   .hide {
     display: none;
   }
+  .old_content {
+    height: fit-content;
+  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -452,15 +455,13 @@
   .bg_container_4 {
     height: 25rem !important;
   }
-  .whats_new_cards_container {
-    /* transform: translateY(-30px) !important; */
-  }
+
   .active_buttons {
     transform: translate(10px, -42px) !important;
   }
   .old_content {
     width: 20.5rem;
-    height: 8.5rem;
+    height: fit-content;
     background-color: #ffffff;
     border-radius: 20px;
     margin: 0 auto;

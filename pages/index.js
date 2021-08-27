@@ -36,6 +36,25 @@ export default function Home() {
     },
   ]
 
+  const whatsNewData = [
+    {
+      id: 1,
+      img: "/assets/images/WhatsNew-Placeholders/ImageLarge.svg",
+      label: "Councelling",
+      event: "One on one counselling",
+      details:
+        " One on one counselling sessions with Aksha Juvekar - Book a session to explore yourself, manage your emotions, and find healthier ways to cope with everyday life challenges. ",
+    },
+    {
+      id: 2,
+      img: "/assets/images/WhatsNew-Placeholders/ImageLarge.svg",
+      label: "Event",
+      event: "Unfold: Relationships ",
+      details:
+        "Your relationship with yourself is your best investment. Spend some time exploring your relationships with self and others at Unfold.  ",
+    },
+  ]
+
   const [activeCard, setactiveCard] = useState(0)
   const [translateX, setTranslateX] = useState(0)
   var activeWindowSize = 1080
@@ -109,23 +128,20 @@ export default function Home() {
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_1)}>
               <section className={styles1.impressions_home}>
                 <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
-                  {impressions.map((impression, index) => (
+                  {whatsNewData.map((data, index) => (
                     <div
                       className={cx(styles1.card, styles.whats_new_card)}
-                      key={impression.id}
+                      key={data.id}
                       id="card"
                       style={{ transform: `translateX(${translateX}px)`, opacity: index !== activeCard ? "0" : "1" }}
                     >
                       <div className={styles.new_img_container}>
-                        <img src="/assets/images/WhatsNew-Placeholders/ImageLarge.svg" alt="" />
+                        <img src={data.img} alt="" />
                       </div>
                       <div className={styles.whats_new_content}>
-                        <div className={styles.label}>New Event</div>
-                        <div className={styles.event_name}>New Event</div>
-                        <div className={styles.event_details}>
-                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                          aliquyam erat, sed diam voluptua.{" "}
-                        </div>
+                        <div className={styles.label}>{data.label}</div>
+                        <div className={styles.event_name}>{data.event}</div>
+                        <div className={styles.event_details}>{data.details}</div>
                         <Link href="/events/register/example">
                           <button className={styles.register_button}>Seek Help</button>
                         </Link>
@@ -134,9 +150,9 @@ export default function Home() {
                   ))}
                 </div>
                 <div className={cx(styles1.active_buttons, styles.active_buttons)} style={{ transform: "TranslateY(-20px)" }}>
-                  {impressions.map((count, index) => {
+                  {whatsNewData.map((count, index) => {
                     return index === activeCard ? (
-                      <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
+                      <div style={{ marginRight: index !== whatsNewData.length ? "1.2rem" : "0px", color: "#707070", cursor: "pointer" }}>
                         <BsCircleFill
                           onClick={() => {
                             setCard(index)
@@ -144,7 +160,7 @@ export default function Home() {
                         />
                       </div>
                     ) : (
-                      <div style={{ marginRight: index !== impressions.length ? "1.2rem" : "0px", color: "#ffffff", cursor: "pointer" }}>
+                      <div style={{ marginRight: index !== whatsNewData.length ? "1.2rem" : "0px", color: "#ffffff", cursor: "pointer" }}>
                         <BsCircleFill
                           onClick={() => {
                             setCard(index)
@@ -197,15 +213,12 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.old_content}>
-                <div className={styles.old_content_name}>Event Name</div>
+                <div className={styles.old_content_name}>Unfold and Reflect</div>
                 <div className={styles.old_content_text}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna{" "}
-                  <span className={styles.hide}>
-                    {" "}
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                  </span>
+                  'Unfold' and 'Reflect' are our monthly theme-based sessions. The modules of these sessions have been curated by our team. Through
+                  these sessions we provide a non-judgmental platform for one to explore and express self. It is also an opportunity for individuals
+                  to make new connections and gain more information about professional mental health services. Be a part of our community as there is
+                  a lot to learn from others’ experiences too!
                 </div>
               </div>
               <div className={styles.line}></div>

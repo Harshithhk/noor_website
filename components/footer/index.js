@@ -33,18 +33,26 @@ const index = () => {
       <div className={styles.social_media}>
         <div>Social Media</div>
         <div className={styles.socials_container}>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Google.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Twitter.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Facebook.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Instagram.png" alt="" />
-          </div>
+          <a href="#">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Google.png" alt="" />
+            </div>
+          </a>
+          <a href="https://twitter.com/Noor23858692?s=09" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Twitter.png" alt="" />
+            </div>
+          </a>
+          <a href="https://www.facebook.com/Noor-100477398906304/" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Facebook.png" alt="" />
+            </div>
+          </a>
+          <a href="https://instagram.com/officialnoor__?utm_medium=copy_link" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Instagram.png" alt="" />
+            </div>
+          </a>
         </div>
       </div>
     </footer>

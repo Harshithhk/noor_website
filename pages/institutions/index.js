@@ -32,11 +32,11 @@ const index = () => {
           <div className={styles.information}>
             <div className={styles.subheading}>We at Noor partner with multiple institutions across the city to provide mental healthcare</div>
             <div className={styles.text_info}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-              ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-              sea takimata sanctus est Lorem ipsum dolor sit amet.
+              Youth is the greatest asset of any economy, therefore it is important that they remain physically and mentally fit! We conduct
+              interactive sessions at academic institutions for adolescents, pertaining to psychoeducation and self-development. These sessions are
+              conducted by credible youngsters from various fields, making it a holistic approach towards self-development. <br /> Sessions requiring
+              expertise on the deeper and more sensitive topics of mental health, such as suicide awareness and prevention, are conducted by certified
+              mental health professionals.
             </div>
           </div>
         </div>
