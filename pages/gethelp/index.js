@@ -15,9 +15,9 @@ const index = () => {
           <div className={styles.imglines}>
             <div className={styles.person_image}>
               <div className={cx(styles.innerBg, styles.hide)}>
-                <img src="/assets/images/Get-Help/Img1Inner.png" alt="" />
+                <img src="/assets/images/Get-Help/journey.svg" alt="" />
               </div>
-              <img className={styles.show} src="/assets/images/Get-Help/Img1Inner.png" alt="" />
+              <img className={styles.show} src="/assets/images/Get-Help/journey.svg" alt="" />
             </div>
             <div className={styles.content}>
               <div>The journey to stable mental health is a long one</div>

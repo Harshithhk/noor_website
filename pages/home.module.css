@@ -93,6 +93,7 @@
 ._noor_bg_container {
   height: 750px;
   width: 100%;
+  position: relative;
   /* overflow-y: hidden; */
   /* margin-bottom: 10000px; */
 
@@ -107,6 +108,13 @@
   margin-left: 50%;
   transform: translate(-50%, -8rem);
   /* transform: translateY(-8rem); */
+}
+.overlaybg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .whats_new_bg_container {
   height: 40rem;

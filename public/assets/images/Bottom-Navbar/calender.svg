@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.532" height="26.125" viewBox="0 0 23.532 26.125">
+  <g id="Group_564" data-name="Group 564" transform="translate(0.75 0.5)">
+    <line id="Line_29" data-name="Line 29" y2="1.858" transform="translate(5.441 0)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_30" data-name="Line 30" y2="1.858" transform="translate(14.733 0)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <g id="Group_557" data-name="Group 557" transform="translate(0 1.858)">
+      <g id="Group_549" data-name="Group 549" transform="translate(0 0)">
+        <path id="Path_909" data-name="Path 909" d="M205,330.806v3.624H182.97v-3.624a1.11,1.11,0,0,1,1.115-1.106H203.9A1.1,1.1,0,0,1,205,330.806Z" transform="translate(-182.97 -329.7)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1.5"/>
+        <path id="Path_910" data-name="Path 910" d="M205,334.79v16.9a1.382,1.382,0,0,1-1.385,1.385H184.355a1.388,1.388,0,0,1-1.385-1.385v-16.9Z" transform="translate(-182.97 -330.06)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1.5"/>
+      </g>
+      <rect id="Rectangle_1619" data-name="Rectangle 1619" width="3.717" height="3.717" transform="translate(3.717 9.517)" fill="#707070"/>
+    </g>
+  </g>
+</svg>
