@@ -24,10 +24,11 @@ const index = () => {
 
           <div className={styles.person_details}>
             <div className={styles.right_text}>
-              <div className={styles.name}>Name</div>
-              <div className={styles.designation}>Designation</div>
+              <div className={styles.name}>Aksha Juvekar</div>
+              <div className={styles.designation}>Psychologist</div>
               <div data-aos="fade-in" data-aos-delay="0" className={styles.text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                A counselling expert striving to enhance the society by sharing her knowledge, aiding us to gain insight and using it for our
+                betterment.
                 <span className={styles.hide}>
                   et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
                   gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
@@ -42,7 +43,7 @@ const index = () => {
               <div className={styles.name}>Name</div>
               <div className={styles.designation}>Designation</div>
               <div className={styles.text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                An approachable and comforting presence spreading awareness and involving hobbies in therapy, helping us rediscover ourselves.
                 <span className={styles.hide}>
                   {" "}
                   et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd

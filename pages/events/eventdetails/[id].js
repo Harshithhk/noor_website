@@ -145,7 +145,7 @@ const Register = () => {
         </div>
       </section>
 
-      <section className={styles.similar_events}>
+      {/* <section className={styles.similar_events}>
         <h1 className={styles.similar_heading}>Similar Upcomming Events</h1>
         <div style={{ display: "flex" }} className={styles.cards}>
           {upcomingEventsData.map((element) => {
@@ -166,7 +166,7 @@ const Register = () => {
             )
           })}
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

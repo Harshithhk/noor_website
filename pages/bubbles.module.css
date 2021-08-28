@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+.bubble {
+  /* background: yellowgreen; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  font-family: "Open Sans", sans-serif;
+}
+.bubble_wrapper {
+  position: relative;
+  width: 100%;
+}
+.bubble_text {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  color: #7f7f7f;
+  text-align: center;
+}
+
+.b1 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 0%;
+  left: 2.5%;
+  color: #a2d2ff;
+}
+
+.b2 {
+  width: 9.375rem;
+  font-size: 0.85rem;
+  font-size: 0.95rem;
+  top: 15%;
+  left: 10%;
+}
+
+.b3 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 35%;
+  left: 2%;
+}
+.b4 {
+  width: 7.5rem;
+  font-size: 0.85rem;
+  top: 2%;
+  left: 25%;
+  color: #a2d2ff;
+}
+.b5 {
+  width: 12.5rem;
+  font-size: 0.85rem;
+  top: 25%;
+  left: 25%;
+}
+.b6 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 45%;
+  left: 40%;
+}
+.b7 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 10%;
+  left: 38%;
+  color: #a2d2ff;
+}
+.b8 {
+  width: 10.625rem;
+  font-size: 0.85rem;
+  top: 10%;
+  left: 50%;
+}
+.b9 {
+  width: 9.375rem;
+  font-size: 0.9rem;
+  top: 45%;
+  left: 55%;
+}
+.b10 {
+  width: 9.375rem;
+  font-size: 0.95rem;
+  top: 25%;
+  left: 65%;
+}
+.b11 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 45%;
+  left: 75%;
+  color: #a2d2ff;
+}
+.b12 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 05%;
+  left: 75%;
+}
+.b13 {
+  width: 9.375rem;
+  font-size: 0.95rem;
+  top: 15%;
+  left: 85%;
+  color: #a2d2ff;
+}
+.b14 {
+  width: 6.25rem;
+  font-size: 0.7rem;
+  top: 55%;
+  left: 90%;
+}
+
+.b1:hover,
+.b3:hover,
+.b4:hover,
+.b6:hover,
+.b7:hover,
+.b11:hover,
+.b12:hover,
+.b14:hover {
+  width: 10.25rem;
+  transform: translate(-10%, -10%);
+}
+
+.b5:hover {
+  width: 15.25rem;
+  transform: translate(-10%, -10%);
+}
+.b8:hover {
+  width: 12.25rem;
+  transform: translate(-10%, -10%);
+}
+.b2:hover,
+.b9:hover,
+.b10:hover,
+.b13:hover {
+  width: 12rem;
+  transform: translate(-10%, -10%);
+}
+
+.bubble img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.b1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+  .b11 {
+    display: none;
+  }
+  .b13 {
+    left: 80%;
+  }
+  .b14 {
+    left: 80%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .b1 {
+    top: 2%;
+    /* width: 8.25rem; */
+  }
+  .b1:hover {
+    width: 8.25rem;
+  }
+  .b2 {
+    top: 18%;
+  }
+  .b3 {
+    top: 37.5%;
+  }
+  .b4 {
+    top: 5%;
+  }
+  .b5 {
+    width: 10.5rem;
+    top: 35%;
+  }
+  .b6 {
+    display: none;
+  }
+  .b8 {
+    left: 45%;
+  }
+  .b12 {
+    display: none;
+  }
+  .b13 {
+    top: 10%;
+    left: 78.5%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .b10 {
+    display: none;
+  }
+  .b13 {
+    top: 25%;
+    left: 70.5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .b1:hover {
+    transform: translate(-0%, -0%);
+  }
+  .b2 {
+    font-size: 0.7rem;
+    width: 7rem;
+    top: 28%;
+    left: 60%;
+  }
+  .b2:hover {
+    width: 10rem;
+  }
+  .b3 {
+    top: 50.5%;
+  }
+  .b3:hover {
+    width: 9rem;
+    transform: translate(-0%, -8%);
+  }
+
+  .b4 {
+    width: 5.25rem;
+    /* padding: 0.17rem; */
+    font-size: 0.7rem;
+    top: 5%;
+    left: 55%;
+    color: #a2d2ff;
+  }
+  .b4:hover {
+    width: 7.25rem;
+  }
+  .b5 {
+    width: 9rem;
+    top: 18%;
+    left: 10%;
+  }
+  .b5:hover {
+    width: 10.25rem;
+    transform: translate(-17%, -7.5%);
+  }
+  .b8 {
+    display: none;
+  }
+  .b9 {
+    width: 7.375rem;
+    font-size: 0.9rem;
+    top: 52.5%;
+    left: 58%;
+  }
+  .b9:hover {
+    width: 11rem;
+    transform: translate(-15.5%, -10%);
+  }
+  .b13 {
+    width: 7.5rem;
+    top: 38%;
+    left: 25.5%;
+  }
+  .b13:hover {
+    width: 10.5rem;
+  }
+  .b14 {
+    display: none;
+  }
+}

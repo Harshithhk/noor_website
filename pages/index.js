@@ -3,6 +3,7 @@ import Head from "next/head"
 import Image from "next/image"
 import styles from "./home.module.css"
 import styles1 from "./events/eventdetails/event_details.module.css"
+import styles2 from "./bubbles.module.css"
 import cx from "classnames"
 import Footer from "../components/footer"
 import { BsCircle, BsCircleFill } from "react-icons/bs"
@@ -14,34 +15,42 @@ export default function Home() {
   const impressions = [
     {
       id: 1,
-      img: "/assets/images/avatarHuman.png",
-      name: "JOHN DOE",
-      event: "Attended X event",
+      img: "/assets/images/Testimonials/Ansh-puri.jpeg",
+      name: "Ansh Puri",
+      event: "Attended Unfold",
       review:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no.",
+        "My experience with Noor has always been tremendously satisfying. You walk away from the events not only with the joy that you derive from the activities, but invaluable connections and solid bonds that last a lifetime.",
     },
     {
       id: 2,
-      img: "/assets/images/avatarHuman.png",
-      name: "JOHN DOE",
-      event: "Attended Y event",
+      img: "/assets/images/Testimonials/Shehjaar-Kaur.jpeg",
+      name: "Shehjaar Kaur",
+      event: "Attended Valentines",
       review:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no.",
+        "I got introduced to Noor in the beginning of 2021, and since then I've made a point to attend as many sessions as I can. the Unfold sessions have been brilliantly planned and executed, and I have rarely ever found another environment that is safe and receptive and brimming with engagement.",
     },
     {
       id: 3,
-      img: "/assets/images/avatarHuman.png",
-      name: "JOHN DOE",
-      event: "Attended Z event",
+      img: "/assets/images/Testimonials/Vikrant.jpeg",
+      name: "Vikrant",
+      event: "Attended All Events",
       review:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no.",
+        "The kind of activities and conversations that the people at Noor get you to do will not only help you out with some of your issues but will also make you aware of the variety of situations people find themselves in.",
+    },
+    {
+      id: 4,
+      img: "/assets/images/Testimonials/Siddhai-Pashikar.jpeg",
+      name: "Siddhai Pashikar",
+      event: "Attended Unfold",
+      review:
+        "I remember the first time I attended Noor. Since then, I've longed for this experience. Everytime I attend any Noor session, I end up feeling better about myself. Like a group of people coming together to provide a safe, non judgemental space without anyone interrupting them from sharing their thoughts is amazing.",
     },
   ]
 
   const whatsNewData = [
     {
       id: 1,
-      img: "/assets/images/WhatsNew-Placeholders/ImageLarge.svg",
+      img: "/assets/images/WhatsNew-Placeholders/Test1.png",
       label: "Counselling",
       event: "One on one counselling",
       details:
@@ -49,7 +58,7 @@ export default function Home() {
     },
     {
       id: 2,
-      img: "/assets/images/WhatsNew-Placeholders/ImageLarge.svg",
+      img: "/assets/images/WhatsNew-Placeholders/Test3.png",
       label: "Event",
       event: "Unfold: Relationships ",
       details:
@@ -96,6 +105,8 @@ export default function Home() {
     }
   }
 
+  const fontColors = ["#F8C5D8", "#7881db", "#D8BCE8"]
+
   useEffect(() => {
     window.addEventListener("resize", handleResize)
     Aos.init({ duration: 500, delay: 20 })
@@ -119,6 +130,116 @@ export default function Home() {
             </div>
             <div className={styles._noor_bg_container}>
               <img className={styles.noor_bg_img} src="/assets/images/Utils/Background_noor.png" alt="" />
+              <div className={cx(styles2.bubble, styles2.b1)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B3.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Be your own light
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b2)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B2.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Interactive
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b3)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B1.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    New connections
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b4)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B4.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Self-awareness
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b5)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B2.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Safe space
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b6)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B3.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Inspiring
+                  </div>
+                </div>
+              </div>
+              {/* <div className={cx(styles2.bubble, styles2.b7)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B1.png" alt="" />
+                  <div className={styles2.bubble_text}>This is Noor B7</div>
+                </div>
+              </div> */}
+              <div className={cx(styles2.bubble, styles2.b8)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B4.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Inclusive
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b9)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B1.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Psycho-education
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b10)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B2.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Be your own light
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b11)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B3.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Collaborative
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b12)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B2.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Faith
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b13)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B4.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Be your own light
+                  </div>
+                </div>
+              </div>
+              <div className={cx(styles2.bubble, styles2.b14)}>
+                <div className={styles2.bubble_wrapper}>
+                  <img src="/assets/images/Bubbles/B3.png" alt="" />
+                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                    Self-awareness
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <section className={styles.transformation}>
@@ -139,7 +260,7 @@ export default function Home() {
                       style={{ transform: `translateX(${translateX}px)`, opacity: index !== activeCard ? "0" : "1" }}
                     >
                       <div className={styles.new_img_container}>
-                        <img src={data.img} alt="" />
+                        <img src={data.img} alt="" style={{ width: index == 1 ? "90%" : "100%" }} />
                       </div>
                       <div className={styles.whats_new_content}>
                         <div className={styles.label}>{data.label}</div>
@@ -190,29 +311,29 @@ export default function Home() {
               <div className={styles.graphic_container}>
                 <div className={styles.left_holder}>
                   <div className={styles.left_large}>
-                    <img src="/assets/images/WhatsOld-Placeholders/LeftLarge1.png" alt="" />
+                    <img src="/assets/images/WhatsOld-Placeholders/left-tiny.jpg" alt="" />
                   </div>
                   <div className={styles.left_small}>
                     <div className={styles.left_left}>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/left-small.jpg" alt="" />
                       </div>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/left-tiny2.png" alt="" />
                       </div>
                     </div>
                     <div className={styles.right_right}>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallImage1.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/left-tiny4.jpg" alt="" />
                       </div>
                       <div className={styles.left_small_img}>
-                        <img src="/assets/images/WhatsOld-Placeholders/LeftSmallVideo1.png" alt="" />
+                        <img src="/assets/images/WhatsOld-Placeholders/left-tiny3.jpg" alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className={styles.right_holder}>
-                  <img src="/assets/images/WhatsOld-Placeholders/RightImage.svg" alt="" srcset="" />
+                  <img src="/assets/images/WhatsOld-Placeholders/Right-Large.PNG" alt="" srcset="" />
                 </div>
               </div>
               <div data-aos="fade-in" className={styles.old_content}>
@@ -307,9 +428,11 @@ export default function Home() {
             </div>
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_4)} style={{ height: "30rem" }}>
               <div data-aos="fade-in" className={styles.institutional_text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                {" "}
+                We conduct interactive sessions at academic institutions for adolescents, pertaining to psychoeducation and self-development. These
+                sessions are conducted by credible youngsters from various fields, making it a holistic approach towards self-development. Sessions
+                requiring expertise on the deeper and more sensitive topics of mental health, such as suicide awareness and prevention, are conducted
+                by certified mental health professionals.
                 <Link href="/institutions">
                   <div className={styles.absolute_hyperLink}>Check out Institutes</div>
                 </Link>

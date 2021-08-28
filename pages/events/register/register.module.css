@@ -22,6 +22,15 @@
   margin: auto;
   overflow: hidden;
   width: 50%;
+  height: 344px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.img img {
+  width: 100%;
+  object-fit: cover;
 }
 .content_description {
   height: 365px;
@@ -30,6 +39,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .content_texts {
@@ -59,7 +69,7 @@
 
 .event_price {
   font-size: 1.25rem;
-  margin-top: 1.375rem;
+  margin-top: 1.25rem;
   font-weight: lighter;
 }
 

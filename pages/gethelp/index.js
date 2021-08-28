@@ -12,7 +12,7 @@ const index = () => {
   })
 
   return (
-    <>
+    <section style={{ overflowX: "hidden", overflowY: "auto" }}>
       <section className={styles.events_page_wrapper}>
         <main>
           <div data-aos="zoom-in" className={styles.heading}>
@@ -66,10 +66,9 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_right)}
             style={{ borderRadius: "12px 0px 0px 12px", background: "#D5EBFE" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
+            <div className={styles.question}>What is Noor?</div>
             <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+              A mental health start-up ambitious to help you find balance in your life by encouraging you to take care of your mental health
             </div>
           </div>
         </div>
@@ -81,10 +80,10 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_left)}
             style={{ borderRadius: "0px 12px 12px 0px", background: "#D4FEF1" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
+            <div className={styles.question}>Is Noor a support group?</div>
             <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+              No, Noor encourages you to address and speak about your issues so you can seek further help if required. We do not provide advices or
+              solutions.
             </div>
           </div>
         </div>
@@ -96,10 +95,9 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_right)}
             style={{ borderRadius: "12px 0px 0px 12px", background: "#ECDAF8" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
+            <div className={styles.question}>Should I attend only when I have problems?</div>
             <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+              This platform is for you to recognize your thoughts, positive or negative, and speak your mind. Attend anytime you like!
             </div>
           </div>
         </div>
@@ -111,10 +109,10 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_left)}
             style={{ borderRadius: "0px 12px 12px 0px", background: "#FECECE" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
+            <div className={styles.question}>When do I seek counselling?</div>
             <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+              Absolutely anytime! Just like physical checkups, counselling aids you to understand your mental health better, and know if you need
+              further help.
             </div>
           </div>
         </div>
@@ -126,10 +124,10 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_right)}
             style={{ borderRadius: "12px 0px 0px 12px", background: "#D5EBFE" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
+            <div className={styles.question}>Can I trust the therapist?</div>
             <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+              Definitely! Like other professions, psychology has its ethics – confidentiality is one of them. The therapist will not use the
+              information against you.
             </div>
           </div>
         </div>
@@ -141,11 +139,8 @@ const index = () => {
             className={cx(styles.question_container, styles.qc_pd_left)}
             style={{ borderRadius: "0px 12px 12px 0px", background: "#FFC8DD" }}
           >
-            <div className={styles.question}>Question example : Is it okay to feel this way?</div>
-            <div className={styles.answer}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
-            </div>
+            <div className={styles.question}>What age group do you cater to?</div>
+            <div className={styles.answer}>Currently catering to the age range of 14 to 45 years.</div>
           </div>
         </div>
       </section>
@@ -195,7 +190,7 @@ const index = () => {
           </div>
         </section>
       </section>
-    </>
+    </section>
   )
 }
 

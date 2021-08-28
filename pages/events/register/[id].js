@@ -9,18 +9,20 @@ const Register = () => {
         </div>
         <div className={styles.content_description}>
           <div className={styles.img}>
-            <img src="/assets/images/imagPlaceHolder.png" alt="" width="100%" />
+            <img src="/assets/images/Register/Register3.jpeg" alt="" />
           </div>
           <div className={styles.content_texts}>
             <div className={styles.content_texts_inner}>
               <div className={styles.event_date}>28 Jan 2021</div>
-              <div className={styles.event_heading}>Mental health awareness seminar</div>
+              <div className={styles.event_heading}>Unfold - Relationships (Self)</div>
               <div className={styles.event_description}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                The theme this time is 'Relationships'. Human relations are a beautiful blend of warmth, perspectives, experiences, and belongingness.
+                The relationship with yourself especially, is your best investment. Have you ever said things out loud to someone else and discovered
+                something new about yourself? Or openly talked about problems with friends and suddenly found a solution? That’s what we also need
+                with ourself. A bond of trust where we can openly communicate and admit certain things and minimise problems and confusions. So come
+                join us!
               </div>
-              <div className={styles.event_price}>Price : Rs. 250/-</div>
+              <div className={styles.event_price}>Price : Rs. 200/-</div>
             </div>
           </div>
         </div>
@@ -39,7 +41,7 @@ const Register = () => {
                 <div className={styles.label}>Phone Number</div>
                 <input className={styles.phone_number} type="text" />
               </div>
-              <button className={styles.payment_button}> CONTINUE TO PAYMENT GATEWAY</button>
+              <button className={styles.payment_button}> REGISTER AS AN ATTENDEE</button>
             </div>
           </div>
         </div>
