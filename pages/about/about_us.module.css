@@ -20,12 +20,22 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  position: relative;
   animation-name: expander;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  /* margin: 0 auto; */
 }
 
 .video {
+  max-height: 656px;
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
   /* height: 200px; */
   /* background-color: #7f7f7f; */
   /* background-image: ("/assets/images/video-placeholder.png"); */
@@ -33,13 +43,17 @@
 .video img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   width: 100%;
   -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+}
+.hero {
+  width: 100%;
+  object-fit: cover !important;
 }
 .founders_message {
   width: 100%;
@@ -55,6 +69,7 @@
   color: #707070;
 }
 .message_description {
+  padding: 1rem;
   font-size: 0.875rem;
   color: #707070;
   margin-top: 2rem;
@@ -248,11 +263,14 @@
 }
 .hide {
 }
+.show {
+  display: none;
+}
 
 @media only screen and (max-width: 1300px) {
   .about_us_page_wrapper {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
     padding-bottom: 6.25rem;
   }
 }
@@ -320,6 +338,9 @@
   }
   .hide {
     display: none;
+  }
+  .show {
+    display: inherit;
   }
   .display {
     display: inherit;
@@ -398,6 +419,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 35px;
+    animation-name: expander_two;
+  }
   .founders {
     margin-left: -2.25rem;
     margin-right: -2.25rem;
@@ -435,7 +460,8 @@
     height: 12rem;
   }
   .video {
-    height: 200px;
+    border-radius: 10px;
+    /* height: 200px; */
   }
 }
 
@@ -510,5 +536,21 @@
   .person_modal {
     width: 90vw;
     height: 31.875rem;
+  }
+}
+@keyframes expander {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 48px;
+  }
+}
+@keyframes expander_two {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 35px;
   }
 }

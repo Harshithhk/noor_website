@@ -4,6 +4,7 @@ import styles from "../individual_blog.module.css"
 import BlogCard from "../../../components/cards/blog-card/BlogCard"
 import { useRouter } from "next/router"
 import cx from "classnames"
+import Head from "next/head"
 
 var upcomingEventsData = [
   {
@@ -35,6 +36,11 @@ const index = () => {
   }, [])
   return (
     <section className={styles.blog_page_wrapper}>
+      <Head>
+        <title>Noor</title>
+        <meta name="description" content="Be your own light" />
+        <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+      </Head>
       <main>
         <div className={styles.heading}>
           <div className={styles.splash}>

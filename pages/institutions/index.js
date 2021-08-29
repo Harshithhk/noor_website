@@ -1,6 +1,6 @@
 import styles from "./institutions.module.css"
 import BlogCard from "../../components/cards/blog-card/BlogCard"
-
+import Head from "next/head"
 var upcomingEventsData = [
   {
     id: 1,
@@ -28,6 +28,11 @@ var upcomingEventsData = [
 const index = () => {
   return (
     <section className={styles.institutions_page_wrapper}>
+      <Head>
+        <title>Noor</title>
+        <meta name="description" content="Be your own light" />
+        <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+      </Head>
       <section>
         <div className={styles.heading}>
           <div style={{ textAlign: "center", alignItems: "center" }}>Institution Reach</div>

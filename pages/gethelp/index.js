@@ -5,7 +5,7 @@ import ButWhy from "../../components/but-why/index"
 import cx from "classnames"
 import Aos from "aos"
 import "aos/dist/aos.css"
-
+import Head from "next/head"
 const index = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 20 })
@@ -13,6 +13,11 @@ const index = () => {
 
   return (
     <section style={{ overflowX: "hidden", overflowY: "auto" }}>
+      <Head>
+        <title>Noor</title>
+        <meta name="description" content="Be your own light" />
+        <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+      </Head>
       <section className={styles.events_page_wrapper}>
         <main>
           <div data-aos="zoom-in" className={styles.heading}>
