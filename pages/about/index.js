@@ -34,8 +34,8 @@ const index = () => {
             </div>
           </div>
           <div className={styles.video}>
-            <img className={styles.hide} src="/assets/images/About_US_Hero_Wide.jpeg" alt="" />
-            <img className={cx(styles.show, styles.hero)} src="/assets/images/About_US_Hero.jpeg" alt="" />
+            <img className={styles.hide} src="/assets/images/About_Us_Hero_Wide.jpeg" alt="" />
+            <img className={cx(styles.show, styles.hero)} src="/assets/images/About_Us_Hero.jpeg" alt="" />
           </div>
 
           <section>

@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./questions.module.css"
+import Head from "next/head"
 
 const index = () => {
   return (
