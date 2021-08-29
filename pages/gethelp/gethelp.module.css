@@ -4,6 +4,8 @@
   padding-right: 40px;
   /* padding-bottom: 100px; */
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .heading {
@@ -36,7 +38,7 @@
 .innerBg {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/images/Get-Help/Img1.png");
+  background-image: url("/assets/images/-Help/Img1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 35rem;
@@ -457,6 +459,7 @@
 @media only screen and (max-width: 450px) {
   .partners_wrapper {
     padding: 1.25rem;
+    padding-bottom: 6.25rem;
   }
   .portal_text {
     margin-top: 2rem;

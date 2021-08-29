@@ -111,6 +111,8 @@
 .avatar {
   width: 7rem;
   height: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .avatar img {

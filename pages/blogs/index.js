@@ -1,16 +1,19 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./blogs.module.css"
-import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+// import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+import { blogssData } from "../../utils/dummy-data/blogsData"
 // import Blogcard from "../../components/cards/new-blog-card/BlogCard";
 import Blogcard from "../../components/cards/blog-card/BlogCard"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const index = () => {
   let i = 0.5
   const [nav, setNav] = useState(0)
   const [searchText, setSearchText] = useState("")
 
-  const [blogsMasterData, setblogsMasterData] = useState(() => upcomingEventsData)
-  const [blogsData, setblogsData] = useState(() => upcomingEventsData)
+  const [blogsMasterData, setblogsMasterData] = useState(() => blogssData)
+  const [blogsData, setblogsData] = useState(() => blogssData)
 
   const handleSearch = (e) => {
     let text = e.target.value.toLowerCase()
@@ -20,10 +23,14 @@ const index = () => {
     setblogsData(blogsFiteredData)
   }
 
+  useEffect(() => {
+    Aos.init({ duration: 500, delay: 20 })
+  }, [])
+
   return (
     <section className={styles.events_page_wrapper}>
       <section className={styles.heading_and_tools}>
-        <div className={styles.heading}>
+        <div data-aos="zoom-in" className={styles.heading}>
           <div style={{ textAlign: "center", alignItems: "center" }}>Blogs</div>
         </div>
       </section>
@@ -47,6 +54,8 @@ const index = () => {
                 bgUrl={element.bgUrl}
                 id={element.id}
                 title={element.title}
+                name={element.name}
+                link={element.link}
               />
             </div>
           )

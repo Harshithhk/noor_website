@@ -52,10 +52,11 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <img src="/assets/images/logo.svg" width="125px" height="50px" />
-      </div>
-
+      <Link href="/">
+        <div className={styles.logo} onClick={() => handleNavClick(0)}>
+          <img src="/assets/images/Logos/Noor_Colored_White.svg" width="125px" height="50px" />
+        </div>
+      </Link>
       <div className={styles.nav_buttons}>
         <div className={styles.nav_bg} style={{ transform: `translate(${left}px, -50%)` }}>
           <img
@@ -91,7 +92,7 @@ const NavBar = () => {
           Services
           <div className={styles.sub_menu}>
             <Link href="/gethelp">
-              <div onClick={() => handleNavClick(4)}>Get Help</div>
+              <div onClick={() => handleNavClick(4)}>Seek Help</div>
             </Link>
             <Link href="/institutions">
               <div onClick={() => handleNavClick(4)}>Institutions</div>

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"
 import styles from "./about_us.module.css"
 import ResponsivePlayer from "../../components/video-player/ResponsivePlayer"
 import cx from "classnames"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 const index = () => {
   const [modalDetails, setModalDetails] = useState()
   const [modalActive, setModalActive] = useState(false)
@@ -11,16 +14,23 @@ const index = () => {
     setModalActive(true)
   }
 
+  useEffect(() => {
+    Aos.init({ duration: 500, delay: 20 })
+  }, [])
+
   return (
     <>
       <section className={styles.about_us_page_wrapper}>
         <main>
           <div className={styles.heading}>
-            <div style={{ textAlign: "center", alignItems: "center" }}>About Us</div>
+            <div data-aos="zoom-in" style={{ textAlign: "center", alignItems: "center" }}>
+              About Us
+            </div>
           </div>
           <div className={styles.video}>
             <img src="/assets/images/video-placehholder.png" alt="" />
           </div>
+
           <section>
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Founder's message</div>
@@ -32,17 +42,17 @@ const index = () => {
               <div className={styles.message}>
                 <div className={styles.message_heading}>Hello there!</div>
                 <p className={styles.message_description}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                  erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                  <br /> <br /> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                  consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                  vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                  amet.{" "}
-                  <div style={{ marginTop: "0.70rem" }}>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam
-                  </div>
+                  Growing up, I always wished I had an influence in my life who would help me navigate through the emotional turmoil I went through.
+                  Someone with a non-judgemental attitude, someone I wasn’t scared of, someone who’d tell me that no problem in my life is bigger than
+                  me, someone who would help me realise my potential. Noor is that someone for me. <br /> Noor empowers me and encourages me to level
+                  up everyday.
+                  <br /> <br />
+                  Our vision is to create a mentally aware and psychologically healthier society. Our mission is to create and provide efficient
+                  mental health services, psycho-education and empower individuals through self awareness.
+                  {/* <div style={{ marginTop: "0.70rem" }}>
+                    So here we are, 2 years down the line known as Team Noor. Noor was born in the June of 2019. It was a result of my (Zeel’s) past
+                    experiences and the need for someone{" "}
+                  </div> */}
                 </p>
               </div>
               <div className={cx(styles.message_img, styles.hide)}>
@@ -52,24 +62,21 @@ const index = () => {
           </section>
           <section className={styles.founders}>
             <div className={styles.heading}>
-              <div style={{ textAlign: "center", alignItems: "center" }}>Meet the founders</div>
+              <div style={{ textAlign: "center", alignItems: "center" }}>Meet the team</div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder1.svg" alt="" />
               </div>
 
               <div className={styles.person_details}>
                 <div className={styles.right_text}>
                   <div className={styles.name}>Zeel</div>
-                  <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                  <div className={styles.designation}>Founder</div>
+                  <div data-aos="fade-in " className={styles.text}>
+                    Zeel is an aspiring entrepreneur. A teacher by profession and a budding Educational Psychologist.
                     <span className={styles.hide}>
-                      {" "}
-                      et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                      diam nonumy eirmod tempor invidunt.
+                      She enjoys talking about human behaviour, has an inquisitive personality and problem solving attitude.
                     </span>
                   </div>
                 </div>
@@ -79,51 +86,59 @@ const index = () => {
               <div className={styles.person_details}>
                 <div className={styles.left_text}>
                   <div className={styles.name}>Mugdha</div>
-                  <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    <span className={styles.hide}>
-                      {" "}
-                      et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                      diam nonumy eirmod tempor invidunt.
-                    </span>
+                  <div className={styles.designation}>Co-founder</div>
+                  <div data-aos="fade-in " d className={styles.text}>
+                    A budding clinical psychologist. She enjoys pondering upon the existence of several things and exploring different fields.
+                    <span className={styles.hide}> She’s a tagged juvenile spirit, an approachable person and a patient listener.</span>
                   </div>
                 </div>
               </div>
-              <div className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
+              <div data-aos="fade-left" className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
               </div>
             </div>
             <div className={styles.person}>
-              <div className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
+              <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
                 <img src="/assets/images/Meet-the-founders/Founder3.svg" alt="" />
               </div>
 
               <div className={styles.person_details}>
                 <div className={styles.right_text}>
                   <div className={styles.name}>Piyush</div>
-                  <div className={styles.designation}>Designation</div>
-                  <div className={styles.text}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    <span className={styles.hide}>
-                      {" "}
-                      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                      kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt.
-                    </span>
+                  <div className={styles.designation}>Co-founder</div>
+                  <div data-aos="fade-in " className={styles.text}>
+                    An open book, fantastic conversationalist and the typical extrovert who keeps things transparent and straightforward.
+                    <span className={styles.hide}> He enjoys interacting and getting to know new people.</span>
                   </div>
                 </div>
               </div>
             </div>
+            <div className={styles.person}>
+              <div className={styles.person_details}>
+                <div className={styles.left_text}>
+                  <div className={styles.name}>Sejal</div>
+                  <div className={styles.designation}>Manager</div>
+                  <div data-aos="fade-in " className={styles.text}>
+                    Combine goofy smiles with comfortable conversations; ambitious professionalism and you meet Sejal.
+                    <span className={styles.hide}>
+                      A maturing psychology student, working towards creating a community which would be aware of mental health and well-being.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-left" className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
+                <img src="/assets/images/Meet-the-founders/Founder4.png" alt="" />
+              </div>
+            </div>
           </section>
-          <section>
+          {/* <section>
             <div className={styles.heading}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Meet the team</div>
             </div>
             <div className={styles.meet_the_team_avatars}>
               <div className={styles.avatar_row} style={{ display: "flex", justifyContent: "space-around" }}>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -138,6 +153,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Manas </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -152,6 +168,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Manasvi </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -168,6 +185,7 @@ const index = () => {
               </div>
               <div className={cx(styles.avatar_row, styles.right_row)} style={{ display: "flex", justifyContent: "space-around", marginTop: "3rem" }}>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -182,6 +200,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Ramesh </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -196,6 +215,7 @@ const index = () => {
                   <div className={styles.avatar_name}> Ashish </div>
                 </div>
                 <div
+                  data-aos="fade-in"
                   className={styles.avtars_container}
                   onClick={() =>
                     handleModal({
@@ -233,14 +253,14 @@ const index = () => {
                 </div>
               </section>
             )}
-          </section>
+          </section> */}
 
           <section>
             <div className={styles.heading} style={{ marginTop: "2rem" }}>
               <div style={{ textAlign: "center", alignItems: "center" }}>Say hi!</div>
             </div>
             <div className={styles.about_us_form}>
-              <div className={styles.about_us_form_img}>
+              <div data-aos="zoom-in" className={styles.about_us_form_img}>
                 <img src="/assets/images/deskWithMonitor.svg" alt="" />
               </div>
               <div className={styles.about_us_form_inputs}>

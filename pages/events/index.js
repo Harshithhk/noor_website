@@ -75,13 +75,13 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
                 clearText()
               }}
             >
-              Upcoming
+              All
             </div>
             <div
               className={styles.past}
               style={nav === 1 ? borderPast : {}}
               onClick={() => {
-                setNav(1)
+                // setNav(1)
                 clearText()
               }}
             >

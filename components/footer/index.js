@@ -28,24 +28,40 @@ const index = () => {
         </div>
       </section>
       <div className={styles.logo}>
-        <img src="/assets/images/Utils/Logo-footer.png" alt="" />
+        <img src="/assets/images/Logos/Noor_Colored_Black.svg" alt="" />
       </div>
       <div className={styles.social_media}>
         <div>Social Media</div>
         <div className={styles.socials_container}>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Google.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Twitter.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Facebook.png" alt="" />
-          </div>
-          <div className={styles.socials}>
-            <img src="/assets/images/Utils/Socials/Instagram.png" alt="" />
-          </div>
+          <a href="https://www.linkedin.com/company/noorpune" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/linked.png" alt="" />
+            </div>
+          </a>
+          <a href="https://twitter.com/Noor23858692?s=09" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Twitter.png" alt="" />
+            </div>
+          </a>
+          <a href="https://www.facebook.com/Noor-100477398906304/" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Facebook.png" alt="" />
+            </div>
+          </a>
+          <a href="https://instagram.com/officialnoor__?utm_medium=copy_link" target="_blank">
+            <div className={styles.socials}>
+              <img src="/assets/images/Utils/Socials/Instagram.png" alt="" />
+            </div>
+          </a>
         </div>
+        <div style={{ marginTop: "1.5rem", marginBottom: "1rem" }}>Website by-</div>
+        <a href="https://github.com/Harshithhk" target="_blank" style={{ textDecoration: "none", color: "#7f7f7f" }}>
+          <div style={{ fontSize: "0.75rem", fontWeight: "lighter" }}>Harshith Kelkar</div>
+        </a>
+        <div style={{ fontSize: "0.6rem" }}>&</div>
+        <a href="https://github.com/mulitate4" target="_blank" style={{ textDecoration: "none", color: "#7f7f7f" }}>
+          <div style={{ fontSize: "0.75rem", fontWeight: "lighter" }}>Aryan Dongre</div>
+        </a>
       </div>
     </footer>
   )

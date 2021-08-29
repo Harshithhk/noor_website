@@ -3,24 +3,25 @@ import styles from "./upcoming_card.module.css"
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
 import Link from "next/link"
 
-const UpcomingCard = ({ bgColor, bgUrl, title }) => {
+const UpcomingCard = ({ bgColor, bgUrl, title, label, shortDesc, largeDesc, date, link }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
-
+  let buttonText = label == "Upcoming" ? "Register" : "Explore More"
+  let cardLabel = label == "Upcoming" ? "Upcoming" : "Past"
+  // let linkUrl = label == "Upcoming" ? "/events/register/example" : "/events/eventdetails/example"
   return (
     <div className={styles.upcoming_card_wrapper} style={{ backgroundColor: "#f2f2f2" }}>
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>
-            {" "}
-            Seminar{" "}
+            {cardLabel}
           </div>
-          <div className={styles.date}>18 jan 2021</div>
+          <div className={styles.date}>{date}</div>
           <div className={styles.title}>{title}</div>
-          <div className={styles.description}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr
-          </div>
-          <Link href="/events/register/example">
-            <button className={styles.register}>Register</button>
+          <div className={styles.description}>{shortDesc}</div>
+          {/* <Link href="/events/register/example"> */}
+          <Link href={link}>
+            <button className={styles.register}>{buttonText}</button>
+            {/* </Link> */}
           </Link>
         </div>
       </div>
