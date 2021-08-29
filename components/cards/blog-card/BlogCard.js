@@ -31,7 +31,7 @@ const BlogCard = ({ bgColor, bgUrl, id, title, name, link }) => {
         </div>
         <div className={styles.like}>
           <img src="/assets/images/like.svg" width="40px"></img>
-          <div style={{}}>160</div>
+          <div style={{}}></div>
         </div>
       </div>
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
