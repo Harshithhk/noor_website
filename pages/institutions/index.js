@@ -5,16 +5,23 @@ var upcomingEventsData = [
   {
     id: 1,
     bgColor: "#FCD5E4",
-    title: "Metal health awareness seminar",
-    bgUrl:
-      "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+    name: "Team Noor",
+    title: `Why your friend ≠ a therapist`,
+    label: "label",
+    date: "29 aug 2020",
+    bgUrl: "https://picsum.photos/id/1018/1000/600/",
+    link: "/blogs/1",
   },
   {
     id: 2,
     bgColor: "#AAF1DB",
-    title: "Metal health awareness seminar",
+    name: "Team Noor",
+    title: "Counselling or therapy? Are they the same?",
+    label: "label",
+    date: "29 aug 2020",
     bgUrl:
-      "https://images.unsplash.com/photo-1501869150797-9bbb64f782fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+    link: "/blogs/2",
   },
 ]
 
@@ -43,12 +50,10 @@ const index = () => {
         <div className={styles.other_institutions}>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/school.jpg" alt="" style={{ filter: "grayscale(100%)" }} />
             </div>
             <div className={styles.institution_card_content}>
-              <div className={styles.card_content_text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
-              </div>
+              <div className={styles.card_content_text}>Basic Tutorial, Tilak Road.</div>
               <div className={styles.card_bottom_img}>
                 <img src="/assets/images/Institutions/bottom_img1.png" alt="" />
               </div>
@@ -56,12 +61,10 @@ const index = () => {
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/school.jpg" alt="" style={{ filter: "grayscale(100%)" }} />
             </div>
             <div className={styles.institution_card_content}>
-              <div className={styles.card_content_text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
-              </div>
+              <div className={styles.card_content_text}>BS Educon, Market Yard.</div>
               <div className={styles.card_bottom_img}>
                 <img src="/assets/images/Institutions/bottom_img2.png" alt="" />
               </div>
@@ -69,12 +72,10 @@ const index = () => {
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/Institutions/Insti_placeholder_img.png" alt="" />
+              <img src="/assets/images/Institutions/sbpatil.png" alt="" style={{ filter: "grayscale(100%)" }} />
             </div>
             <div className={styles.institution_card_content}>
-              <div className={styles.card_content_text}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr et dolore magna aliquyam erat sadipscing elitr.
-              </div>
+              <div className={styles.card_content_text}>SB Patil School, Tavet</div>
               <div className={styles.card_bottom_img}>
                 <img src="/assets/images/Institutions/bottom_img3.png" alt="" />
               </div>
@@ -88,7 +89,17 @@ const index = () => {
           {upcomingEventsData.map((element) => {
             return (
               <div className={styles.card_container}>
-                <BlogCard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} title={element.title} />
+                <BlogCard
+                  key={element.id}
+                  height="270"
+                  width="400"
+                  bgColor={element.bgColor}
+                  bgUrl={element.bgUrl}
+                  id={element.id}
+                  title={element.title}
+                  name={element.name}
+                  link={element.link}
+                />
               </div>
             )
           })}

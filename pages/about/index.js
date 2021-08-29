@@ -73,7 +73,7 @@ const index = () => {
                 <div className={styles.right_text}>
                   <div className={styles.name}>Zeel</div>
                   <div className={styles.designation}>Founder</div>
-                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
+                  <div data-aos="fade-in " className={styles.text}>
                     Zeel is an aspiring entrepreneur. A teacher by profession and a budding Educational Psychologist.
                     <span className={styles.hide}>
                       She enjoys talking about human behaviour, has an inquisitive personality and problem solving attitude.
@@ -87,7 +87,7 @@ const index = () => {
                 <div className={styles.left_text}>
                   <div className={styles.name}>Mugdha</div>
                   <div className={styles.designation}>Co-founder</div>
-                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
+                  <div data-aos="fade-in " d className={styles.text}>
                     A budding clinical psychologist. She enjoys pondering upon the existence of several things and exploring different fields.
                     <span className={styles.hide}> She’s a tagged juvenile spirit, an approachable person and a patient listener.</span>
                   </div>
@@ -106,7 +106,7 @@ const index = () => {
                 <div className={styles.right_text}>
                   <div className={styles.name}>Piyush</div>
                   <div className={styles.designation}>Co-founder</div>
-                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
+                  <div data-aos="fade-in " className={styles.text}>
                     An open book, fantastic conversationalist and the typical extrovert who keeps things transparent and straightforward.
                     <span className={styles.hide}> He enjoys interacting and getting to know new people.</span>
                   </div>
@@ -118,7 +118,7 @@ const index = () => {
                 <div className={styles.left_text}>
                   <div className={styles.name}>Sejal</div>
                   <div className={styles.designation}>Manager</div>
-                  <div data-aos="fade-in " data-aos-delay="0" className={styles.text}>
+                  <div data-aos="fade-in " className={styles.text}>
                     Combine goofy smiles with comfortable conversations; ambitious professionalism and you meet Sejal.
                     <span className={styles.hide}>
                       A maturing psychology student, working towards creating a community which would be aware of mental health and well-being.
@@ -127,7 +127,7 @@ const index = () => {
                 </div>
               </div>
               <div data-aos="fade-left" className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
-                <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
+                <img src="/assets/images/Meet-the-founders/Founder4.png" alt="" />
               </div>
             </div>
           </section>

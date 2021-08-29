@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styles from "./blogs.module.css"
-import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+// import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
+import { blogssData } from "../../utils/dummy-data/blogsData"
 // import Blogcard from "../../components/cards/new-blog-card/BlogCard";
 import Blogcard from "../../components/cards/blog-card/BlogCard"
 import Aos from "aos"
@@ -11,8 +12,8 @@ const index = () => {
   const [nav, setNav] = useState(0)
   const [searchText, setSearchText] = useState("")
 
-  const [blogsMasterData, setblogsMasterData] = useState(() => upcomingEventsData)
-  const [blogsData, setblogsData] = useState(() => upcomingEventsData)
+  const [blogsMasterData, setblogsMasterData] = useState(() => blogssData)
+  const [blogsData, setblogsData] = useState(() => blogssData)
 
   const handleSearch = (e) => {
     let text = e.target.value.toLowerCase()
@@ -53,6 +54,8 @@ const index = () => {
                 bgUrl={element.bgUrl}
                 id={element.id}
                 title={element.title}
+                name={element.name}
+                link={element.link}
               />
             </div>
           )

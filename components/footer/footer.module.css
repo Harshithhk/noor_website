@@ -78,6 +78,9 @@
   object-fit: cover;
 }
 @media only screen and (max-width: 630px) {
+  .footer_container {
+    transform: translateY(-50px);
+  }
   .social_media {
     font-size: 1.125rem;
     color: #707070;
@@ -85,8 +88,8 @@
     height: 3rem;
   }
   .socials_container {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    height: 8rem;
+    /* height: 8rem; */
   }
 }
