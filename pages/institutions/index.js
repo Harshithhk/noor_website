@@ -61,10 +61,10 @@ const index = () => {
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/Institutions/school.jpg" alt="" style={{ filter: "grayscale(100%)" }} />
+              <img src="/assets/images/Institutions/sbpatil.png" alt="" style={{ filter: "grayscale(100%)" }} />
             </div>
             <div className={styles.institution_card_content}>
-              <div className={styles.card_content_text}>BS Educon, Market Yard.</div>
+              <div className={styles.card_content_text}>SB Patil School, Ravet</div>
               <div className={styles.card_bottom_img}>
                 <img src="/assets/images/Institutions/bottom_img2.png" alt="" />
               </div>
@@ -72,10 +72,10 @@ const index = () => {
           </div>
           <div className={styles.institution_card}>
             <div className={styles.card_image_container}>
-              <img src="/assets/images/Institutions/sbpatil.png" alt="" style={{ filter: "grayscale(100%)" }} />
+              <img src="/assets/images/Institutions/school.jpg" alt="" style={{ filter: "grayscale(100%)" }} />
             </div>
             <div className={styles.institution_card_content}>
-              <div className={styles.card_content_text}>SB Patil School, Tavet</div>
+              <div className={styles.card_content_text}>BS Educon, Market Yard.</div>
               <div className={styles.card_bottom_img}>
                 <img src="/assets/images/Institutions/bottom_img3.png" alt="" />
               </div>
