@@ -3,6 +3,7 @@ import styles from "./events.module.css"
 import Upcoming from "./events-content/Upcoming"
 import Past from "./events-content/Past"
 import axios from "axios"
+import Head from "next/head"
 // import { upcomingEventsData } from " ../../utils/dummy-data/upcomingEventsData"
 import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
 import { pastEventsData } from "../../utils/dummy-data/pastEventsData"
@@ -61,6 +62,11 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
 
   return (
     <section className={styles.events_page_wrapper}>
+      <Head>
+        <title>Noor</title>
+        <meta name="description" content="Be your own light" />
+        <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+      </Head>
       <section>
         <div className={styles.heading}>
           <div style={{ fontSize: "48px" }}>Events</div>

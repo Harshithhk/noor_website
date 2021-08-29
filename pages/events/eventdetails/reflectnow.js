@@ -7,7 +7,7 @@ import { BsCircle, BsCircleFill } from "react-icons/bs"
 import UpcomingCard from "../../../components/cards/upcoming-card/UpcomingCard"
 import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData"
 import Link from "next/link"
-
+import Head from "next/head"
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 const Register = () => {
@@ -118,6 +118,11 @@ const Register = () => {
   return (
     <>
       <section className={styles.event_details_page_wrapper}>
+        <Head>
+          <title>Noor</title>
+          <meta name="description" content="Be your own light" />
+          <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+        </Head>
         <main>
           <div className={styles.heading}>
             <div style={{ textAlign: "center", alignItems: "center" }}>Events details</div>

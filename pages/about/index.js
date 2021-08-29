@@ -4,6 +4,7 @@ import ResponsivePlayer from "../../components/video-player/ResponsivePlayer"
 import cx from "classnames"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import Head from "next/head"
 
 const index = () => {
   const [modalDetails, setModalDetails] = useState()
@@ -21,6 +22,11 @@ const index = () => {
   return (
     <>
       <section className={styles.about_us_page_wrapper}>
+        <Head>
+          <title>Noor</title>
+          <meta name="description" content="Be your own light" />
+          <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+        </Head>
         <main>
           <div className={styles.heading}>
             <div data-aos="zoom-in" style={{ textAlign: "center", alignItems: "center" }}>
@@ -28,7 +34,8 @@ const index = () => {
             </div>
           </div>
           <div className={styles.video}>
-            <img src="/assets/images/video-placehholder.png" alt="" />
+            <img className={styles.hide} src="/assets/images/About_US_Hero_Wide.jpeg" alt="" />
+            <img className={cx(styles.show, styles.hero)} src="/assets/images/About_US_Hero.jpeg" alt="" />
           </div>
 
           <section>

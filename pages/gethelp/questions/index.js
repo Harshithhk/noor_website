@@ -4,6 +4,11 @@ import styles from "./questions.module.css"
 const index = () => {
   return (
     <section className={styles.questions_page_wrapper}>
+      <Head>
+        <title>Noor</title>
+        <meta name="description" content="Be your own light" />
+        <link rel="icon" href="/assets/images/Logos/favicon.ico" />
+      </Head>
       <main>
         <div className={styles.heading}>
           <div style={{ fontSize: "48px" }}>A few questions</div>

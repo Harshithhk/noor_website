@@ -15,6 +15,7 @@
   width: 100%;
 }
 .bubble_text {
+  font-weight: bold;
   width: 80%;
   position: absolute;
   top: 50%;
