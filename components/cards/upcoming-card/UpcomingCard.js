@@ -9,7 +9,7 @@ const UpcomingCard = ({ bgColor, bgUrl, title, label, shortDesc, largeDesc, date
   let cardLabel = label == "Upcoming" ? "Upcoming" : "Past"
   // let linkUrl = label == "Upcoming" ? "/events/register/example" : "/events/eventdetails/example"
   return (
-    <div className={styles.upcoming_card_wrapper} style={{ backgroundColor: "#f2f2f2" }}>
+    <div className={styles.upcoming_card_wrapper} style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${bgColor});` }}>
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>
