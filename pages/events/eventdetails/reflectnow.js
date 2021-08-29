@@ -14,24 +14,25 @@ const Register = () => {
   let carouselImages = [
     {
       id: 1,
-      original: "https://picsum.photos/id/1018/1000/600/",
+      original: "/assets/images/Events/ReflectNow/Reflect1.jpeg",
     },
 
     {
       id: 2,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+      original: "/assets/images/Events/ReflectNow/Reflect6.jpeg",
     },
-    { id: 3, original: "https://picsum.photos/id/1015/1000/600/" },
+    { id: 3, original: "/assets/images/Events/ReflectNow/Reflect3.jpeg" },
     {
       id: 4,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+      original: "/assets/images/Events/ReflectNow/Reflect4.jpeg",
     },
     {
       id: 5,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+      original: "/assets/images/Events/ReflectNow/Reflect2.jpeg",
+    },
+    {
+      id: 6,
+      original: "/assets/images/Events/ReflectNow/Reflect6.jpeg",
     },
   ]
 
