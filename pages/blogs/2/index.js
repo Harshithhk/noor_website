@@ -14,7 +14,7 @@ var upcomingEventsData = [
     title: `Why your friend ≠ a therapist`,
     label: "label",
     date: "29 aug 2020",
-    bgUrl: "https://picsum.photos/id/1018/1000/600/",
+    bgUrl: "/assets/images/Blog/Blog1.jpg",
     link: "/blogs/1",
   },
   {
