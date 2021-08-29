@@ -21,6 +21,7 @@ const Upcoming = ({ searchText, eventsData }) => {
               shortDesc={element.shortDescription}
               largeDesc={element.largeDescription}
               date={element.date}
+              link={element.link}
             />
           </div>
         )

@@ -3,11 +3,11 @@ import styles from "./upcoming_card.module.css"
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
 import Link from "next/link"
 
-const UpcomingCard = ({ bgColor, bgUrl, title, label, shortDesc, largeDesc, date }) => {
+const UpcomingCard = ({ bgColor, bgUrl, title, label, shortDesc, largeDesc, date, link }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
   let buttonText = label == "Upcoming" ? "Register" : "Explore More"
   let cardLabel = label == "Upcoming" ? "Upcoming" : "Past"
-  let linkUrl = label == "Upcoming" ? "/events/register/example " : "/events/eventdetails/example"
+  // let linkUrl = label == "Upcoming" ? "/events/register/example" : "/events/eventdetails/example"
   return (
     <div className={styles.upcoming_card_wrapper} style={{ backgroundColor: "#f2f2f2" }}>
       <div className={styles.text_content} style={{ backgroundColor: bgColor }}>
@@ -19,7 +19,7 @@ const UpcomingCard = ({ bgColor, bgUrl, title, label, shortDesc, largeDesc, date
           <div className={styles.title}>{title}</div>
           <div className={styles.description}>{shortDesc}</div>
           {/* <Link href="/events/register/example"> */}
-          <Link href={linkUrl}>
+          <Link href={link}>
             <button className={styles.register}>{buttonText}</button>
             {/* </Link> */}
           </Link>

@@ -28,14 +28,14 @@ const index = () => {
         </div>
       </section>
       <div className={styles.logo}>
-        <img src="/assets/images/Utils/Logo-footer.png" alt="" />
+        <img src="/assets/images/Logos/Noor_Colored_Black.svg" alt="" />
       </div>
       <div className={styles.social_media}>
         <div>Social Media</div>
         <div className={styles.socials_container}>
-          <a href="#">
+          <a href="https://www.linkedin.com/company/noorpune" target="_blank">
             <div className={styles.socials}>
-              <img src="/assets/images/Utils/Socials/Google.png" alt="" />
+              <img src="/assets/images/Utils/Socials/linked.png" alt="" />
             </div>
           </a>
           <a href="https://twitter.com/Noor23858692?s=09" target="_blank">

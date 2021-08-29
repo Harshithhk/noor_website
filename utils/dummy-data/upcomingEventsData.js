@@ -10,6 +10,7 @@ export var upcomingEventsData = [
       "The theme this time is 'Relationships'. Human relations are a beautiful blend of warmth, perspectives, experiences, and belongingness. The relationship with yourself especially, is your best investment. Have you ever said things out loud to someone else and discovered something new about yourself? Or openly talked about problems with friends and suddenly found a solution? That’s what we also need with ourself. A bond of trust where we can openly communicate and admit certain things and minimise problems and confusions. So come join us!",
     bgUrl:
       "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+    link: "/events/register/unfoldrelationships",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export var upcomingEventsData = [
       "So many books to read, and so many series to watch. We pick up a character we like the most … Wait, may we pick up the one we relate to the most? Here’s what we discovered in this session, about how several mediums teach us about our own situations and especially the types of love. we experience - be it self love, romantic, or in a friendship.  ",
     bgUrl:
       "https://images.unsplash.com/photo-1501869150797-9bbb64f782fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+    link: "/events/eventdetails/valentimes",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export var upcomingEventsData = [
     label: "Past",
     bgUrl:
       "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+    link: "/events/eventdetails/reflectnow",
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ we have always aimed to provide a non-judgemental platform where people can expr
     label: "Past",
     bgUrl:
       "https://images.unsplash.com/photo-1620173766248-411954ff5694?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80",
+    link: "/events/eventdetails/hbdunfold",
   },
 
   {
@@ -65,5 +69,6 @@ Eventually, an aura of confidence, stronger opinions and new connections took ov
     label: "Past",
     bgUrl:
       "https://images.unsplash.com/photo-1541976844346-f18aeac57b06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+    link: "/events/eventdetails/unfoldmarch",
   },
 ]

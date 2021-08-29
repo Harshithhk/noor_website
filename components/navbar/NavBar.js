@@ -53,7 +53,7 @@ const NavBar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src="/assets/images/logo.svg" width="125px" height="50px" />
+        <img src="/assets/images/Logos/Noor_Colored_white.svg" width="125px" height="50px" />
       </div>
 
       <div className={styles.nav_buttons}>

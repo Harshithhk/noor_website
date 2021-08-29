@@ -25,7 +25,8 @@ const index = () => {
           <div className={styles.person_details}>
             <div className={styles.right_text}>
               <div className={styles.name}>Aksha Juvekar</div>
-              <div className={styles.designation}>Psychologist</div>
+              <div className={styles.designation}>Psychologist </div>
+              <div className={styles.designation_degree}> -M.A. Clinical Psychology ( Savitribai Phule University )</div>
               <div data-aos="fade-in" data-aos-delay="0" className={styles.text}>
                 A counselling expert striving to enhance the society by sharing her knowledge, aiding us to gain insight and using it for our
                 betterment.
@@ -40,14 +41,16 @@ const index = () => {
         <div className={styles.person}>
           <div className={styles.person_details}>
             <div data-aos="fade-in" data-aos-delay="0" className={styles.left_text}>
-              <div className={styles.name}>Name</div>
-              <div className={styles.designation}>Designation</div>
+              <div className={styles.name}>Niraja Ingle- Erande </div>
+              <div className={styles.designation}>Psychologist</div>
+              <div className={styles.designation_degree}> -M.A. Clinical Psychology ( Savitribai Phule University )</div>
               <div className={styles.text}>
                 An approachable and comforting presence spreading awareness and involving hobbies in therapy, helping us rediscover ourselves.
                 <span className={styles.hide}>
                   {" "}
-                  et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                  gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                  Niraja is an approachable person for every age group and a comforting presence. She is working towards the creation of mental health
+                  awareness in a way that every individual will flourish. She educates people by not only using formal methods of teaching but also by
+                  helping them involve their hobbies and creativity at the same time.
                 </span>
               </div>
             </div>
@@ -56,7 +59,7 @@ const index = () => {
             <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
           </div>
         </div>
-        <div className={styles.person}>
+        {/* <div className={styles.person}>
           <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
             <img src="/assets/images/Meet-the-founders/Founder1.svg" alt="" />
           </div>
@@ -75,7 +78,7 @@ const index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </section>
   )

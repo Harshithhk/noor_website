@@ -5,30 +5,8 @@ import { BsCircle, BsCircleFill } from "react-icons/bs"
 import cx from "classnames"
 import styles from "./carousel.module.css"
 
-const Carousel = () => {
-  const [images, setimages] = useState(() => [
-    {
-      id: 1,
-      original: "https://picsum.photos/id/1018/1000/600/",
-    },
-
-    {
-      id: 2,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
-    },
-    { id: 3, original: "https://picsum.photos/id/1015/1000/600/" },
-    {
-      id: 4,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
-    },
-    {
-      id: 5,
-      original:
-        "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
-    },
-  ])
+const Carousel = ({ carouselImages }) => {
+  const [images, setimages] = useState(() => carouselImages)
   const [pgCountForthree, setpgCountForthree] = useState(() => Math.ceil(images.length / 3))
   const [pgCountFortwo, setpgCountFortwo] = useState(() => Math.ceil(images.length / 2))
   const [pgCountForone, setpgCountForone] = useState(() => Math.ceil(images.length / 1))
