@@ -7,16 +7,25 @@ import cx from "classnames"
 
 var upcomingEventsData = [
   {
-    id: 1,
-    bgColor: "#FCD5E4",
-    bgUrl:
-      "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
-  },
-  {
     id: 2,
     bgColor: "#AAF1DB",
+    name: "Team Noor",
+    title: "Counselling or therapy? Are they the same?",
+    label: "label",
+    date: "28 aug 2021",
     bgUrl:
-      "https://images.unsplash.com/photo-1501869150797-9bbb64f782fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+    link: "/blogs/2",
+  },
+  {
+    id: 3,
+    bgColor: "#C1E1FF",
+    name: "Team Noor",
+    title: `Choosing a psychologist`,
+    label: "label",
+    date: "29 aug 2021",
+    bgUrl: "https://picsum.photos/id/1015/1000/600/",
+    link: "/blogs/3",
   },
 ]
 const index = () => {
@@ -38,7 +47,7 @@ const index = () => {
           </div>
         </div>
         <div className={styles.img_container}>
-          <img src="/assets/images/Blog/Blog_img_placeholder.png" alt="" />
+          <img src="/assets/images/Blog/Blog1.jpg" alt="" />
         </div>
         <div className={styles.minor_text}>Lorem ipsum dolor sit amet, consetetur sadipscing.</div>
         <div className={styles.blog}>
@@ -92,7 +101,17 @@ const index = () => {
             // return <Blogcard key={element.id} height="270" width="400" bgColor={element.bgColor} bgUrl={element.bgUrl} />;
             return (
               <div className={styles.card_container}>
-                <BlogCard key={element.id} bgColor={element.bgColor} bgUrl={element.bgUrl} />
+                <BlogCard
+                  key={element.id}
+                  height="270"
+                  width="400"
+                  bgColor={element.bgColor}
+                  bgUrl={element.bgUrl}
+                  id={element.id}
+                  title={element.title}
+                  name={element.name}
+                  link={element.link}
+                />
               </div>
             )
           })}

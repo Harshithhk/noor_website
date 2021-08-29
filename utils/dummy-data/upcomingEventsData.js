@@ -8,8 +8,7 @@ export var upcomingEventsData = [
     shortDescription: "Your best investment? A good relationship with yourself!",
     largeDescription:
       "The theme this time is 'Relationships'. Human relations are a beautiful blend of warmth, perspectives, experiences, and belongingness. The relationship with yourself especially, is your best investment. Have you ever said things out loud to someone else and discovered something new about yourself? Or openly talked about problems with friends and suddenly found a solution? That’s what we also need with ourself. A bond of trust where we can openly communicate and admit certain things and minimise problems and confusions. So come join us!",
-    bgUrl:
-      "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+    bgUrl: "/assets/images/Events/UnfoldRelationships.png",
     link: "/events/register/unfoldrelationships",
   },
   {
@@ -34,8 +33,7 @@ export var upcomingEventsData = [
     largeDescription:
       "The years in one’s life are often so impacting, they make you who you are and prepare you for who you want to be ahead. It is only human to make mistakes, but it is celestial to learn from it and create a better future for self. Regrets, mistakes on one hand, and achievements, treasured memories on the other. A perfection session for addressing who we were, who we are and who we aspire to be. ",
     label: "Past",
-    bgUrl:
-      "https://images.unsplash.com/photo-1622837633469-ee5b894a4f59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+    bgUrl: "/assets/images/Events/Reflect.png",
     link: "/events/eventdetails/reflectnow",
   },
   {
@@ -49,8 +47,7 @@ To everyone who's attended Unfold,
 we have always aimed to provide a non-judgemental platform where people can express themselves without any fears or insecurities. Achieving this milestone, with your support has motivated us to bring better experiences for you. We hope to see y'all soon at Unfold again!
 `,
     label: "Past",
-    bgUrl:
-      "https://images.unsplash.com/photo-1620173766248-411954ff5694?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80",
+    bgUrl: "/assets/images/Events/HBDUnfold.png",
     link: "/events/eventdetails/hbdunfold",
   },
 
@@ -67,8 +64,7 @@ we have always aimed to provide a non-judgemental platform where people can expr
 Eventually, an aura of confidence, stronger opinions and new connections took over the room. The four walls which otherwise should have been confining, perhaps created the most liberated space✨ 
 `,
     label: "Past",
-    bgUrl:
-      "https://images.unsplash.com/photo-1541976844346-f18aeac57b06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+    bgUrl: "/assets/images/Events/Unfold.png",
     link: "/events/eventdetails/unfoldmarch",
   },
 ]
