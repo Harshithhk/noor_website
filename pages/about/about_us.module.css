@@ -24,7 +24,6 @@
   animation-name: expander;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  /* margin: 0 auto; */
 }
 
 .video {
@@ -65,6 +64,7 @@
   padding-right: 4rem;
 }
 .message_heading {
+  padding-left: 1rem;
   font-size: 1.5rem;
   color: #707070;
 }
@@ -424,8 +424,8 @@
     animation-name: expander_two;
   }
   .founders {
-    margin-left: -2.25rem;
-    margin-right: -2.25rem;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
   }
   .person {
     height: 15rem;

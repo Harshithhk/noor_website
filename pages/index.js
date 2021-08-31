@@ -142,15 +142,15 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="0" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B2.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Interactive
+                    Interactive <div className={cx(styles2.b2_inner, styles2.b_inner)}>- engage in meaningful conversations </div>
                   </div>
                 </div>
               </div>
               <div className={cx(styles2.bubble, styles2.b3)}>
-                <div data-aos="zoom-in" data-aos-delay="70" className={styles2.bubble_wrapper}>
+                <div className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B1.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    New connections
+                    New connections <div className={cx(styles2.b3_inner, styles2.b_inner)}>– find like-minded people </div>
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function Home() {
                 <div className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B4.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Self-awareness
+                    Self-awareness<div className={cx(styles2.b4_inner, styles2.b_inner)}>– speak your truth </div>
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="0" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B2.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Safe space
+                    Safe space <div className={cx(styles2.b5_inner, styles2.b_inner)}>– non-judgmental environment </div>
                   </div>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="50" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B3.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Inspiring
+                    Inspiring <div className={cx(styles2.b6_inner, styles2.b_inner)}>- we heal together </div>
                   </div>
                 </div>
               </div>
@@ -188,15 +188,15 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="0" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B4.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Inclusive
+                    Inclusive <div className={cx(styles2.b8_inner, styles2.b_inner)}> – we hear you!</div>
                   </div>
                 </div>
               </div>
               <div className={cx(styles2.bubble, styles2.b9)}>
-                <div data-aos="zoom-in" data-aos-delay="100" className={styles2.bubble_wrapper}>
+                <div className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B1.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Psycho-education
+                    Psycho-education <div className={cx(styles2.b9_inner, styles2.b_inner)}>– learn & stay mentally healthy </div>
                   </div>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="1000" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B3.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Collaborative
+                    Collaborative <div className={cx(styles2.b11_inner, styles2.b_inner)}> – the more, the merrier</div>
                   </div>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function Home() {
                 <div data-aos="zoom-in" data-aos-delay="100" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B2.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Faith
+                    Faith <div className={cx(styles2.b12_inner, styles2.b_inner)}> – trust, and things may mend</div>
                   </div>
                 </div>
               </div>
@@ -236,7 +236,7 @@ export default function Home() {
                 <div className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B3.png" alt="" />
                   <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Self-awareness
+                    Self-awareness <div className={cx(styles2.b14_inner, styles2.b_inner)}>– speak your truth </div>
                   </div>
                 </div>
               </div>

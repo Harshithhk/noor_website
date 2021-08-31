@@ -5,7 +5,7 @@ const Register = () => {
     <section className={styles.register_page_wrapper}>
       <section>
         <div className={styles.heading}>
-          <div style={{ fontSize: "48px" }}>Register</div>
+          <div>Register</div>
         </div>
         <div className={styles.content_description}>
           <div className={styles.img}>

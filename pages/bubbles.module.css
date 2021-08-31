@@ -146,6 +146,88 @@
   width: 12rem;
   transform: translate(-10%, -10%);
 }
+.b_inner {
+  animation-name: expander_two;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes expander_two {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.b_inner {
+  display: none;
+  transition: 0.5s all ease;
+}
+
+.b1:hover .b1_inner {
+  width: fit-content;
+  display: block !important;
+}
+
+.b2:hover .b2_inner {
+  width: fit-content;
+  display: block !important;
+}
+
+.b3:hover .b3_inner {
+  width: fit-content;
+  display: block;
+}
+.b4:hover .b4_inner {
+  width: fit-content;
+  display: block;
+}
+.b4:hover .b4_inner {
+  width: fit-content;
+  display: block;
+}
+.b5:hover .b5_inner {
+  width: fit-content;
+  display: block;
+}
+.b6:hover .b6_inner {
+  width: fit-content;
+  display: block;
+}
+.b7:hover .b7_inner {
+  width: fit-content;
+  display: block;
+}
+.b8:hover .b8_inner {
+  width: fit-content;
+  display: block;
+}
+.b9:hover .b9_inner {
+  width: fit-content;
+  display: block;
+}
+.b10:hover .b10_inner {
+  width: fit-content;
+  display: block;
+}
+.b11:hover .b11_inner {
+  width: fit-content;
+  display: block;
+}
+.b12:hover .b12_inner {
+  width: fit-content;
+  display: block;
+}
+.b13:hover .b13_inner {
+  width: fit-content;
+  display: block;
+}
+.b14:hover .b14_inner {
+  width: fit-content;
+  display: block;
+}
 
 .bubble img {
   width: 100%;

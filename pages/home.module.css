@@ -357,7 +357,7 @@
 .see_all_events {
   font-size: 1.25rem;
   color: #7f7f7f;
-
+  height: fit-content;
   position: absolute;
   left: 50%;
   bottom: 3rem;

@@ -17,6 +17,10 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  position: relative;
+  animation-name: expander;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 .carousel {
@@ -325,6 +329,10 @@
 }
 
 @media only screen and (max-width: 630px) {
+  .heading {
+    font-size: 35px;
+    animation-name: expander_two;
+  }
   .cards_container {
     width: 30rem;
     height: 22rem;

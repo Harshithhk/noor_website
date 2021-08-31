@@ -18,6 +18,10 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  position: relative;
+  animation-name: expander;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 .splash {
   width: 50px;
@@ -119,17 +123,22 @@
     padding-left: 0px;
     padding-right: 0px;
   }
+  .heading {
+    font-size: 30px;
+    animation-name: expander_two;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 @media only screen and (max-width: 450px) {
+  .splash {
+    width: 50px;
+  }
   .blog_page_wrapper {
     padding-left: 0rem;
     padding-right: 0rem;
   }
-  .heading {
-    font-size: 35px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+
   .img_container {
     width: 19.5rem;
     height: 11.125rem;
@@ -143,5 +152,22 @@
   }
   .similar_blog_cards {
     width: 19.5rem;
+  }
+}
+
+@keyframes expander {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 48px;
+  }
+}
+@keyframes expander_two {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 30px;
   }
 }

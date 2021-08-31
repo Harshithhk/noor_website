@@ -12,7 +12,7 @@ const index = () => {
       </Head>
       <main>
         <div className={styles.heading}>
-          <div style={{ fontSize: "48px" }}>A few questions</div>
+          <div>A few questions</div>
         </div>
         <section>
           <div style={{ paddingLeft: "14rem" }}>

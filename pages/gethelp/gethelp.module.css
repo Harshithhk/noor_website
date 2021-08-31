@@ -18,6 +18,10 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  position: relative;
+  animation-name: expander;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 .imglines {
   width: 100%;
@@ -398,6 +402,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 35px;
+    animation-name: expander_two;
+  }
   .question_container {
     padding: 1.25rem;
     margin-bottom: 2rem;

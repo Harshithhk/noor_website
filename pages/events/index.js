@@ -69,7 +69,7 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
       </Head>
       <section>
         <div className={styles.heading}>
-          <div style={{ fontSize: "48px" }}>Events</div>
+          <div>Events</div>
         </div>
         <div className={styles.events_nav}>
           <div className={styles.upcoming_past}>

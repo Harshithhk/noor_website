@@ -5,7 +5,7 @@
   display: flex;
   animation: comeInside 2s ease-in-out;
   color: #414141;
-  /* background-image: linear-gradient(to bottom right, rgb(235, 233, 233), rgb(99, 99, 99)); */
+  background-image: linear-gradient(to bottom right, rgb(235, 233, 233) 80%, rgb(99, 99, 99));
 }
 
 .text_content {
