@@ -1,0 +1,53 @@
+.ImageGallery {
+  position: fixed;
+  z-index: 500;
+  /* height: calc(100vh - 160px); */
+  height: 100vh;
+  width: 100%;
+  top: 50%;
+  /* padding-top: 50%; */
+  transform: translateY(-50%);
+  background-color: black;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes zoom {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 100vh;
+    opacity: 1;
+  }
+}
+.active {
+  z-index: 600;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  font-weight: bolder;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.active:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .ImageGallery {
+    padding-top: 50%;
+  }
+  .active {
+    font-size: 25px;
+    width: 25px;
+    height: 30px;
+    position: static;
+    /* transform: translateY(+50); */
+    margin-left: auto;
+  }
+}

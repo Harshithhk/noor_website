@@ -5,7 +5,7 @@ import { BsCircle, BsCircleFill } from "react-icons/bs"
 import cx from "classnames"
 import styles from "./carousel.module.css"
 
-const Carousel = ({ carouselImages }) => {
+const Carousel = ({ carouselImages, setGalleryActive, handleClick }) => {
   const [images, setimages] = useState(() => carouselImages)
   const [pgCountForthree, setpgCountForthree] = useState(() => Math.ceil(images.length / 3))
   const [pgCountFortwo, setpgCountFortwo] = useState(() => Math.ceil(images.length / 2))
@@ -52,7 +52,14 @@ const Carousel = ({ carouselImages }) => {
       <section className={styles.media_showcase} style={{ zIndex: "1" }}>
         {images.map((img) => {
           return (
-            <div key={img.id} className={styles.card} style={{ transform: `translateX(${translateX}px)` }}>
+            <div
+              key={img.id}
+              className={styles.card}
+              onClick={() => {
+                handleClick(img)
+              }}
+              style={{ transform: `translateX(${translateX}px)` }}
+            >
               <img src={img.original} alt={img.original} />
             </div>
           )

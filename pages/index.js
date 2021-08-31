@@ -10,6 +10,23 @@ import { BsCircle, BsCircleFill } from "react-icons/bs"
 import Link from "next/link"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import Gallery from "../components/image-gallery"
+import ReactPlayer from "react-player"
+
+const images = [
+  {
+    original: "https://picsum.photos/id/1018/1000/600/",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1015/1000/600/",
+    thumbnail: "https://picsum.photos/id/1015/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+]
 
 export default function Home() {
   const impressions = [
@@ -66,8 +83,29 @@ export default function Home() {
     },
   ]
 
+  const [whatWeDoImages, setWhatWeDoImages] = useState(() => [
+    { original: "/assets/images/WhatsOld-Placeholders/Right-Large.PNG", thumbnail: "/assets/images/WhatsOld-Placeholders/Right-Large.PNG" },
+    { original: "/assets/images/WhatsOld-Placeholders/left-small.jpg", thumbnail: "/assets/images/WhatsOld-Placeholders/left-small.jpg" },
+    { original: "/assets/images/WhatsOld-Placeholders/left-tiny.jpg", thumbnail: "/assets/images/WhatsOld-Placeholders/left-tiny.jpg" },
+    { original: "/assets/images/WhatsOld-Placeholders/left-tiny2.png", thumbnail: "/assets/images/WhatsOld-Placeholders/left-tiny2.png" },
+    { original: "/assets/images/WhatsOld-Placeholders/left-tiny4.jpg", thumbnail: "/assets/images/WhatsOld-Placeholders/left-tiny4.jpg" },
+    { original: "/assets/images/WhatsOld-Placeholders/left-tiny3.jpg", thumbnail: "/assets/images/WhatsOld-Placeholders/left-tiny3.jpg" },
+  ])
+  const [carouselImages, setCarouselImages] = useState(() => whatWeDoImages)
+
+  const handleClick = (obj) => {
+    let imgsTemp = whatWeDoImages.filter((img) => obj !== img)
+    imgsTemp.unshift(obj)
+    setCarouselImages(() => imgsTemp)
+
+    setGalleryActive(true)
+  }
+
+  const [galleryActive, setGalleryActive] = useState(false)
+
   const [activeCard, setactiveCard] = useState(0)
   const [translateX, setTranslateX] = useState(0)
+
   var activeWindowSize = 1080
 
   const setCard = (index) => {
@@ -121,6 +159,7 @@ export default function Home() {
         <link rel="icon" href="/assets/images/Logos/favicon.ico" />
       </Head>
       <section className={styles.home_wrapper}>
+        {galleryActive && <Gallery images={carouselImages} setGalleryActive={setGalleryActive} />}
         <main>
           <section>
             <div className={styles.heading}>
@@ -310,29 +349,29 @@ export default function Home() {
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_2)} style={{ flexDirection: "column", height: "50rem" }}>
               <div className={styles.graphic_container}>
                 <div className={styles.left_holder}>
-                  <div className={styles.left_large}>
+                  <div className={styles.left_large} onClick={() => handleClick(whatWeDoImages[2])}>
                     <img src="/assets/images/WhatsOld-Placeholders/left-tiny.jpg" alt="" />
                   </div>
                   <div className={styles.left_small}>
                     <div className={styles.left_left}>
-                      <div className={styles.left_small_img}>
+                      <div className={styles.left_small_img} onClick={() => handleClick(whatWeDoImages[1])}>
                         <img src="/assets/images/WhatsOld-Placeholders/left-small.jpg" alt="" />
                       </div>
-                      <div className={styles.left_small_img}>
+                      <div className={styles.left_small_img} onClick={() => handleClick(whatWeDoImages[3])}>
                         <img src="/assets/images/WhatsOld-Placeholders/left-tiny2.png" alt="" />
                       </div>
                     </div>
                     <div className={styles.right_right}>
-                      <div className={styles.left_small_img}>
+                      <div className={styles.left_small_img} onClick={() => handleClick(whatWeDoImages[4])}>
                         <img src="/assets/images/WhatsOld-Placeholders/left-tiny4.jpg" alt="" />
                       </div>
-                      <div className={styles.left_small_img}>
+                      <div className={styles.left_small_img} onClick={() => handleClick(whatWeDoImages[5])}>
                         <img src="/assets/images/WhatsOld-Placeholders/left-tiny3.jpg" alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className={styles.right_holder}>
+                <div className={styles.right_holder} onClick={() => handleClick(whatWeDoImages[0])}>
                   <img src="/assets/images/WhatsOld-Placeholders/Right-Large.PNG" alt="" srcset="" />
                 </div>
               </div>

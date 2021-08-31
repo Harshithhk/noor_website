@@ -127,6 +127,8 @@
   margin-top: 2rem;
   height: 24.813rem;
   display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 .left_holder {
   width: 11.938rem;

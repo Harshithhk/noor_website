@@ -9,23 +9,29 @@ import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData
 import Link from "next/link"
 import Head from "next/head"
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+import Gallery from "../../../components/image-gallery"
 
 const Register = () => {
   let carouselImages = [
     {
       id: 1,
       original: "/assets/images/Events/HBDUnfold/HBD1jpeg.jpeg",
+      thumbnail: "/assets/images/Events/HBDUnfold/HBD1jpeg.jpeg",
     },
 
     {
       id: 2,
       original: "/assets/images/Events/HBDUnfold/HBD2.jpeg",
+      thumbnail: "/assets/images/Events/HBDUnfold/HBD2.jpeg",
     },
     {
       id: 3,
       original: "/assets/images/Events/HBDUnfold/HBD3.jpeg",
+      thumbnail: "/assets/images/Events/HBDUnfold/HBD3.jpeg",
     },
   ]
+  const [galleryImages, setGalleryImages] = useState(() => carouselImages)
+  const [galleryActive, setGalleryActive] = useState(false)
 
   var upcomingEventsData = [
     {
@@ -101,6 +107,14 @@ const Register = () => {
     }
   }
 
+  const handleClick = (obj) => {
+    let imgsTemp = galleryImages.filter((img) => obj !== img)
+    imgsTemp.unshift(obj)
+    setGalleryImages(() => imgsTemp)
+
+    setGalleryActive(true)
+  }
+
   useEffect(() => {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
@@ -108,6 +122,7 @@ const Register = () => {
 
   return (
     <>
+      {galleryActive && <Gallery images={galleryImages} setGalleryActive={setGalleryActive} />}
       <section className={styles.event_details_page_wrapper}>
         <Head>
           <title>Noor</title>
@@ -119,7 +134,7 @@ const Register = () => {
             <div style={{ textAlign: "center", alignItems: "center" }}>Events details</div>
           </div>
           <div className={styles.carousel}>
-            <Carousel className={styles.carousel} carouselImages={carouselImages} />
+            <Carousel className={styles.carousel} carouselImages={carouselImages} setGalleryActive={setGalleryActive} handleClick={handleClick} />
           </div>
           <section className={styles.description}>
             <div className={styles.desc_container}>

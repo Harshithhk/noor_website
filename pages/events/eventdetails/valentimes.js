@@ -8,20 +8,25 @@ import UpcomingCard from "../../../components/cards/upcoming-card/UpcomingCard"
 import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData"
 import Link from "next/link"
 import Head from "next/head"
+import Gallery from "../../../components/image-gallery"
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 const Register = () => {
+  const [galleryActive, setGalleryActive] = useState(false)
   let carouselImages = [
     {
       id: 1,
       original: "/assets/images/Events/Valentimes/Valentimes.jpg",
+      thumbnail: "/assets/images/Events/Valentimes/Valentimes.jpg",
     },
 
     {
       id: 2,
       original: "/assets/images/Events/Valentimes/Valentimes2.jpg",
+      thumbnail: "/assets/images/Events/Valentimes/Valentimes2.jpg",
     },
-    { id: 3, original: "/assets/images/Events/Valentimes/Valentimes3.jpg" },
+    { id: 3, original: "/assets/images/Events/Valentimes/Valentimes3.jpg", thumbnail: "/assets/images/Events/Valentimes/Valentimes3.jpg" },
     // {
     //   id: 4,
     //   original:
@@ -33,6 +38,7 @@ const Register = () => {
     //     "https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
     // },
   ]
+  const [galleryImages, setGalleryImages] = useState(() => carouselImages)
 
   var upcomingEventsData = [
     {
@@ -108,6 +114,14 @@ const Register = () => {
     }
   }
 
+  const handleClick = (obj) => {
+    let imgsTemp = galleryImages.filter((img) => obj !== img)
+    imgsTemp.unshift(obj)
+    setGalleryImages(() => imgsTemp)
+
+    setGalleryActive(true)
+  }
+
   useEffect(() => {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
@@ -115,18 +129,20 @@ const Register = () => {
 
   return (
     <>
+      {galleryActive && <Gallery images={galleryImages} setGalleryActive={setGalleryActive} />}
       <section className={styles.event_details_page_wrapper}>
         <Head>
           <title>Noor</title>
           <meta name="description" content="Be your own light" />
           <link rel="icon" href="/assets/images/Logos/favicon.ico" />
         </Head>
+
         <main>
           <div className={styles.heading}>
             <div style={{ textAlign: "center", alignItems: "center" }}>Events details</div>
           </div>
           <div className={styles.carousel}>
-            <Carousel className={styles.carousel} carouselImages={carouselImages} />
+            <Carousel className={styles.carousel} carouselImages={carouselImages} setGalleryActive={setGalleryActive} handleClick={handleClick} />
           </div>
           <section className={styles.description}>
             <div className={styles.desc_container}>

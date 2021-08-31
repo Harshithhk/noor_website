@@ -8,6 +8,8 @@ import UpcomingCard from "../../../components/cards/upcoming-card/UpcomingCard"
 import { upcomingEventsData } from "../../../utils/dummy-data/upcomingEventsData"
 import Link from "next/link"
 import Head from "next/head"
+import Gallery from "../../../components/image-gallery"
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 const Register = () => {
@@ -15,21 +17,26 @@ const Register = () => {
     {
       id: 1,
       original: "/assets/images/Events/UnfoldMarch/Unfold1.jpg",
+      thumbnail: "/assets/images/Events/UnfoldMarch/Unfold1.jpg",
     },
 
     {
       id: 2,
       original: "/assets/images/Events/UnfoldMarch/Unfold2.jpg",
+      thumbnail: "/assets/images/Events/UnfoldMarch/Unfold2.jpg",
     },
     {
       id: 3,
       original: "/assets/images/Events/UnfoldMarch/Unfold3.jpg",
+      thumbnail: "/assets/images/Events/UnfoldMarch/Unfold3.jpg",
     },
     {
       id: 4,
       original: "/assets/images/Events/UnfoldMarch/Unfold5.jpg",
+      thumbnail: "/assets/images/Events/UnfoldMarch/Unfold5.jpg",
     },
   ]
+  const [galleryImages, setGalleryImages] = useState(() => carouselImages)
 
   var upcomingEventsData = [
     {
@@ -45,6 +52,7 @@ const Register = () => {
         "https://images.unsplash.com/photo-1501869150797-9bbb64f782fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
     },
   ]
+  const [galleryActive, setGalleryActive] = useState(false)
 
   const impressions = [
     {
@@ -104,6 +112,13 @@ const Register = () => {
       setCard(0)
     }
   }
+  const handleClick = (obj) => {
+    let imgsTemp = galleryImages.filter((img) => obj !== img)
+    imgsTemp.unshift(obj)
+    setGalleryImages(() => imgsTemp)
+
+    setGalleryActive(true)
+  }
 
   useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -112,6 +127,7 @@ const Register = () => {
 
   return (
     <>
+      {galleryActive && <Gallery images={galleryImages} setGalleryActive={setGalleryActive} />}
       <section className={styles.event_details_page_wrapper}>
         <Head>
           <title>Noor</title>
@@ -123,7 +139,7 @@ const Register = () => {
             <div style={{ textAlign: "center", alignItems: "center" }}>Events details</div>
           </div>
           <div className={styles.carousel}>
-            <Carousel className={styles.carousel} carouselImages={carouselImages} />
+            <Carousel className={styles.carousel} carouselImages={carouselImages} setGalleryActive={setGalleryActive} handleClick={handleClick} />
           </div>
           <section className={styles.description}>
             <div className={styles.desc_container}>
