@@ -79,10 +79,6 @@
   background-image: url("/assets/images/Subtraction 9.png");
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none;
 }
 .impressions_home {
   height: 650px;
@@ -93,10 +89,6 @@
   /* background-image: url("/assets/images/Subtraction 9.png"); */
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none;
 }
 
 .cards_container {

@@ -469,8 +469,8 @@ export default function Home() {
               <div className={cx(styles1.cards_container, styles.whats_new_cards_container)} style={{ cursor: "pointer" }}>
                 {impressions.map((impression, index) => (
                   <div
-                    onTouchStart={(e) => touchstart(e)}
-                    onTouchMove={(e) => touchmove(e, 2)}
+                    onTouchStart={(e) => touchstart(e, "touch")}
+                    onTouchMove={(e) => touchmove(e, 2, "touch")}
                     onTouchEnd={(e) => touchend(e)}
                     onMouseDown={(e) => touchstart(e, "mouse")}
                     onMouseMove={(e) => touchmove(e, 2, "mouse")}
