@@ -142,6 +142,48 @@ export default function Home() {
       setCard2(0)
     }
   }
+  var startingX, movingX
+  var moving = false
+  function touchstart(evt, input) {
+    evt.preventDefault()
+    startingX = input == "touch" ? evt.touches[0].clientX : evt.clientX
+  }
+  function touchmove(evt, cardNo, input) {
+    if (cardNo == 2) {
+      if (!moving) {
+        movingX = input == "touch" ? evt.touches[0].clientX : evt.clientX
+        if (startingX + 100 < movingX) {
+          if (activeCard2 !== 0) {
+            moving = true
+            setCard2(activeCard2 - 1)
+          }
+        } else if (startingX - 100 > movingX) {
+          if (activeCard2 !== impressions.length - 1) {
+            moving = true
+            setCard2(activeCard2 + 1)
+          }
+        }
+      }
+    } else if (cardNo == 1) {
+      if (!moving) {
+        movingX = input == "touch" ? evt.touches[0].clientX : evt.clientX
+        if (startingX + 100 < movingX) {
+          if (activeCard !== 0) {
+            moving = true
+            setCard(activeCard - 1)
+          }
+        } else if (startingX - 100 > movingX) {
+          if (activeCard !== whatsNewData.length - 1) {
+            moving = true
+            setCard(activeCard + 1)
+          }
+        }
+      }
+    }
+  }
+  function touchend(evt) {
+    moving = false
+  }
 
   const fontColors = ["#F8C5D8", "#7881db", "#D8BCE8"]
 
@@ -290,9 +332,15 @@ export default function Home() {
             </div>
             <div className={cx(styles.whats_new_bg_container, styles.bg_container_1)}>
               <section className={styles1.impressions_home}>
-                <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
+                <div className={cx(styles1.cards_container, styles.whats_new_cards_container)} style={{ cursor: "pointer" }}>
                   {whatsNewData.map((data, index) => (
                     <div
+                      onTouchStart={(e) => touchstart(e, "touch")}
+                      onTouchMove={(e) => touchmove(e, 1, "touch")}
+                      onTouchEnd={(e) => touchend(e)}
+                      onMouseDown={(e) => touchstart(e, "mouse")}
+                      onMouseMove={(e) => touchmove(e, 1, "mouse")}
+                      onMouseUp={(e) => touchend(e)}
                       className={cx(styles1.card, styles.whats_new_card)}
                       key={data.id}
                       id="card"
@@ -418,9 +466,15 @@ export default function Home() {
               <div style={{ textAlign: "center", alignItems: "center" }}>They think we're nice</div>
             </div>
             <section className={cx(styles1.impressions, styles.impressions)}>
-              <div className={cx(styles1.cards_container, styles.whats_new_cards_container)}>
+              <div className={cx(styles1.cards_container, styles.whats_new_cards_container)} style={{ cursor: "pointer" }}>
                 {impressions.map((impression, index) => (
                   <div
+                    onTouchStart={(e) => touchstart(e)}
+                    onTouchMove={(e) => touchmove(e, 2)}
+                    onTouchEnd={(e) => touchend(e)}
+                    onMouseDown={(e) => touchstart(e, "mouse")}
+                    onMouseMove={(e) => touchmove(e, 2, "mouse")}
+                    onMouseUp={(e) => touchend(e)}
                     className={styles1.card}
                     key={impression.id}
                     id="card2"

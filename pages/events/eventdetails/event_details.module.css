@@ -4,6 +4,10 @@
   padding-right: 6.25rem;
   /* padding-bottom: 10.25rem; */
   font-family: "Open Sans", sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 
   /* height: 100px; */
 }
@@ -75,6 +79,10 @@
   background-image: url("/assets/images/Subtraction 9.png");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 }
 .impressions_home {
   height: 650px;
@@ -85,6 +93,10 @@
   /* background-image: url("/assets/images/Subtraction 9.png"); */
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 }
 
 .cards_container {
@@ -147,6 +159,10 @@
   color: #7f7f7f;
   margin-top: 2rem;
   font-style: italic;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .active_buttons {
