@@ -54,13 +54,18 @@ const index = () => {
             </div>
           </a>
         </div>
-        <div style={{ marginTop: "1.5rem", marginBottom: "1rem" }}>Website by-</div>
+        <hr style={{ borderColor: "#ffdeea", border: "1px dashed   #ffdeea", margin: "8px 0" }} />
+        <div style={{ marginTop: "0.5rem", marginBottom: "0.25rem", fontSize: "1rem" }}>Website by-</div>
         <a href="https://github.com/Harshithhk" target="_blank" style={{ textDecoration: "none", color: "#7f7f7f" }}>
           <div style={{ fontSize: "0.75rem", fontWeight: "lighter" }}>Harshith Kelkar</div>
         </a>
-        <div style={{ fontSize: "0.6rem" }}>&</div>
+        {/* <div style={{ fontSize: "0.6rem" }}>&</div> */}
         <a href="https://github.com/mulitate4" target="_blank" style={{ textDecoration: "none", color: "#7f7f7f" }}>
           <div style={{ fontSize: "0.75rem", fontWeight: "lighter" }}>Aryan Dongre</div>
+        </a>
+        <div style={{ marginTop: "0.5rem", marginBottom: "0.25rem", fontSize: "1rem" }}>Designed by-</div>
+        <a href="mailto:anshpurii@gmail.com" target="_blank" style={{ textDecoration: "none", color: "#7f7f7f" }}>
+          <div style={{ fontSize: "0.75rem", fontWeight: "lighter" }}>Ansh Purii</div>
         </a>
       </div>
     </footer>
