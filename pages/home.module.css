@@ -4,9 +4,10 @@
   font-family: "Open Sans", sans-serif;
   /* max-width: 1920px; */
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  margin-bottom: 6.25rem;
 }
 
 .transformation {
