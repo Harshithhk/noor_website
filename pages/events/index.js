@@ -17,7 +17,9 @@ const borderPast = {
 }
 
 export const getStaticProps = async () => {
-  const upcommingData = upcomingEventsData
+  const res = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+  const upcommingData = res.data
+  // const upcommingData = upcomingEventsData
   const pastData = pastEventsData
 
   return {
@@ -28,8 +30,9 @@ export const getStaticProps = async () => {
 const index = ({ upcomingEventsData, pastEventsData }) => {
   useEffect(async () => {
     // const e = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+    // console.log(e)
     // const e = await axios.get("http://localhost:3000/api/hello")
-    console.log(upcomingEventsData)
+    // console.log(upcomingEventsData)
     return () => {}
   }, [])
 
