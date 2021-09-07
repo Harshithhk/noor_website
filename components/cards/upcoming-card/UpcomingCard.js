@@ -10,7 +10,7 @@ const UpcomingCard = ({ dataa }) => {
   let cardLabel = data.genre == "Upcoming" ? "Upcoming" : "Past"
   // let linkUrl = label == "Upcoming" ? "/events/register/example" : "/events/eventdetails/example"
   return (
-    <div style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${data.color});` }} className={styles.upcoming_card_wrapper}>
+    <div className={styles.upcoming_card_wrapper} style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${data.color});` }}>
       <div className={styles.text_content} style={{ backgroundColor: data.color }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>
@@ -20,7 +20,7 @@ const UpcomingCard = ({ dataa }) => {
           <div className={styles.title}>{data.title}</div>
           <div className={styles.description}>{data.short_description}</div>
           {/* <Link href="/events/register/example"> */}
-          {/* <Link href={data.link}> */}
+          {/* <Link href={`/events/eventdetails/${data._id}`}> */}
           <button className={styles.register}>{buttonText}</button>
           {/* </Link> */}
           {/* </Link> */}
