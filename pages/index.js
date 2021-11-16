@@ -297,7 +297,8 @@ export default function Home() {
               <div className={cx(styles2.bubble, styles2.b12)}>
                 <div data-aos="zoom-in" data-aos-delay="100" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B2.png" alt="" />
-                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                  {/* <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}> */}
+                  <div className={styles2.bubble_text}>
                     Faith <div className={cx(styles2.b12_inner, styles2.b_inner)}> – trust, and things may mend</div>
                   </div>
                 </div>
@@ -305,15 +306,15 @@ export default function Home() {
               <div className={cx(styles2.bubble, styles2.b13)}>
                 <div data-aos="zoom-in" data-aos-delay="50" className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B4.png" alt="" />
-                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
-                    Be your own light
-                  </div>
+                  {/* <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}> */}
+                  <div className={styles2.bubble_text}>Be your own light</div>
                 </div>
               </div>
               <div className={cx(styles2.bubble, styles2.b14)}>
                 <div className={styles2.bubble_wrapper}>
                   <img src="/assets/images/Bubbles/B3.png" alt="" />
-                  <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}>
+                  {/* <div className={styles2.bubble_text} style={{ color: `${fontColors[Math.floor(Math.random() * 3)]}` }}> */}
+                  <div className={styles2.bubble_text}>
                     Self-awareness <div className={cx(styles2.b14_inner, styles2.b_inner)}>– speak your truth </div>
                   </div>
                 </div>
