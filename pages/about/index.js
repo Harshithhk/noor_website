@@ -73,7 +73,7 @@ const index = () => {
             </div>
             <div className={styles.person}>
               <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
-                <img src="/assets/images/Meet-the-founders/Founder1.svg" alt="" />
+                <img src="/assets/images/Meet-the-founders/Zeel.png" alt="" />
               </div>
 
               <div className={styles.person_details}>
@@ -94,19 +94,19 @@ const index = () => {
                 <div className={styles.left_text}>
                   <div className={styles.name}>Mugdha</div>
                   <div className={styles.designation}>Co-founder</div>
-                  <div data-aos="fade-in " d className={styles.text}>
+                  <div data-aos="fade-in " className={styles.text}>
                     A budding clinical psychologist. She enjoys pondering upon the existence of several things and exploring different fields.
                     <span className={styles.hide}> She’s a tagged juvenile spirit, an approachable person and a patient listener.</span>
                   </div>
                 </div>
               </div>
               <div data-aos="fade-left" className={cx(styles.person_image, styles.right)} style={{ paddingLeft: " 5rem" }}>
-                <img src="/assets/images/Meet-the-founders/Founder2.svg" alt="" />
+                <img src="/assets/images/Meet-the-founders/Mugdha.png" alt="" />
               </div>
             </div>
             <div className={styles.person}>
               <div data-aos="fade-right" className={cx(styles.person_image, styles.left)} style={{ paddingRight: " 5rem" }}>
-                <img src="/assets/images/Meet-the-founders/Founder3.svg" alt="" />
+                <img src="/assets/images/Meet-the-founders/Piyush.png" alt="" />
               </div>
 
               <div className={styles.person_details}>

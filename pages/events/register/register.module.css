@@ -142,6 +142,7 @@
 }
 
 .payment_button {
+  position: relative;
   outline: none;
   border: none;
   background-color: #ffffff;
@@ -155,6 +156,34 @@
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   box-shadow: 2px 2px 2px 2px rgb(221, 221, 221);
+}
+.payment_active {
+  background: linear-gradient(-45deg, #f5bc20, #5fb1fd, #56f3c1, #9bcfff);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+  /* height: 100vh; */
+}
+
+.payment_warning {
+  background: linear-gradient(-45deg, #2987df, #5fb1fd, #043563, #5fb1fd);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+  color: white;
+}
+.success {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  background-color: rgb(142, 221, 24);
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+.warning {
+  background-color: rgb(250, 98, 98);
+  color: white;
 }
 
 .payment_button:hover {
@@ -171,6 +200,18 @@
 }
 .phone_number:focus {
   outline: none; /* Removes the border when the input is clicked */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media only screen and (max-width: 1300px) {

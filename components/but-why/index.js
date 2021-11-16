@@ -24,7 +24,7 @@ const index = () => {
 
           <div className={styles.person_details}>
             <div className={styles.right_text}>
-              <div className={styles.name}>Niraja Ingle- Erande </div>
+              <div className={styles.name}>Niraja Ingle</div>
               <div className={styles.designation}>Psychologist </div>
               <div className={styles.designation_degree}> -M.A. Clinical Psychology ( Savitribai Phule University )</div>
               <div data-aos="fade-in" data-aos-delay="0" className={styles.text}>

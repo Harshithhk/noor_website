@@ -9,10 +9,10 @@
 
 .events_nav {
   position: relative;
-  width: 100%;
+  width: fit-content;
   /* background-color: aqua; */
   /* display: flex; */
-  height: 40px;
+  /* height: 40px; */
   /* padding: 0px 20px; */
 }
 
@@ -79,8 +79,9 @@
   justify-content: flex-end;
   align-items: center;
   right: 2.5%;
-  top: 20px;
-  transform: translateY(-50%);
+  top: -90px;
+  left: 90vw;
+  transform: translateX(-100%);
 }
 .mobile_actions {
   height: 100%;
@@ -89,15 +90,6 @@
   justify-content: space-evenly;
   align-items: center;
   transform: translateY(150%);
-}
-
-@media only screen and (max-width: 800px) {
-  .mobile_actions {
-    display: flex;
-  }
-  .actions {
-    display: none;
-  }
 }
 
 .filter {
@@ -158,25 +150,14 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .events_cards_container {
-    grid-template-columns: repeat(1, 425px);
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .events_cards_container {
-    grid-template-columns: repeat(1, 320px);
-    column-gap: 45px;
-    row-gap: 45px;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .events_page_wrapper {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 6.25rem;
+  }
+  .actions {
+    top: -80px;
   }
 }
 
@@ -185,14 +166,58 @@
     height: 125px;
   }
 }
+@media only screen and (max-width: 900px) {
+  .events_cards_container {
+    grid-template-columns: repeat(1, 425px);
+  }
+
+  .events_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .heading {
     font-size: 40px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mobile_actions {
+    display: flex;
   }
 }
 @media only screen and (max-width: 600px) {
   .heading {
     font-size: 35px;
     animation-name: expander_two;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .events_cards_container {
+    grid-template-columns: repeat(1, 320px);
+    column-gap: 45px;
+    row-gap: 45px;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

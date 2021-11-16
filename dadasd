@@ -1,0 +1,297 @@
+[1mdiff --git a/components/cards/upcoming-card/UpcomingCard.js b/components/cards/upcoming-card/UpcomingCard.js[m
+[1mindex f66f03f..b7ac29f 100644[m
+[1m--- a/components/cards/upcoming-card/UpcomingCard.js[m
+[1m+++ b/components/cards/upcoming-card/UpcomingCard.js[m
+[36m@@ -2,28 +2,30 @@[m [mimport React, { useState } from "react"[m
+ import styles from "./upcoming_card.module.css"[m
+ import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"[m
+ import Link from "next/link"[m
+[32m+[m[32mimport moment from "moment"[m
+ [m
+ const UpcomingCard = ({ dataa }) => {[m
+   const [data, setData] = useState(() => dataa)[m
+   const darkenedLabelBg = LightenDarkenColor(data.color, -20)[m
+[31m-  let buttonText = data.genre == "Upcoming" ? "Register" : "Explore More"[m
+[31m-  let cardLabel = data.genre == "Upcoming" ? "Upcoming" : "Past"[m
+[31m-  // let linkUrl = label == "Upcoming" ? "/events/register/example" : "/events/eventdetails/example"[m
+[32m+[m[32m  let buttonText = data.event_type == "upcoming" ? "Register" : "Explore More"[m
+[32m+[m[32m  // let linkUrl = label == "upcoming" ? "/events/register/example" : "/events/eventdetails/example"[m
+   return ([m
+[31m-    <div className={styles.upcoming_card_wrapper} style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${data.color});` }}>[m
+[32m+[m[32m    <div className={styles.upcoming_card_wrapper} style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${data.color})` }}>[m
+       <div className={styles.text_content} style={{ backgroundColor: data.color }}>[m
+         <div style={{ display: "flex", flexDirection: "column" }}>[m
+           <div className={styles.label} style={{ backgroundColor: darkenedLabelBg }}>[m
+[31m-            {cardLabel}[m
+[32m+[m[32m            {data.genre.toLowerCase()}[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m          <div className={styles.date}>[m
+[32m+[m[32m            {moment(data.date)[m
+[32m+[m[32m              .format(`DD MMM YY ${data.event_type === "upcoming" ? ", h:mm a" : ""}`)[m
+[32m+[m[32m              .toLowerCase()}[m
+           </div>[m
+[31m-          <div className={styles.date}>{data.date}</div>[m
+           <div className={styles.title}>{data.title}</div>[m
+           <div className={styles.description}>{data.short_description}</div>[m
+[31m-          {/* <Link href="/events/register/example"> */}[m
+[31m-          {/* <Link href={`/events/eventdetails/${data._id}`}> */}[m
+[31m-          <button className={styles.register}>{buttonText}</button>[m
+[31m-          {/* </Link> */}[m
+[31m-          {/* </Link> */}[m
+[32m+[m[32m          <Link href={data.event_type === "upcoming" ? `/events/register/${data._id}` : `/events/eventdetails/${data._id}`}>[m
+[32m+[m[32m            <button className={styles.register}>{buttonText}</button>[m
+[32m+[m[32m          </Link>[m
+         </div>[m
+       </div>[m
+       <div className={styles.image} style={{ backgroundImage: `url(${data.cover_image_url})` }}></div>[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 511acf7..420515f 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -12,6 +12,8 @@[m
+         "axios": "^0.21.1",[m
+         "bootstrap": "^4.6.0",[m
+         "classnames": "^2.2.6",[m
+[32m+[m[32m        "moment": "^2.29.1",[m
+[32m+[m[32m        "mongoose": "^6.0.10",[m
+         "next": "10.2.3",[m
+         "next-images": "^1.8.1",[m
+         "react": "17.0.2",[m
+[36m@@ -320,6 +322,20 @@[m
+       "resolved": "https://registry.npmjs.org/@types/warning/-/warning-3.0.0.tgz",[m
+       "integrity": "sha1-DSUBJorY+ZYrdA04fEZU9fjiPlI="[m
+     },[m
+[32m+[m[32m    "node_modules/@types/webidl-conversions": {[m
+[32m+[m[32m      "version": "6.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/webidl-conversions/-/webidl-conversions-6.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XAahCdThVuCFDQLT7R7Pk/vqeObFNL3YqRyFZg+AqAP/W1/w3xHaIxuW7WszQqTbIBOPRcItYJIou3i/mppu3Q=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@types/whatwg-url": {[m
+[32m+[m[32m      "version": "8.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/whatwg-url/-/whatwg-url-8.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-2YubE1sjj5ifxievI5Ge1sckb9k/Er66HyR2c+3+I6VDUUg1TLPdYYTEbQ+DjRkS4nTxMJhgWfSfMRD2sl2EYQ==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/node": "*",[m
+[32m+[m[32m        "@types/webidl-conversions": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@webassemblyjs/ast": {[m
+       "version": "1.11.1",[m
+       "resolved": "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.11.1.tgz",[m
+[36m@@ -785,6 +801,17 @@[m
+         "url": "https://opencollective.com/browserslist"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/bson": {[m
+[32m+[m[32m      "version": "4.5.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/bson/-/bson-4.5.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-qVX7LX79Mtj7B3NPLzCfBiCP6RAsjiV8N63DjlaVVpZW+PFoDTxQ4SeDbSpcqgE6mXksM5CAwZnXxxxn/XwC0g==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "buffer": "^5.6.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=6.9.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/buffer": {[m
+       "version": "5.6.0",[m
+       "resolved": "https://registry.npmjs.org/buffer/-/buffer-5.6.0.tgz",[m
+[36m@@ -1092,6 +1119,14 @@[m
+         "node": ">= 0.4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/denque": {[m
+[32m+[m[32m      "version": "2.0.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/denque/-/denque-2.0.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-tfiWc6BQLXNLpNiR5iGd0Ocu3P3VpxfzFiqubLgMfhfOw9WyvgJBd46CClNn9k3qfbjvT//0cf7AlYRX/OslMQ==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=0.10"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/depd": {[m
+       "version": "1.1.2",[m
+       "resolved": "https://registry.npmjs.org/depd/-/depd-1.1.2.tgz",[m
+[36m@@ -1977,6 +2012,11 @@[m
+         "json5": "lib/cli.js"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/kareem": {[m
+[32m+[m[32m      "version": "2.3.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/kareem/-/kareem-2.3.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-STHz9P7X2L4Kwn72fA4rGyqyXdmrMSdxqHx9IXon/FXluXieaFA6KJ2upcHAHxQPQ0LeM/OjLrhFxifHewOALQ=="[m
+[32m+[m[32m    },[m
+     "node_modules/load-script": {[m
+       "version": "1.0.0",[m
+       "resolved": "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz",[m
+[36m@@ -2080,6 +2120,12 @@[m
+       "resolved": "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz",[m
+       "integrity": "sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q=="[m
+     },[m
+[32m+[m[32m    "node_modules/memory-pager": {[m
+[32m+[m[32m      "version": "1.5.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==",[m
+[32m+[m[32m      "optional": true[m
+[32m+[m[32m    },[m
+     "node_modules/merge-stream": {[m
+       "version": "2.0.0",[m
+       "resolved": "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz",[m
+[36m@@ -2136,6 +2182,140 @@[m
+       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",[m
+       "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw=="[m
+     },[m
+[32m+[m[32m    "node_modules/moment": {[m
+[32m+[m[32m      "version": "2.29.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongodb": {[m
+[32m+[m[32m      "version": "4.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-4.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-pHCKDoOy1h6mVurziJmXmTMPatYWOx8pbnyFgSgshja9Y36Q+caHUzTDY6rrIy9HCSrjnbXmx3pCtvNZHmR8xg==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "bson": "^4.5.2",[m
+[32m+[m[32m        "denque": "^2.0.1",[m
+[32m+[m[32m        "mongodb-connection-string-url": "^2.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12.9.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "optionalDependencies": {[m
+[32m+[m[32m        "saslprep": "^1.0.3"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongodb-connection-string-url": {[m
+[32m+[m[32m      "version": "2.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-2.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Qf9Zw7KGiRljWvMrrUFDdVqo46KIEiDuCzvEN97rh/PcKzk2bd6n9KuzEwBwW9xo5glwx69y1mI6s+jFUD/aIQ==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/whatwg-url": "^8.2.1",[m
+[32m+[m[32m        "whatwg-url": "^9.1.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongodb-connection-string-url/node_modules/tr46": {[m
+[32m+[m[32m      "version": "2.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tr46/-/tr46-2.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "punycode": "^2.1.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=8"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongodb-connection-string-url/node_modules/webidl-conversions": {[m
+[32m+[m[32m      "version": "6.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-6.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=10.4"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongodb-connection-string-url/node_modules/whatwg-url": {[m
+[32m+[m[32m      "version": "9.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/whatwg-url/-/whatwg-url-9.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-CQ0UcrPHyomtlOCot1TL77WyMIm/bCwrJ2D6AOKGwEczU9EpyoqAokfqrf/MioU9kHcMsmJZcg1egXix2KYEsA==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tr46": "^2.1.0",[m
+[32m+[m[32m        "webidl-conversions": "^6.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongoose": {[m
+[32m+[m[32m      "version": "6.0.10",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mongoose/-/mongoose-6.0.10.tgz",[m
+[32m+[m[32m      "integrity": "sha512-p/wiEDUXoQuyb/xQx8QW/YGN92ZsojJ5E/DDgMCUU0WOGxc5uhcWoZ7ijLu6Ssjq8UkwVSv+jzkYp4Wbr+NqBg==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "bson": "^4.2.2",[m
+[32m+[m[32m        "kareem": "2.3.2",[m
+[32m+[m[32m        "mongodb": "4.1.2",[m
+[32m+[m[32m        "mpath": "0.8.4",[m
+[32m+[m[32m        "mquery": "4.0.0",[m
+[32m+[m[32m        "ms": "2.1.2",[m
+[32m+[m[32m        "regexp-clone": "1.0.0",[m
+[32m+[m[32m        "sift": "13.5.2",[m
+[32m+[m[32m        "sliced": "1.0.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/mongoose"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mongoose/node_modules/ms": {[m
+[32m+[m[32m      "version": "2.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mpath": {[m
+[32m+[m[32m      "version": "0.8.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mpath/-/mpath-0.8.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-DTxNZomBcTWlrMW76jy1wvV37X/cNNxPW1y2Jzd4DZkAaC5ZGsm8bfGfNOthcDuRJujXLqiuS6o3Tpy0JEoh7g==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=4.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mquery": {[m
+[32m+[m[32m      "version": "4.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mquery/-/mquery-4.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nGjm89lHja+T/b8cybAby6H0YgA4qYC/lx6UlwvHGqvTq8bDaNeCwl1sY8uRELrNbVWJzIihxVd+vphGGn1vBw==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "debug": "4.x",[m
+[32m+[m[32m        "regexp-clone": "^1.0.0",[m
+[32m+[m[32m        "sliced": "1.0.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mquery/node_modules/debug": {[m
+[32m+[m[32m      "version": "4.3.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "ms": "2.1.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=6.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "supports-color": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/mquery/node_modules/ms": {[m
+[32m+[m[32m      "version": "2.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="[m
+[32m+[m[32m    },[m
+     "node_modules/ms": {[m
+       "version": "2.0.0",[m
+       "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",[m
+[36m@@ -3028,6 +3208,11 @@[m
+       "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz",[m
+       "integrity": "sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew=="[m
+     },[m
+[32m+[m[32m    "node_modules/regexp-clone": {[m
+[32m+[m[32m      "version": "1.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/regexp-clone/-/regexp-clone-1.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-TuAasHQNamyyJ2hb97IuBEif4qBHGjPHBS64sZwytpLEqtBQ1gPJTnOaQ6qmpET16cK14kkjbazl6+p0RRv0yw=="[m
+[32m+[m[32m    },[m
+     "node_modules/resize-observer-polyfill": {[m
+       "version": "1.5.1",[m
+       "resolved": "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz",[m
+[36m@@ -3066,6 +3251,18 @@[m
+       "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",[m
+       "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="[m
+     },[m
+[32m+[m[32m    "node_modules/saslprep": {[m
+[32m+[m[32m      "

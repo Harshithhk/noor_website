@@ -6,7 +6,7 @@ import axios from "axios"
 import Head from "next/head"
 // import { upcomingEventsData } from " ../../utils/dummy-data/upcomingEventsData"
 import { upcomingEventsData } from "../../utils/dummy-data/upcomingEventsData"
-import { pastEventsData } from "../../utils/dummy-data/pastEventsData"
+// import { pastEventsData } from "../../utils/dummy-data/pastEventsData"
 
 const borderUpcoming = {
   borderBottom: "1px solid #f6c1c1",
@@ -17,31 +17,40 @@ const borderPast = {
 }
 
 export const getStaticProps = async () => {
-  const res = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
-  const upcommingData = res.data
-  // const upcommingData = upcomingEventsData
-  const pastData = pastEventsData
+  let upcommingData = []
+  let pastData = []
+  try {
+    const resUpcoming = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
+    if (resUpcoming.data && resUpcoming.data.length > 0) {
+      upcommingData = resUpcoming.data
+      upcommingData = upcommingData.sort((a, b) => new Date(b.date) - new Date(a.date))
+    }
+  } catch (err) {
+    console.log(err)
+  }
+  try {
+    const resPast = await axios.get("https://noor-test.herokuapp.com/api/v1/events/past")
+    if (resPast.data && resPast.data.length > 0) {
+      pastData = resPast.data
+      pastData = pastData.sort((a, b) => new Date(b.date) - new Date(a.date))
+    }
+  } catch (err) {
+    console.log(err)
+  }
+  const eventsData = upcommingData.concat(pastData)
 
   return {
-    props: { upcomingEventsData: upcommingData, pastEventsData: pastData },
+    props: { upcomingEventsData: upcommingData, pastEventsData: pastData, eventsData: eventsData },
     revalidate: 30,
   }
 }
 
-const index = ({ upcomingEventsData, pastEventsData }) => {
-  useEffect(async () => {
-    // const e = await axios.get("https://noor-test.herokuapp.com/api/v1/events/upcoming")
-    // console.log(e)
-    // const e = await axios.get("http://localhost:3000/api/hello")
-    // console.log(upcomingEventsData)
-    return () => {}
-  }, [])
-
+const index = ({ upcomingEventsData, pastEventsData, eventsData }) => {
   const [nav, setNav] = useState(0)
   const [searchText, setSearchText] = useState("")
 
-  const [upcommingEventsData, setupcommingEventsData] = useState(() => upcomingEventsData)
-  const [upcommingData, setUpcommingData] = useState(() => upcomingEventsData)
+  const [upcommingEventsData, setupcommingEventsData] = useState(() => eventsData)
+  const [upcommingData, setUpcommingData] = useState(() => eventsData)
 
   const [pasttEventsData, setpasttEventsData] = useState(() => pastEventsData)
   const [pastData, setPastData] = useState(() => pastEventsData)
@@ -76,7 +85,7 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
           <div>Events</div>
         </div>
         <div className={styles.events_nav}>
-          <div className={styles.upcoming_past}>
+          {/* <div className={styles.upcoming_past}>
             <div
               className={styles.upcoming}
               style={nav === 0 ? borderUpcoming : {}}
@@ -97,7 +106,7 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
             >
               Past
             </div>
-          </div>
+          </div> */}
           <div className={styles.actions}>
             <img src="/assets/images/filters.svg" className={styles.filter} />
             <div style={{ height: "25px", width: "200px", position: "relative" }}>
@@ -106,13 +115,13 @@ const index = ({ upcomingEventsData, pastEventsData }) => {
             </div>
           </div>
         </div>
-        <div className={styles.mobile_actions}>
+        {/* <div className={styles.mobile_actions}>
           <img src="/assets/images/filters.svg" className={styles.filter} />
           <div style={{ height: "25px", width: "200px", position: "relative" }}>
             <div className={styles.search_icon}></div>
             <input type="search" name="" className={styles.search_box} value={searchText} onChange={handleSearch}></input>
           </div>
-        </div>
+        </div> */}
       </section>
       {nav == 0 ? <Upcoming searchText eventsData={upcommingData} /> : <Past searchText eventsData={pastData} />}
     </section>
