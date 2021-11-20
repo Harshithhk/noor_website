@@ -97,6 +97,16 @@ const index = () => {
             This year, let's erase the "men will be men" <br />
             Let's all preach "men will be humans too".{" "}
           </b>
+          <br />
+          <br />
+          <br/>
+          <div style={{fontSize:"17px"}}>
+          Author -{" "} 
+          <a style={{color:"blue"}} href="https://www.instagram.com/manaswink/" target="blank">
+            <b>@Manaswi</b>
+          </a>
+          
+          </div>
         </div>
         <div className={styles.similar_blogs}>Similar blogs</div>
         <div className={styles.similar_blog_cards}>
