@@ -56,6 +56,7 @@ const index = () => {
                 title={element.title}
                 name={element.name}
                 link={element.link}
+                date={element.date}
               />
             </div>
           )

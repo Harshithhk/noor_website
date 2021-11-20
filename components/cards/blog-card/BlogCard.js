@@ -3,7 +3,7 @@ import styles from "./blog_card.module.css"
 import { LightenDarkenColor } from "../../../utils/design-utils/css-utils"
 import Link from "next/link"
 
-const BlogCard = ({ bgColor, bgUrl, id, title, name, link }) => {
+const BlogCard = ({ bgColor, bgUrl, id, title, name, link, date }) => {
   const darkenedLabelBg = LightenDarkenColor(bgColor, -20)
   const [showGallery, setshowGallery] = useState(false)
   const images = [
@@ -41,7 +41,7 @@ const BlogCard = ({ bgColor, bgUrl, id, title, name, link }) => {
           <div style={{ display: "flex", alignItems: "center", marginTop: "0.25rem" }}>
             <div className={styles.avatar}> </div>{" "}
             <div>
-              {name} <span style={{ fontSize: "0.75rem" }}>- 18th Jan 2021</span>
+              {name} <span style={{ fontSize: "0.75rem" }}>- {date}</span>
             </div>
           </div>
           <div className={styles.read_more} style={{ background: darkenedLabelBg }}>
