@@ -51,6 +51,17 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(92, 92, 92);
 }
+.location_img {
+  width: 18px;
+  /* transform: translateX(-2px); */
+  transform: translate(-2px, -2px);
+}
+.location {
+  font-size: 11px;
+  margin-top: 8px;
+  display: flex;
+  transform: translateX(-2px);
+}
 
 .register {
   cursor: pointer;
@@ -105,6 +116,12 @@
     width: 80%;
   }
   .title {
-    min-height: 81px;
+    min-height: 60px;
+  }
+  .location {
+    margin-top: 16px;
+  }
+  .location_img {
+    transform: translateY(-3px);
   }
 }

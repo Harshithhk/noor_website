@@ -81,7 +81,7 @@ const Register = ({ eventDetails }) => {
   if (router.isFallback) {
     return <div>Loading...</div>
   } else {
-    const description = eventDetails.description.replace(regEx, "</br>")
+    const description = eventDetails.description.replace(regEx, "</br>").split("*loc*")[0]
     return (
       <section className={styles.register_page_wrapper}>
         <section>
@@ -96,6 +96,14 @@ const Register = ({ eventDetails }) => {
               <div className={styles.content_texts_inner}>
                 <div className={styles.event_date}>{moment(eventDetails.date).format("DD MMM YYYY")}</div>
                 <div className={styles.event_heading}>{eventDetails.title}</div>
+                <div
+                  className={styles.location}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => (window.location.href = eventDetails.description.split("*loc*")[2])}
+                >
+                  <img src="/assets/images/location.png" className={styles.location_img} alt="location" />
+                  {eventDetails.description.split("*loc*")[1]}
+                </div>
                 <div className={styles.event_description} dangerouslySetInnerHTML={{ __html: description }}></div>
                 <div className={styles.event_price}>Price : Rs. {eventDetails.price}/-</div>
               </div>

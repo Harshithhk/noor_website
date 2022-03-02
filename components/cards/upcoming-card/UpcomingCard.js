@@ -9,6 +9,11 @@ const UpcomingCard = ({ dataa }) => {
   const darkenedLabelBg = LightenDarkenColor(data.color, -20)
   let buttonText = data.event_type == "upcoming" ? "Register" : "Explore More"
   // let linkUrl = label == "upcoming" ? "/events/register/example" : "/events/eventdetails/example"
+
+  let handleLocation = () => {
+    window.location.href = data.short_description.split("*loc*")[2]
+  }
+
   return (
     <div className={styles.upcoming_card_wrapper} style={{ background: `linear-gradient(to right,#f2f2f2 60%, ${data.color})` }}>
       <div className={styles.text_content} style={{ backgroundColor: data.color }}>
@@ -22,7 +27,12 @@ const UpcomingCard = ({ dataa }) => {
               .toLowerCase()}
           </div>
           <div className={styles.title}>{data.title}</div>
-          <div className={styles.description}>{data.short_description}</div>
+
+          <div className={styles.location} style={{ cursor: "pointer" }} onClick={handleLocation}>
+            <img src="/assets/images/location.png" className={styles.location_img} alt="location" /> {data.short_description.split("*loc*")[1]}
+          </div>
+
+          <div className={styles.description}>{data.short_description.split("*loc*")[0]}</div>
           <Link href={data.event_type === "upcoming" ? `/events/register/${data._id}` : `/events/eventdetails/${data._id}`}>
             <button className={styles.register}>{buttonText}</button>
           </Link>

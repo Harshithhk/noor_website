@@ -1,8 +1,7 @@
 {
-    "html.format.wrapLineLength": 180,
-    "[Log]": {
-    
-        "editor.wordWrap": "off"
-    },
-    "prettier.printWidth": 150
+  "html.format.wrapLineLength": 180,
+  "[Log]": {
+    "editor.wordWrap": "off"
+  },
+  "prettier.printWidth": 150
 }
