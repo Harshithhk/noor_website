@@ -7,7 +7,7 @@ import moment from "moment"
 const UpcomingCard = ({ dataa }) => {
   const [data, setData] = useState(() => dataa)
   const darkenedLabelBg = LightenDarkenColor(data.color, -20)
-  let buttonText = data.event_type == "upcoming" ? "Register" : "Explore More"
+  let buttonText = data.genre == "upcoming" ? "Register" : "Explore More"
   // let linkUrl = label == "upcoming" ? "/events/register/example" : "/events/eventdetails/example"
 
   let handleLocation = () => {
@@ -33,7 +33,7 @@ const UpcomingCard = ({ dataa }) => {
           </div>
 
           <div className={styles.description}>{data.short_description.split("*loc*")[0]}</div>
-          <Link href={data.event_type === "upcoming" ? `/events/register/${data._id}` : `/events/eventdetails/${data._id}`}>
+          <Link href={data.genre === "upcoming" ? `/events/register/${data._id}` : `/events/eventdetails/${data._id}`}>
             <button className={styles.register}>{buttonText}</button>
           </Link>
         </div>
