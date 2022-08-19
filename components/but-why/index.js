@@ -45,7 +45,7 @@ const index = () => {
               <div className={styles.designation}>Psychologist</div>
               <div className={styles.designation_degree}> -M.A. Clinical Psychology ( Savitribai Phule University )</div>
               <div className={styles.text}>
-                counselling expert striving to enhance the society by sharing her knowledge, aiding us to gain insight and using it for our
+                Counselling expert striving to enhance the society by sharing her knowledge, aiding us to gain insight and using it for our
                 betterment.
                 <span className={styles.hide}>
                   {" "}
